@@ -1,0 +1,81 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/Internship_Indeeksha/Verilog/03_11/asynchronus_fifo
+T_opt
+!s110 1710764571
+VF[TkMG:@cI2C]084gEScY3
+Z1 04 2 4 work tb fast 0
+=1-54ee7509668a-65f8321b-154-ae0
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1711020659
+V0_dGBl71XJR37ONf`ajXz0
+R1
+=1-54ee7509668a-65fc1a73-6f-3aec
+Z4 o-quiet -auto_acc_if_foreign -work work
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1713376999
+VHYjJmi0?GoK^j2VNfodHZ2
+R1
+=1-54ee7509668a-66200ee7-51-24b8
+R4
+R2
+n@_opt2
+R3
+vasync_fifo
+Z5 !s110 1713376997
+!i10b 1
+!s100 ajciYl@bIM^dzMlmk_Mkh3
+IkoUO@IK`E4N1E9j`5ob4[2
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1711023522
+8async_fifo.v
+Fasync_fifo.v
+L0 6
+Z7 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z8 !s108 1713376997.000000
+Z9 !s107 tb.v|async_fifo.v|
+Z10 !s90 async_fifo.v|tb.v|
+!i113 0
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtb
+R5
+!i10b 1
+!s100 kE6emaM_7CjZA<5^b58Fk3
+Ik580SFh_<oSFkTji1LLUM0
+R6
+R0
+w1713376885
+8tb.v
+Ftb.v
+L0 3
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2

@@ -1,0 +1,62 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Lenovo/Documents/internship_verilog/d_flip-flop
+T_opt
+!s110 1704367697
+VY[iFSI2^YB[:j4?Z6@kKG2
+04 2 4 work tb fast 0
+=1-54ee7509668a-65969651-2ca-90c
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+R0
+vtb
+!s110 1704970680
+!i10b 1
+!s100 DH^0AHgD>9j9a;E@C]S<F3
+I0:6;SKPa5Gbe`h:P=ZLLh2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1704367688
+8C:\Users\Lenovo\Documents\internship_verilog\d_flip-flop\tb.v
+FC:\Users\Lenovo\Documents\internship_verilog\d_flip-flop\tb.v
+L0 1
+Z3 OL;L;10.7c;67
+r1
+!s85 0
+31
+!s108 1704970680.000000
+!s107 C:\Users\Lenovo\Documents\internship_verilog\d_flip-flop\tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:\Users\Lenovo\Documents\internship_verilog\d_flip-flop\tb.v|
+!i113 0
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtest
+!s110 1704367693
+!i10b 1
+!s100 TUEl_Jfih?k1cf_W5O@c82
+I[YO[1MA9e`LAYUko6Ooce0
+R2
+R0
+w1704360772
+8C:/Users/Lenovo/Documents/internship_verilog/d_flip-flop/test.v
+FC:/Users/Lenovo/Documents/internship_verilog/d_flip-flop/test.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1704367693.000000
+!s107 C:/Users/Lenovo/Documents/internship_verilog/d_flip-flop/test.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/Lenovo/Documents/internship_verilog/d_flip-flop/test.v|
+!i113 0
+R4
+R1

@@ -1,0 +1,4 @@
+-html
+async_fifo_cov.ucdb
+-htmldir
+round_robin_makefile_coverage

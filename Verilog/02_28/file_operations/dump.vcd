@@ -1,0 +1,24 @@
+$date
+	Thu Feb 29 16:12:01 2024
+$end
+$version
+	QuestaSim Version 10.7c
+$end
+$timescale
+	1ns
+$end
+
+$scope module file_ops $end
+$var integer 32 ! fd $end
+$var integer 32 " fread1 $end
+$var integer 32 # fread2 $end
+$var integer 32 $ i $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10000000000000000000000000000011 !
+b1111 "
+b1111 #
+b10000 $
+$end

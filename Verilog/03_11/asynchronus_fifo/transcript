@@ -1,0 +1,2863 @@
+# vsim -vopt -coverage work.tb "+fifo_half_full" -c -do "coverage save -onexit -directive -cvg -codeall half_full.ucdb; run -all; exit" 
+# Start time: 16:32:52 on Mar 21,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.tb(fast)
+# Loading work.async_fifo(fast)
+# coverage save -onexit -directive -cvg -codeall half_full.ucdb
+#  run -all
+# --------------------------------------------------------------------
+#                    1 :read pointer =  0,write pointer =  0 
+#                    1 :read data is passed
+#                    1 :actual read =   0, expected read =   0 
+#                    1 :full flag is passed
+#                    1 :empty flag is passed
+#                    1 :almost full is passed
+#                    1 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  501 :read pointer =  1,write pointer =  0 
+#                  501 :read data is passed
+#                  501 :actual read =  36, expected read =  36 
+#                  501 :full flag is passed
+#                  501 :empty flag is passed
+#                  501 :almost full is passed
+#                  501 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  541 :read pointer =  2,write pointer =  0 
+#                  541 :read data is passed
+#                  541 :actual read = 129, expected read = 129 
+#                  541 :full flag is passed
+#                  541 :empty flag is passed
+#                  541 :almost full is passed
+#                  541 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  581 :read pointer =  3,write pointer =  0 
+#                  581 :read data is passed
+#                  581 :actual read =   9, expected read =   9 
+#                  581 :full flag is passed
+#                  581 :empty flag is passed
+#                  581 :almost full is passed
+#                  581 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  621 :read pointer =  4,write pointer =  0 
+#                  621 :read data is passed
+#                  621 :actual read =  99, expected read =  99 
+#                  621 :full flag is passed
+#                  621 :empty flag is passed
+#                  621 :almost full is passed
+#                  621 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  661 :read pointer =  5,write pointer =  0 
+#                  661 :read data is passed
+#                  661 :actual read =  13, expected read =  13 
+#                  661 :full flag is passed
+#                  661 :empty flag is passed
+#                  661 :almost full is passed
+#                  661 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  701 :read pointer =  6,write pointer =  0 
+#                  701 :read data is passed
+#                  701 :actual read = 141, expected read = 141 
+#                  701 :full flag is passed
+#                  701 :empty flag is passed
+#                  701 :almost full is passed
+#                  701 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  741 :read pointer =  7,write pointer =  0 
+#                  741 :read data is passed
+#                  741 :actual read = 101, expected read = 101 
+#                  741 :full flag is passed
+#                  741 :empty flag is passed
+#                  741 :almost full is passed
+#                  741 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  781 :read pointer =  8,write pointer =  0 
+#                  781 :read data is passed
+#                  781 :actual read =  18, expected read =  18 
+#                  781 :full flag is passed
+#                  781 :empty flag is passed
+#                  781 :almost full is passed
+#                  781 :almost empty is passed
+# --------------------------------------------------------------------
+# ** Note: $finish    : tb.v(213)
+#    Time: 1210 ns  Iteration: 0  Instance: /tb
+# Saving coverage database on exit...
+# End time: 16:32:54 on Mar 21,2024, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vsim -lib work work.tb -c -do "run -all; quit -f" "+sanity_test" "+fifo_full" "+fifo_empty" "+simultaneous_rw" "+continuous_rw" "+fifo_half_full" 
+# Start time: 23:27:28 on Apr 17,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.tb(fast)
+# run -all
+# --------------------------------------------------------------------
+#                    1 :read pointer =  0,write pointer =  0 
+#                    1 :read data is passed
+#                    1 :actual read =   0, expected read =   0 
+#                    1 :full flag is passed
+#                    1 :empty flag is passed
+#                    1 :almost full is passed
+#                    1 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  181 :read pointer =  1,write pointer =  3 
+#                  181 :read data is passed
+#                  181 :actual read =  23, expected read =  23 
+#                  181 :full flag is passed
+#                  181 :empty flag is passed
+#                  181 :almost full is passed
+#                  181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  221 :read pointer =  2,write pointer =  3 
+#                  221 :read data is passed
+#                  221 :actual read =  56, expected read =  56 
+#                  221 :full flag is passed
+#                  221 :empty flag is passed
+#                  221 :almost full is passed
+#                  221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  281 :read pointer =  0,write pointer =  0 
+#                  281 :read data is passed
+#                  281 :actual read =   0, expected read =   0 
+#                  281 :full flag is passed
+#                  281 :empty flag is passed
+#                  281 :almost full is passed
+#                  281 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  701 :read pointer =  1,write pointer =  0 
+#                  701 :read data is passed
+#                  701 :actual read =  36, expected read =  36 
+#                  701 :full flag is passed
+#                  701 :empty flag is passed
+#                  701 :almost full is passed
+#                  701 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  741 :read pointer =  2,write pointer =  0 
+#                  741 :read data is passed
+#                  741 :actual read = 129, expected read = 129 
+#                  741 :full flag is passed
+#                  741 :empty flag is passed
+#                  741 :almost full is passed
+#                  741 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  781 :read pointer =  3,write pointer =  0 
+#                  781 :read data is passed
+#                  781 :actual read =   9, expected read =   9 
+#                  781 :full flag is passed
+#                  781 :empty flag is passed
+#                  781 :almost full is passed
+#                  781 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  821 :read pointer =  4,write pointer =  0 
+#                  821 :read data is passed
+#                  821 :actual read =  99, expected read =  99 
+#                  821 :full flag is passed
+#                  821 :empty flag is passed
+#                  821 :almost full is passed
+#                  821 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  861 :read pointer =  5,write pointer =  0 
+#                  861 :read data is passed
+#                  861 :actual read =  13, expected read =  13 
+#                  861 :full flag is passed
+#                  861 :empty flag is passed
+#                  861 :almost full is passed
+#                  861 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  901 :read pointer =  6,write pointer =  0 
+#                  901 :read data is passed
+#                  901 :actual read = 141, expected read = 141 
+#                  901 :full flag is passed
+#                  901 :empty flag is passed
+#                  901 :almost full is passed
+#                  901 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  941 :read pointer =  7,write pointer =  0 
+#                  941 :read data is passed
+#                  941 :actual read = 101, expected read = 101 
+#                  941 :full flag is passed
+#                  941 :empty flag is passed
+#                  941 :almost full is passed
+#                  941 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  981 :read pointer =  8,write pointer =  0 
+#                  981 :read data is passed
+#                  981 :actual read =  18, expected read =  18 
+#                  981 :full flag is passed
+#                  981 :empty flag is passed
+#                  981 :almost full is passed
+#                  981 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1021 :read pointer =  9,write pointer =  0 
+#                 1021 :read data is passed
+#                 1021 :actual read =   1, expected read =   1 
+#                 1021 :full flag is passed
+#                 1021 :empty flag is passed
+#                 1021 :almost full is passed
+#                 1021 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1061 :read pointer = 10,write pointer =  0 
+#                 1061 :read data is passed
+#                 1061 :actual read =  13, expected read =  13 
+#                 1061 :full flag is passed
+#                 1061 :empty flag is passed
+#                 1061 :almost full is passed
+#                 1061 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1101 :read pointer = 11,write pointer =  0 
+#                 1101 :read data is passed
+#                 1101 :actual read = 118, expected read = 118 
+#                 1101 :full flag is passed
+#                 1101 :empty flag is passed
+#                 1101 :almost full is passed
+#                 1101 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1141 :read pointer = 12,write pointer =  0 
+#                 1141 :read data is passed
+#                 1141 :actual read =  61, expected read =  61 
+#                 1141 :full flag is passed
+#                 1141 :empty flag is passed
+#                 1141 :almost full is passed
+#                 1141 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1181 :read pointer = 13,write pointer =  0 
+#                 1181 :read data is passed
+#                 1181 :actual read = 237, expected read = 237 
+#                 1181 :full flag is passed
+#                 1181 :empty flag is passed
+#                 1181 :almost full is passed
+#                 1181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1221 :read pointer = 14,write pointer =  0 
+#                 1221 :read data is passed
+#                 1221 :actual read = 140, expected read = 140 
+#                 1221 :full flag is passed
+#                 1221 :empty flag is passed
+#                 1221 :almost full is passed
+#                 1221 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1261 :read pointer = 15,write pointer =  0 
+#                 1261 :read data is passed
+#                 1261 :actual read = 249, expected read = 249 
+#                 1261 :full flag is passed
+#                 1261 :empty flag is passed
+#                 1261 :almost full is passed
+#                 1261 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1301 :read pointer =  0,write pointer =  0 
+#                 1301 :read data is passed
+#                 1301 :actual read = 198, expected read = 198 
+#                 1301 :full flag is passed
+#                 1301 :empty flag is passed
+#                 1301 :almost full is passed
+#                 1301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1721 :read pointer =  0,write pointer =  0 
+#                 1721 :read data is passed
+#                 1721 :actual read =   0, expected read =   0 
+#                 1721 :full flag is passed
+#                 1721 :empty flag is passed
+#                 1721 :almost full is passed
+#                 1721 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2141 :read pointer =  1,write pointer =  0 
+#                 2141 :read data is passed
+#                 2141 :actual read = 128, expected read = 128 
+#                 2141 :full flag is passed
+#                 2141 :empty flag is passed
+#                 2141 :almost full is passed
+#                 2141 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2181 :read pointer =  2,write pointer =  0 
+#                 2181 :read data is passed
+#                 2181 :actual read =  32, expected read =  32 
+#                 2181 :full flag is passed
+#                 2181 :empty flag is passed
+#                 2181 :almost full is passed
+#                 2181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2221 :read pointer =  3,write pointer =  0 
+#                 2221 :read data is passed
+#                 2221 :actual read = 170, expected read = 170 
+#                 2221 :full flag is passed
+#                 2221 :empty flag is passed
+#                 2221 :almost full is passed
+#                 2221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2261 :read pointer =  4,write pointer =  0 
+#                 2261 :read data is passed
+#                 2261 :actual read = 157, expected read = 157 
+#                 2261 :full flag is passed
+#                 2261 :empty flag is passed
+#                 2261 :almost full is passed
+#                 2261 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2301 :read pointer =  5,write pointer =  0 
+#                 2301 :read data is passed
+#                 2301 :actual read = 150, expected read = 150 
+#                 2301 :full flag is passed
+#                 2301 :empty flag is passed
+#                 2301 :almost full is passed
+#                 2301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2341 :read pointer =  6,write pointer =  0 
+#                 2341 :read data is passed
+#                 2341 :actual read =  19, expected read =  19 
+#                 2341 :full flag is passed
+#                 2341 :empty flag is passed
+#                 2341 :almost full is passed
+#                 2341 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2381 :read pointer =  7,write pointer =  0 
+#                 2381 :read data is passed
+#                 2381 :actual read =  13, expected read =  13 
+#                 2381 :full flag is passed
+#                 2381 :empty flag is passed
+#                 2381 :almost full is passed
+#                 2381 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2421 :read pointer =  8,write pointer =  0 
+#                 2421 :read data is passed
+#                 2421 :actual read =  83, expected read =  83 
+#                 2421 :full flag is passed
+#                 2421 :empty flag is passed
+#                 2421 :almost full is passed
+#                 2421 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2681 :read pointer =  0,write pointer =  0 
+#                 2681 :read data is passed
+#                 2681 :actual read =   0, expected read =   0 
+#                 2681 :full flag is passed
+#                 2681 :empty flag is passed
+#                 2681 :almost full is passed
+#                 2681 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3101 :read pointer =  1,write pointer =  0 
+#                 3101 :read data is passed
+#                 3101 :actual read = 235, expected read = 235 
+#                 3101 :full flag is passed
+#                 3101 :empty flag is passed
+#                 3101 :almost full is passed
+#                 3101 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3141 :read pointer =  2,write pointer =  0 
+#                 3141 :read data is passed
+#                 3141 :actual read = 182, expected read = 182 
+#                 3141 :full flag is passed
+#                 3141 :empty flag is passed
+#                 3141 :almost full is passed
+#                 3141 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3181 :read pointer =  3,write pointer =  0 
+#                 3181 :read data is passed
+#                 3181 :actual read = 198, expected read = 198 
+#                 3181 :full flag is passed
+#                 3181 :empty flag is passed
+#                 3181 :almost full is passed
+#                 3181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3221 :read pointer =  4,write pointer =  0 
+#                 3221 :read data is passed
+#                 3221 :actual read = 174, expected read = 174 
+#                 3221 :full flag is passed
+#                 3221 :empty flag is passed
+#                 3221 :almost full is passed
+#                 3221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3261 :read pointer =  5,write pointer =  0 
+#                 3261 :read data is passed
+#                 3261 :actual read = 188, expected read = 188 
+#                 3261 :full flag is passed
+#                 3261 :empty flag is passed
+#                 3261 :almost full is passed
+#                 3261 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3301 :read pointer =  6,write pointer =  0 
+#                 3301 :read data is passed
+#                 3301 :actual read =  42, expected read =  42 
+#                 3301 :full flag is passed
+#                 3301 :empty flag is passed
+#                 3301 :almost full is passed
+#                 3301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3341 :read pointer =  7,write pointer =  0 
+#                 3341 :read data is passed
+#                 3341 :actual read =  11, expected read =  11 
+#                 3341 :full flag is passed
+#                 3341 :empty flag is passed
+#                 3341 :almost full is passed
+#                 3341 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3381 :read pointer =  8,write pointer =  0 
+#                 3381 :read data is passed
+#                 3381 :actual read = 113, expected read = 113 
+#                 3381 :full flag is passed
+#                 3381 :empty flag is passed
+#                 3381 :almost full is passed
+#                 3381 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3421 :read pointer =  9,write pointer =  0 
+#                 3421 :read data is passed
+#                 3421 :actual read = 133, expected read = 133 
+#                 3421 :full flag is passed
+#                 3421 :empty flag is passed
+#                 3421 :almost full is passed
+#                 3421 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3461 :read pointer = 10,write pointer =  0 
+#                 3461 :read data is passed
+#                 3461 :actual read =  79, expected read =  79 
+#                 3461 :full flag is passed
+#                 3461 :empty flag is passed
+#                 3461 :almost full is passed
+#                 3461 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3501 :read pointer = 11,write pointer =  0 
+#                 3501 :read data is passed
+#                 3501 :actual read =  59, expected read =  59 
+#                 3501 :full flag is passed
+#                 3501 :empty flag is passed
+#                 3501 :almost full is passed
+#                 3501 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3541 :read pointer = 12,write pointer =  0 
+#                 3541 :read data is passed
+#                 3541 :actual read =  58, expected read =  58 
+#                 3541 :full flag is passed
+#                 3541 :empty flag is passed
+#                 3541 :almost full is passed
+#                 3541 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3581 :read pointer = 13,write pointer =  0 
+#                 3581 :read data is passed
+#                 3581 :actual read = 126, expected read = 126 
+#                 3581 :full flag is passed
+#                 3581 :empty flag is passed
+#                 3581 :almost full is passed
+#                 3581 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3621 :read pointer = 14,write pointer =  0 
+#                 3621 :read data is passed
+#                 3621 :actual read =  21, expected read =  21 
+#                 3621 :full flag is passed
+#                 3621 :empty flag is passed
+#                 3621 :almost full is passed
+#                 3621 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3661 :read pointer = 15,write pointer =  0 
+#                 3661 :read data is passed
+#                 3661 :actual read = 241, expected read = 241 
+#                 3661 :full flag is passed
+#                 3661 :empty flag is passed
+#                 3661 :almost full is passed
+#                 3661 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3701 :read pointer =  0,write pointer =  0 
+#                 3701 :read data is passed
+#                 3701 :actual read = 217, expected read = 217 
+#                 3701 :full flag is passed
+#                 3701 :empty flag is passed
+#                 3701 :almost full is passed
+#                 3701 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4141 :read pointer =  1,write pointer =  0 
+#                 4141 :read data is passed
+#                 4141 :actual read =  98, expected read =  98 
+#                 4141 :full flag is passed
+#                 4141 :empty flag is passed
+#                 4141 :almost full is passed
+#                 4141 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4181 :read pointer =  2,write pointer =  0 
+#                 4181 :read data is passed
+#                 4181 :actual read =  76, expected read =  76 
+#                 4181 :full flag is passed
+#                 4181 :empty flag is passed
+#                 4181 :almost full is passed
+#                 4181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4221 :read pointer =  3,write pointer =  0 
+#                 4221 :read data is passed
+#                 4221 :actual read = 159, expected read = 159 
+#                 4221 :full flag is passed
+#                 4221 :empty flag is passed
+#                 4221 :almost full is passed
+#                 4221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4261 :read pointer =  4,write pointer =  0 
+#                 4261 :read data is passed
+#                 4261 :actual read = 143, expected read = 143 
+#                 4261 :full flag is passed
+#                 4261 :empty flag is passed
+#                 4261 :almost full is passed
+#                 4261 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4301 :read pointer =  5,write pointer =  0 
+#                 4301 :read data is passed
+#                 4301 :actual read = 248, expected read = 248 
+#                 4301 :full flag is passed
+#                 4301 :empty flag is passed
+#                 4301 :almost full is passed
+#                 4301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4341 :read pointer =  6,write pointer =  0 
+#                 4341 :read data is passed
+#                 4341 :actual read = 183, expected read = 183 
+#                 4341 :full flag is passed
+#                 4341 :empty flag is passed
+#                 4341 :almost full is passed
+#                 4341 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4381 :read pointer =  7,write pointer =  0 
+#                 4381 :read data is passed
+#                 4381 :actual read = 159, expected read = 159 
+#                 4381 :full flag is passed
+#                 4381 :empty flag is passed
+#                 4381 :almost full is passed
+#                 4381 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4421 :read pointer =  8,write pointer =  0 
+#                 4421 :read data is passed
+#                 4421 :actual read =  92, expected read =  92 
+#                 4421 :full flag is passed
+#                 4421 :empty flag is passed
+#                 4421 :almost full is passed
+#                 4421 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4461 :read pointer =  9,write pointer =  0 
+#                 4461 :read data is passed
+#                 4461 :actual read =  91, expected read =  91 
+#                 4461 :full flag is passed
+#                 4461 :empty flag is passed
+#                 4461 :almost full is passed
+#                 4461 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4501 :read pointer = 10,write pointer =  0 
+#                 4501 :read data is passed
+#                 4501 :actual read = 137, expected read = 137 
+#                 4501 :full flag is passed
+#                 4501 :empty flag is passed
+#                 4501 :almost full is passed
+#                 4501 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4541 :read pointer = 11,write pointer =  0 
+#                 4541 :read data is passed
+#                 4541 :actual read =  73, expected read =  73 
+#                 4541 :full flag is passed
+#                 4541 :empty flag is passed
+#                 4541 :almost full is passed
+#                 4541 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4581 :read pointer = 12,write pointer =  0 
+#                 4581 :read data is passed
+#                 4581 :actual read = 208, expected read = 208 
+#                 4581 :full flag is passed
+#                 4581 :empty flag is passed
+#                 4581 :almost full is passed
+#                 4581 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4621 :read pointer = 13,write pointer =  0 
+#                 4621 :read data is passed
+#                 4621 :actual read = 215, expected read = 215 
+#                 4621 :full flag is passed
+#                 4621 :empty flag is passed
+#                 4621 :almost full is passed
+#                 4621 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4661 :read pointer = 14,write pointer =  0 
+#                 4661 :read data is passed
+#                 4661 :actual read =  81, expected read =  81 
+#                 4661 :full flag is passed
+#                 4661 :empty flag is passed
+#                 4661 :almost full is passed
+#                 4661 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4701 :read pointer = 15,write pointer =  0 
+#                 4701 :read data is passed
+#                 4701 :actual read = 150, expected read = 150 
+#                 4701 :full flag is passed
+#                 4701 :empty flag is passed
+#                 4701 :almost full is passed
+#                 4701 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4741 :read pointer =  0,write pointer =  0 
+#                 4741 :read data is passed
+#                 4741 :actual read =  12, expected read =  12 
+#                 4741 :full flag is passed
+#                 4741 :empty flag is passed
+#                 4741 :almost full is passed
+#                 4741 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4801 :read pointer =  0,write pointer =  0 
+#                 4801 :read data is passed
+#                 4801 :actual read =   0, expected read =   0 
+#                 4801 :full flag is passed
+#                 4801 :empty flag is passed
+#                 4801 :almost full is passed
+#                 4801 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5181 :read pointer =  1,write pointer =  0 
+#                 5181 :read data is passed
+#                 5181 :actual read = 194, expected read = 194 
+#                 5181 :full flag is passed
+#                 5181 :empty flag is passed
+#                 5181 :almost full is passed
+#                 5181 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5221 :read pointer =  2,write pointer =  0 
+#                 5221 :read data is passed
+#                 5221 :actual read = 200, expected read = 200 
+#                 5221 :full flag is passed
+#                 5221 :empty flag is passed
+#                 5221 :almost full is passed
+#                 5221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5261 :read pointer =  3,write pointer =  1 
+#                 5261 :read data is passed
+#                 5261 :actual read = 119, expected read = 119 
+#                 5261 :full flag is passed
+#                 5261 :empty flag is passed
+#                 5261 :almost full is passed
+#                 5261 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5301 :read pointer =  4,write pointer =  2 
+#                 5301 :read data is passed
+#                 5301 :actual read =  61, expected read =  61 
+#                 5301 :full flag is passed
+#                 5301 :empty flag is passed
+#                 5301 :almost full is passed
+#                 5301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5341 :read pointer =  5,write pointer =  3 
+#                 5341 :read data is passed
+#                 5341 :actual read =  18, expected read =  18 
+#                 5341 :full flag is passed
+#                 5341 :empty flag is passed
+#                 5341 :almost full is passed
+#                 5341 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5401 :read pointer =  0,write pointer =  0 
+#                 5401 :read data is passed
+#                 5401 :actual read =   0, expected read =   0 
+#                 5401 :full flag is passed
+#                 5401 :empty flag is passed
+#                 5401 :almost full is passed
+#                 5401 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5781 :read pointer =  1,write pointer =  0 
+#                 5781 :read data is passed
+#                 5781 :actual read = 156, expected read = 156 
+#                 5781 :full flag is passed
+#                 5781 :empty flag is passed
+#                 5781 :almost full is passed
+#                 5781 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5821 :read pointer =  2,write pointer =  0 
+#                 5821 :read data is passed
+#                 5821 :actual read = 250, expected read = 250 
+#                 5821 :full flag is passed
+#                 5821 :empty flag is passed
+#                 5821 :almost full is passed
+#                 5821 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5861 :read pointer =  3,write pointer =  1 
+#                 5861 :read data is passed
+#                 5861 :actual read =  38, expected read =  38 
+#                 5861 :full flag is passed
+#                 5861 :empty flag is passed
+#                 5861 :almost full is passed
+#                 5861 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5901 :read pointer =  4,write pointer =  2 
+#                 5901 :read data is passed
+#                 5901 :actual read = 115, expected read = 115 
+#                 5901 :full flag is passed
+#                 5901 :empty flag is passed
+#                 5901 :almost full is passed
+#                 5901 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5941 :read pointer =  5,write pointer =  3 
+#                 5941 :read data is passed
+#                 5941 :actual read = 163, expected read = 163 
+#                 5941 :full flag is passed
+#                 5941 :empty flag is passed
+#                 5941 :almost full is passed
+#                 5941 :almost empty is passed
+# --------------------------------------------------------------------
+# ** Note: $finish    : tb.v(249)
+#    Time: 6010 ns  Iteration: 0  Instance: /tb
+# End time: 23:27:29 on Apr 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -lib work work.tb -c -do "run -all; quit -f" "+sanity_test" "+fifo_full" "+fifo_empty" "+simultaneous_rw" "+continuous_rw" "+fifo_half_full" 
+# Start time: 23:28:43 on Apr 17,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.tb(fast)
+# run -all
+# --------------------------------------------------------------------
+#                    1 :read pointer =  0,write pointer =  0 
+#                    1 :read data is passed
+#                    1 :actual read =   0, expected read =   0 
+#                    1 :full flag is passed
+#                    1 :empty flag is passed
+#                    1 :almost full is passed
+#                    1 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  181 :read pointer =  1,write pointer =  3 
+#                  181 :read data is passed
+#                  181 :actual read =  23, expected read =  23 
+#                  181 :full flag is passed
+#                  181 :empty flag is passed
+#                  181 :almost full is passed
+#                  181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  221 :read pointer =  2,write pointer =  3 
+#                  221 :read data is passed
+#                  221 :actual read =  56, expected read =  56 
+#                  221 :full flag is passed
+#                  221 :empty flag is passed
+#                  221 :almost full is passed
+#                  221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  281 :read pointer =  0,write pointer =  0 
+#                  281 :read data is passed
+#                  281 :actual read =   0, expected read =   0 
+#                  281 :full flag is passed
+#                  281 :empty flag is passed
+#                  281 :almost full is passed
+#                  281 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  701 :read pointer =  1,write pointer =  0 
+#                  701 :read data is passed
+#                  701 :actual read =  36, expected read =  36 
+#                  701 :full flag is passed
+#                  701 :empty flag is passed
+#                  701 :almost full is passed
+#                  701 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  741 :read pointer =  2,write pointer =  0 
+#                  741 :read data is passed
+#                  741 :actual read = 129, expected read = 129 
+#                  741 :full flag is passed
+#                  741 :empty flag is passed
+#                  741 :almost full is passed
+#                  741 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  781 :read pointer =  3,write pointer =  0 
+#                  781 :read data is passed
+#                  781 :actual read =   9, expected read =   9 
+#                  781 :full flag is passed
+#                  781 :empty flag is passed
+#                  781 :almost full is passed
+#                  781 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  821 :read pointer =  4,write pointer =  0 
+#                  821 :read data is passed
+#                  821 :actual read =  99, expected read =  99 
+#                  821 :full flag is passed
+#                  821 :empty flag is passed
+#                  821 :almost full is passed
+#                  821 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  861 :read pointer =  5,write pointer =  0 
+#                  861 :read data is passed
+#                  861 :actual read =  13, expected read =  13 
+#                  861 :full flag is passed
+#                  861 :empty flag is passed
+#                  861 :almost full is passed
+#                  861 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  901 :read pointer =  6,write pointer =  0 
+#                  901 :read data is passed
+#                  901 :actual read = 141, expected read = 141 
+#                  901 :full flag is passed
+#                  901 :empty flag is passed
+#                  901 :almost full is passed
+#                  901 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  941 :read pointer =  7,write pointer =  0 
+#                  941 :read data is passed
+#                  941 :actual read = 101, expected read = 101 
+#                  941 :full flag is passed
+#                  941 :empty flag is passed
+#                  941 :almost full is passed
+#                  941 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  981 :read pointer =  8,write pointer =  0 
+#                  981 :read data is passed
+#                  981 :actual read =  18, expected read =  18 
+#                  981 :full flag is passed
+#                  981 :empty flag is passed
+#                  981 :almost full is passed
+#                  981 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1021 :read pointer =  9,write pointer =  0 
+#                 1021 :read data is passed
+#                 1021 :actual read =   1, expected read =   1 
+#                 1021 :full flag is passed
+#                 1021 :empty flag is passed
+#                 1021 :almost full is passed
+#                 1021 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1061 :read pointer = 10,write pointer =  0 
+#                 1061 :read data is passed
+#                 1061 :actual read =  13, expected read =  13 
+#                 1061 :full flag is passed
+#                 1061 :empty flag is passed
+#                 1061 :almost full is passed
+#                 1061 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1101 :read pointer = 11,write pointer =  0 
+#                 1101 :read data is passed
+#                 1101 :actual read = 118, expected read = 118 
+#                 1101 :full flag is passed
+#                 1101 :empty flag is passed
+#                 1101 :almost full is passed
+#                 1101 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1141 :read pointer = 12,write pointer =  0 
+#                 1141 :read data is passed
+#                 1141 :actual read =  61, expected read =  61 
+#                 1141 :full flag is passed
+#                 1141 :empty flag is passed
+#                 1141 :almost full is passed
+#                 1141 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1181 :read pointer = 13,write pointer =  0 
+#                 1181 :read data is passed
+#                 1181 :actual read = 237, expected read = 237 
+#                 1181 :full flag is passed
+#                 1181 :empty flag is passed
+#                 1181 :almost full is passed
+#                 1181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1221 :read pointer = 14,write pointer =  0 
+#                 1221 :read data is passed
+#                 1221 :actual read = 140, expected read = 140 
+#                 1221 :full flag is passed
+#                 1221 :empty flag is passed
+#                 1221 :almost full is passed
+#                 1221 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1261 :read pointer = 15,write pointer =  0 
+#                 1261 :read data is passed
+#                 1261 :actual read = 249, expected read = 249 
+#                 1261 :full flag is passed
+#                 1261 :empty flag is passed
+#                 1261 :almost full is passed
+#                 1261 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1301 :read pointer =  0,write pointer =  0 
+#                 1301 :read data is passed
+#                 1301 :actual read = 198, expected read = 198 
+#                 1301 :full flag is passed
+#                 1301 :empty flag is passed
+#                 1301 :almost full is passed
+#                 1301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1721 :read pointer =  0,write pointer =  0 
+#                 1721 :read data is passed
+#                 1721 :actual read =   0, expected read =   0 
+#                 1721 :full flag is passed
+#                 1721 :empty flag is passed
+#                 1721 :almost full is passed
+#                 1721 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2141 :read pointer =  1,write pointer =  0 
+#                 2141 :read data is passed
+#                 2141 :actual read = 128, expected read = 128 
+#                 2141 :full flag is passed
+#                 2141 :empty flag is passed
+#                 2141 :almost full is passed
+#                 2141 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2181 :read pointer =  2,write pointer =  0 
+#                 2181 :read data is passed
+#                 2181 :actual read =  32, expected read =  32 
+#                 2181 :full flag is passed
+#                 2181 :empty flag is passed
+#                 2181 :almost full is passed
+#                 2181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2221 :read pointer =  3,write pointer =  0 
+#                 2221 :read data is passed
+#                 2221 :actual read = 170, expected read = 170 
+#                 2221 :full flag is passed
+#                 2221 :empty flag is passed
+#                 2221 :almost full is passed
+#                 2221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2261 :read pointer =  4,write pointer =  0 
+#                 2261 :read data is passed
+#                 2261 :actual read = 157, expected read = 157 
+#                 2261 :full flag is passed
+#                 2261 :empty flag is passed
+#                 2261 :almost full is passed
+#                 2261 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2301 :read pointer =  5,write pointer =  0 
+#                 2301 :read data is passed
+#                 2301 :actual read = 150, expected read = 150 
+#                 2301 :full flag is passed
+#                 2301 :empty flag is passed
+#                 2301 :almost full is passed
+#                 2301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2341 :read pointer =  6,write pointer =  0 
+#                 2341 :read data is passed
+#                 2341 :actual read =  19, expected read =  19 
+#                 2341 :full flag is passed
+#                 2341 :empty flag is passed
+#                 2341 :almost full is passed
+#                 2341 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2381 :read pointer =  7,write pointer =  0 
+#                 2381 :read data is passed
+#                 2381 :actual read =  13, expected read =  13 
+#                 2381 :full flag is passed
+#                 2381 :empty flag is passed
+#                 2381 :almost full is passed
+#                 2381 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2421 :read pointer =  8,write pointer =  0 
+#                 2421 :read data is passed
+#                 2421 :actual read =  83, expected read =  83 
+#                 2421 :full flag is passed
+#                 2421 :empty flag is passed
+#                 2421 :almost full is passed
+#                 2421 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2681 :read pointer =  0,write pointer =  0 
+#                 2681 :read data is passed
+#                 2681 :actual read =   0, expected read =   0 
+#                 2681 :full flag is passed
+#                 2681 :empty flag is passed
+#                 2681 :almost full is passed
+#                 2681 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3101 :read pointer =  1,write pointer =  0 
+#                 3101 :read data is passed
+#                 3101 :actual read = 235, expected read = 235 
+#                 3101 :full flag is passed
+#                 3101 :empty flag is passed
+#                 3101 :almost full is passed
+#                 3101 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3141 :read pointer =  2,write pointer =  0 
+#                 3141 :read data is passed
+#                 3141 :actual read = 182, expected read = 182 
+#                 3141 :full flag is passed
+#                 3141 :empty flag is passed
+#                 3141 :almost full is passed
+#                 3141 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3181 :read pointer =  3,write pointer =  0 
+#                 3181 :read data is passed
+#                 3181 :actual read = 198, expected read = 198 
+#                 3181 :full flag is passed
+#                 3181 :empty flag is passed
+#                 3181 :almost full is passed
+#                 3181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3221 :read pointer =  4,write pointer =  0 
+#                 3221 :read data is passed
+#                 3221 :actual read = 174, expected read = 174 
+#                 3221 :full flag is passed
+#                 3221 :empty flag is passed
+#                 3221 :almost full is passed
+#                 3221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3261 :read pointer =  5,write pointer =  0 
+#                 3261 :read data is passed
+#                 3261 :actual read = 188, expected read = 188 
+#                 3261 :full flag is passed
+#                 3261 :empty flag is passed
+#                 3261 :almost full is passed
+#                 3261 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3301 :read pointer =  6,write pointer =  0 
+#                 3301 :read data is passed
+#                 3301 :actual read =  42, expected read =  42 
+#                 3301 :full flag is passed
+#                 3301 :empty flag is passed
+#                 3301 :almost full is passed
+#                 3301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3341 :read pointer =  7,write pointer =  0 
+#                 3341 :read data is passed
+#                 3341 :actual read =  11, expected read =  11 
+#                 3341 :full flag is passed
+#                 3341 :empty flag is passed
+#                 3341 :almost full is passed
+#                 3341 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3381 :read pointer =  8,write pointer =  0 
+#                 3381 :read data is passed
+#                 3381 :actual read = 113, expected read = 113 
+#                 3381 :full flag is passed
+#                 3381 :empty flag is passed
+#                 3381 :almost full is passed
+#                 3381 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3421 :read pointer =  9,write pointer =  0 
+#                 3421 :read data is passed
+#                 3421 :actual read = 133, expected read = 133 
+#                 3421 :full flag is passed
+#                 3421 :empty flag is passed
+#                 3421 :almost full is passed
+#                 3421 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3461 :read pointer = 10,write pointer =  0 
+#                 3461 :read data is passed
+#                 3461 :actual read =  79, expected read =  79 
+#                 3461 :full flag is passed
+#                 3461 :empty flag is passed
+#                 3461 :almost full is passed
+#                 3461 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3501 :read pointer = 11,write pointer =  0 
+#                 3501 :read data is passed
+#                 3501 :actual read =  59, expected read =  59 
+#                 3501 :full flag is passed
+#                 3501 :empty flag is passed
+#                 3501 :almost full is passed
+#                 3501 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3541 :read pointer = 12,write pointer =  0 
+#                 3541 :read data is passed
+#                 3541 :actual read =  58, expected read =  58 
+#                 3541 :full flag is passed
+#                 3541 :empty flag is passed
+#                 3541 :almost full is passed
+#                 3541 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3581 :read pointer = 13,write pointer =  0 
+#                 3581 :read data is passed
+#                 3581 :actual read = 126, expected read = 126 
+#                 3581 :full flag is passed
+#                 3581 :empty flag is passed
+#                 3581 :almost full is passed
+#                 3581 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3621 :read pointer = 14,write pointer =  0 
+#                 3621 :read data is passed
+#                 3621 :actual read =  21, expected read =  21 
+#                 3621 :full flag is passed
+#                 3621 :empty flag is passed
+#                 3621 :almost full is passed
+#                 3621 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3661 :read pointer = 15,write pointer =  0 
+#                 3661 :read data is passed
+#                 3661 :actual read = 241, expected read = 241 
+#                 3661 :full flag is passed
+#                 3661 :empty flag is passed
+#                 3661 :almost full is passed
+#                 3661 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3701 :read pointer =  0,write pointer =  0 
+#                 3701 :read data is passed
+#                 3701 :actual read = 217, expected read = 217 
+#                 3701 :full flag is passed
+#                 3701 :empty flag is passed
+#                 3701 :almost full is passed
+#                 3701 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4141 :read pointer =  1,write pointer =  0 
+#                 4141 :read data is passed
+#                 4141 :actual read =  98, expected read =  98 
+#                 4141 :full flag is passed
+#                 4141 :empty flag is passed
+#                 4141 :almost full is passed
+#                 4141 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4181 :read pointer =  2,write pointer =  0 
+#                 4181 :read data is passed
+#                 4181 :actual read =  76, expected read =  76 
+#                 4181 :full flag is passed
+#                 4181 :empty flag is passed
+#                 4181 :almost full is passed
+#                 4181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4221 :read pointer =  3,write pointer =  0 
+#                 4221 :read data is passed
+#                 4221 :actual read = 159, expected read = 159 
+#                 4221 :full flag is passed
+#                 4221 :empty flag is passed
+#                 4221 :almost full is passed
+#                 4221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4261 :read pointer =  4,write pointer =  0 
+#                 4261 :read data is passed
+#                 4261 :actual read = 143, expected read = 143 
+#                 4261 :full flag is passed
+#                 4261 :empty flag is passed
+#                 4261 :almost full is passed
+#                 4261 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4301 :read pointer =  5,write pointer =  0 
+#                 4301 :read data is passed
+#                 4301 :actual read = 248, expected read = 248 
+#                 4301 :full flag is passed
+#                 4301 :empty flag is passed
+#                 4301 :almost full is passed
+#                 4301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4341 :read pointer =  6,write pointer =  0 
+#                 4341 :read data is passed
+#                 4341 :actual read = 183, expected read = 183 
+#                 4341 :full flag is passed
+#                 4341 :empty flag is passed
+#                 4341 :almost full is passed
+#                 4341 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4381 :read pointer =  7,write pointer =  0 
+#                 4381 :read data is passed
+#                 4381 :actual read = 159, expected read = 159 
+#                 4381 :full flag is passed
+#                 4381 :empty flag is passed
+#                 4381 :almost full is passed
+#                 4381 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4421 :read pointer =  8,write pointer =  0 
+#                 4421 :read data is passed
+#                 4421 :actual read =  92, expected read =  92 
+#                 4421 :full flag is passed
+#                 4421 :empty flag is passed
+#                 4421 :almost full is passed
+#                 4421 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4461 :read pointer =  9,write pointer =  0 
+#                 4461 :read data is passed
+#                 4461 :actual read =  91, expected read =  91 
+#                 4461 :full flag is passed
+#                 4461 :empty flag is passed
+#                 4461 :almost full is passed
+#                 4461 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4501 :read pointer = 10,write pointer =  0 
+#                 4501 :read data is passed
+#                 4501 :actual read = 137, expected read = 137 
+#                 4501 :full flag is passed
+#                 4501 :empty flag is passed
+#                 4501 :almost full is passed
+#                 4501 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4541 :read pointer = 11,write pointer =  0 
+#                 4541 :read data is passed
+#                 4541 :actual read =  73, expected read =  73 
+#                 4541 :full flag is passed
+#                 4541 :empty flag is passed
+#                 4541 :almost full is passed
+#                 4541 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4581 :read pointer = 12,write pointer =  0 
+#                 4581 :read data is passed
+#                 4581 :actual read = 208, expected read = 208 
+#                 4581 :full flag is passed
+#                 4581 :empty flag is passed
+#                 4581 :almost full is passed
+#                 4581 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4621 :read pointer = 13,write pointer =  0 
+#                 4621 :read data is passed
+#                 4621 :actual read = 215, expected read = 215 
+#                 4621 :full flag is passed
+#                 4621 :empty flag is passed
+#                 4621 :almost full is passed
+#                 4621 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4661 :read pointer = 14,write pointer =  0 
+#                 4661 :read data is passed
+#                 4661 :actual read =  81, expected read =  81 
+#                 4661 :full flag is passed
+#                 4661 :empty flag is passed
+#                 4661 :almost full is passed
+#                 4661 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4701 :read pointer = 15,write pointer =  0 
+#                 4701 :read data is passed
+#                 4701 :actual read = 150, expected read = 150 
+#                 4701 :full flag is passed
+#                 4701 :empty flag is passed
+#                 4701 :almost full is passed
+#                 4701 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4741 :read pointer =  0,write pointer =  0 
+#                 4741 :read data is passed
+#                 4741 :actual read =  12, expected read =  12 
+#                 4741 :full flag is passed
+#                 4741 :empty flag is passed
+#                 4741 :almost full is passed
+#                 4741 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4801 :read pointer =  0,write pointer =  0 
+#                 4801 :read data is passed
+#                 4801 :actual read =   0, expected read =   0 
+#                 4801 :full flag is passed
+#                 4801 :empty flag is passed
+#                 4801 :almost full is passed
+#                 4801 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5181 :read pointer =  1,write pointer =  0 
+#                 5181 :read data is passed
+#                 5181 :actual read = 194, expected read = 194 
+#                 5181 :full flag is passed
+#                 5181 :empty flag is passed
+#                 5181 :almost full is passed
+#                 5181 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5221 :read pointer =  2,write pointer =  0 
+#                 5221 :read data is passed
+#                 5221 :actual read = 200, expected read = 200 
+#                 5221 :full flag is passed
+#                 5221 :empty flag is passed
+#                 5221 :almost full is passed
+#                 5221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5261 :read pointer =  3,write pointer =  1 
+#                 5261 :read data is passed
+#                 5261 :actual read = 119, expected read = 119 
+#                 5261 :full flag is passed
+#                 5261 :empty flag is passed
+#                 5261 :almost full is passed
+#                 5261 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5301 :read pointer =  4,write pointer =  2 
+#                 5301 :read data is passed
+#                 5301 :actual read =  61, expected read =  61 
+#                 5301 :full flag is passed
+#                 5301 :empty flag is passed
+#                 5301 :almost full is passed
+#                 5301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5341 :read pointer =  5,write pointer =  3 
+#                 5341 :read data is passed
+#                 5341 :actual read =  18, expected read =  18 
+#                 5341 :full flag is passed
+#                 5341 :empty flag is passed
+#                 5341 :almost full is passed
+#                 5341 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5401 :read pointer =  0,write pointer =  0 
+#                 5401 :read data is passed
+#                 5401 :actual read =   0, expected read =   0 
+#                 5401 :full flag is passed
+#                 5401 :empty flag is passed
+#                 5401 :almost full is passed
+#                 5401 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5781 :read pointer =  1,write pointer =  0 
+#                 5781 :read data is passed
+#                 5781 :actual read = 156, expected read = 156 
+#                 5781 :full flag is passed
+#                 5781 :empty flag is passed
+#                 5781 :almost full is passed
+#                 5781 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5821 :read pointer =  2,write pointer =  0 
+#                 5821 :read data is passed
+#                 5821 :actual read = 250, expected read = 250 
+#                 5821 :full flag is passed
+#                 5821 :empty flag is passed
+#                 5821 :almost full is passed
+#                 5821 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5861 :read pointer =  3,write pointer =  1 
+#                 5861 :read data is passed
+#                 5861 :actual read =  38, expected read =  38 
+#                 5861 :full flag is passed
+#                 5861 :empty flag is passed
+#                 5861 :almost full is passed
+#                 5861 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5901 :read pointer =  4,write pointer =  2 
+#                 5901 :read data is passed
+#                 5901 :actual read = 115, expected read = 115 
+#                 5901 :full flag is passed
+#                 5901 :empty flag is passed
+#                 5901 :almost full is passed
+#                 5901 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5941 :read pointer =  5,write pointer =  3 
+#                 5941 :read data is passed
+#                 5941 :actual read = 163, expected read = 163 
+#                 5941 :full flag is passed
+#                 5941 :empty flag is passed
+#                 5941 :almost full is passed
+#                 5941 :almost empty is passed
+# --------------------------------------------------------------------
+# ** Note: $finish    : tb.v(249)
+#    Time: 6010 ns  Iteration: 0  Instance: /tb
+# End time: 23:28:44 on Apr 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -lib work work.tb -c -do "run -all; quit -f" "+sanity_test" "+fifo_full" "+fifo_empty" "+simultaneous_rw" "+continuous_rw" "+fifo_half_full" 
+# Start time: 23:29:01 on Apr 17,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.tb(fast)
+# run -all
+# --------------------------------------------------------------------
+#                    0 :read pointer =  0,write pointer =  0 
+#                    0 :read data is passed
+#                    0 :actual read =   0, expected read =   0 
+#                    0 :full flag is passed
+#                    0 :empty flag is passed
+#                    0 :almost full is passed
+#                    0 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  180 :read pointer =  1,write pointer =  3 
+#                  180 :read data is passed
+#                  180 :actual read =  23, expected read =  23 
+#                  180 :full flag is passed
+#                  180 :empty flag is passed
+#                  180 :almost full is passed
+#                  180 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  220 :read pointer =  2,write pointer =  3 
+#                  220 :read data is passed
+#                  220 :actual read =  56, expected read =  56 
+#                  220 :full flag is passed
+#                  220 :empty flag is passed
+#                  220 :almost full is passed
+#                  220 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  280 :read pointer =  0,write pointer =  0 
+#                  280 :read data is passed
+#                  280 :actual read =   0, expected read =   0 
+#                  280 :full flag is passed
+#                  280 :empty flag is passed
+#                  280 :almost full is passed
+#                  280 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  700 :read pointer =  1,write pointer =  0 
+#                  700 :read data is passed
+#                  700 :actual read =  36, expected read =  36 
+#                  700 :full flag is passed
+#                  700 :empty flag is passed
+#                  700 :almost full is passed
+#                  700 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  740 :read pointer =  2,write pointer =  0 
+#                  740 :read data is passed
+#                  740 :actual read = 129, expected read = 129 
+#                  740 :full flag is passed
+#                  740 :empty flag is passed
+#                  740 :almost full is passed
+#                  740 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  780 :read pointer =  3,write pointer =  0 
+#                  780 :read data is passed
+#                  780 :actual read =   9, expected read =   9 
+#                  780 :full flag is passed
+#                  780 :empty flag is passed
+#                  780 :almost full is passed
+#                  780 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  820 :read pointer =  4,write pointer =  0 
+#                  820 :read data is passed
+#                  820 :actual read =  99, expected read =  99 
+#                  820 :full flag is passed
+#                  820 :empty flag is passed
+#                  820 :almost full is passed
+#                  820 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  860 :read pointer =  5,write pointer =  0 
+#                  860 :read data is passed
+#                  860 :actual read =  13, expected read =  13 
+#                  860 :full flag is passed
+#                  860 :empty flag is passed
+#                  860 :almost full is passed
+#                  860 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  900 :read pointer =  6,write pointer =  0 
+#                  900 :read data is passed
+#                  900 :actual read = 141, expected read = 141 
+#                  900 :full flag is passed
+#                  900 :empty flag is passed
+#                  900 :almost full is passed
+#                  900 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  940 :read pointer =  7,write pointer =  0 
+#                  940 :read data is passed
+#                  940 :actual read = 101, expected read = 101 
+#                  940 :full flag is passed
+#                  940 :empty flag is passed
+#                  940 :almost full is passed
+#                  940 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  980 :read pointer =  8,write pointer =  0 
+#                  980 :read data is passed
+#                  980 :actual read =  18, expected read =  18 
+#                  980 :full flag is passed
+#                  980 :empty flag is passed
+#                  980 :almost full is passed
+#                  980 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1020 :read pointer =  9,write pointer =  0 
+#                 1020 :read data is passed
+#                 1020 :actual read =   1, expected read =   1 
+#                 1020 :full flag is passed
+#                 1020 :empty flag is passed
+#                 1020 :almost full is passed
+#                 1020 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1060 :read pointer = 10,write pointer =  0 
+#                 1060 :read data is passed
+#                 1060 :actual read =  13, expected read =  13 
+#                 1060 :full flag is passed
+#                 1060 :empty flag is passed
+#                 1060 :almost full is passed
+#                 1060 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1100 :read pointer = 11,write pointer =  0 
+#                 1100 :read data is passed
+#                 1100 :actual read = 118, expected read = 118 
+#                 1100 :full flag is passed
+#                 1100 :empty flag is passed
+#                 1100 :almost full is passed
+#                 1100 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1140 :read pointer = 12,write pointer =  0 
+#                 1140 :read data is passed
+#                 1140 :actual read =  61, expected read =  61 
+#                 1140 :full flag is passed
+#                 1140 :empty flag is passed
+#                 1140 :almost full is passed
+#                 1140 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1180 :read pointer = 13,write pointer =  0 
+#                 1180 :read data is passed
+#                 1180 :actual read = 237, expected read = 237 
+#                 1180 :full flag is passed
+#                 1180 :empty flag is passed
+#                 1180 :almost full is passed
+#                 1180 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1220 :read pointer = 14,write pointer =  0 
+#                 1220 :read data is passed
+#                 1220 :actual read = 140, expected read = 140 
+#                 1220 :full flag is passed
+#                 1220 :empty flag is passed
+#                 1220 :almost full is passed
+#                 1220 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1260 :read pointer = 15,write pointer =  0 
+#                 1260 :read data is passed
+#                 1260 :actual read = 249, expected read = 249 
+#                 1260 :full flag is passed
+#                 1260 :empty flag is passed
+#                 1260 :almost full is passed
+#                 1260 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1300 :read pointer =  0,write pointer =  0 
+#                 1300 :read data is passed
+#                 1300 :actual read = 198, expected read = 198 
+#                 1300 :full flag is passed
+#                 1300 :empty flag is passed
+#                 1300 :almost full is passed
+#                 1300 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1720 :read pointer =  0,write pointer =  0 
+#                 1720 :read data is passed
+#                 1720 :actual read =   0, expected read =   0 
+#                 1720 :full flag is passed
+#                 1720 :empty flag is passed
+#                 1720 :almost full is passed
+#                 1720 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2140 :read pointer =  1,write pointer =  0 
+#                 2140 :read data is passed
+#                 2140 :actual read = 128, expected read = 128 
+#                 2140 :full flag is passed
+#                 2140 :empty flag is passed
+#                 2140 :almost full is passed
+#                 2140 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2180 :read pointer =  2,write pointer =  0 
+#                 2180 :read data is passed
+#                 2180 :actual read =  32, expected read =  32 
+#                 2180 :full flag is passed
+#                 2180 :empty flag is passed
+#                 2180 :almost full is passed
+#                 2180 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2220 :read pointer =  3,write pointer =  0 
+#                 2220 :read data is passed
+#                 2220 :actual read = 170, expected read = 170 
+#                 2220 :full flag is passed
+#                 2220 :empty flag is passed
+#                 2220 :almost full is passed
+#                 2220 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2260 :read pointer =  4,write pointer =  0 
+#                 2260 :read data is passed
+#                 2260 :actual read = 157, expected read = 157 
+#                 2260 :full flag is passed
+#                 2260 :empty flag is passed
+#                 2260 :almost full is passed
+#                 2260 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2300 :read pointer =  5,write pointer =  0 
+#                 2300 :read data is passed
+#                 2300 :actual read = 150, expected read = 150 
+#                 2300 :full flag is passed
+#                 2300 :empty flag is passed
+#                 2300 :almost full is passed
+#                 2300 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2340 :read pointer =  6,write pointer =  0 
+#                 2340 :read data is passed
+#                 2340 :actual read =  19, expected read =  19 
+#                 2340 :full flag is passed
+#                 2340 :empty flag is passed
+#                 2340 :almost full is passed
+#                 2340 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2380 :read pointer =  7,write pointer =  0 
+#                 2380 :read data is passed
+#                 2380 :actual read =  13, expected read =  13 
+#                 2380 :full flag is passed
+#                 2380 :empty flag is passed
+#                 2380 :almost full is passed
+#                 2380 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2420 :read pointer =  8,write pointer =  0 
+#                 2420 :read data is passed
+#                 2420 :actual read =  83, expected read =  83 
+#                 2420 :full flag is passed
+#                 2420 :empty flag is passed
+#                 2420 :almost full is passed
+#                 2420 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2680 :read pointer =  0,write pointer =  0 
+#                 2680 :read data is passed
+#                 2680 :actual read =   0, expected read =   0 
+#                 2680 :full flag is passed
+#                 2680 :empty flag is passed
+#                 2680 :almost full is passed
+#                 2680 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3100 :read pointer =  1,write pointer =  0 
+#                 3100 :read data is passed
+#                 3100 :actual read = 235, expected read = 235 
+#                 3100 :full flag is passed
+#                 3100 :empty flag is passed
+#                 3100 :almost full is passed
+#                 3100 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3140 :read pointer =  2,write pointer =  0 
+#                 3140 :read data is passed
+#                 3140 :actual read = 182, expected read = 182 
+#                 3140 :full flag is passed
+#                 3140 :empty flag is passed
+#                 3140 :almost full is passed
+#                 3140 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3180 :read pointer =  3,write pointer =  0 
+#                 3180 :read data is passed
+#                 3180 :actual read = 198, expected read = 198 
+#                 3180 :full flag is passed
+#                 3180 :empty flag is passed
+#                 3180 :almost full is passed
+#                 3180 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3220 :read pointer =  4,write pointer =  0 
+#                 3220 :read data is passed
+#                 3220 :actual read = 174, expected read = 174 
+#                 3220 :full flag is passed
+#                 3220 :empty flag is passed
+#                 3220 :almost full is passed
+#                 3220 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3260 :read pointer =  5,write pointer =  0 
+#                 3260 :read data is passed
+#                 3260 :actual read = 188, expected read = 188 
+#                 3260 :full flag is passed
+#                 3260 :empty flag is passed
+#                 3260 :almost full is passed
+#                 3260 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3300 :read pointer =  6,write pointer =  0 
+#                 3300 :read data is passed
+#                 3300 :actual read =  42, expected read =  42 
+#                 3300 :full flag is passed
+#                 3300 :empty flag is passed
+#                 3300 :almost full is passed
+#                 3300 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3340 :read pointer =  7,write pointer =  0 
+#                 3340 :read data is passed
+#                 3340 :actual read =  11, expected read =  11 
+#                 3340 :full flag is passed
+#                 3340 :empty flag is passed
+#                 3340 :almost full is passed
+#                 3340 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3380 :read pointer =  8,write pointer =  0 
+#                 3380 :read data is passed
+#                 3380 :actual read = 113, expected read = 113 
+#                 3380 :full flag is passed
+#                 3380 :empty flag is passed
+#                 3380 :almost full is passed
+#                 3380 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3420 :read pointer =  9,write pointer =  0 
+#                 3420 :read data is passed
+#                 3420 :actual read = 133, expected read = 133 
+#                 3420 :full flag is passed
+#                 3420 :empty flag is passed
+#                 3420 :almost full is passed
+#                 3420 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3460 :read pointer = 10,write pointer =  0 
+#                 3460 :read data is passed
+#                 3460 :actual read =  79, expected read =  79 
+#                 3460 :full flag is passed
+#                 3460 :empty flag is passed
+#                 3460 :almost full is passed
+#                 3460 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3500 :read pointer = 11,write pointer =  0 
+#                 3500 :read data is passed
+#                 3500 :actual read =  59, expected read =  59 
+#                 3500 :full flag is passed
+#                 3500 :empty flag is passed
+#                 3500 :almost full is passed
+#                 3500 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3540 :read pointer = 12,write pointer =  0 
+#                 3540 :read data is passed
+#                 3540 :actual read =  58, expected read =  58 
+#                 3540 :full flag is passed
+#                 3540 :empty flag is passed
+#                 3540 :almost full is passed
+#                 3540 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3580 :read pointer = 13,write pointer =  0 
+#                 3580 :read data is passed
+#                 3580 :actual read = 126, expected read = 126 
+#                 3580 :full flag is passed
+#                 3580 :empty flag is passed
+#                 3580 :almost full is passed
+#                 3580 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3620 :read pointer = 14,write pointer =  0 
+#                 3620 :read data is passed
+#                 3620 :actual read =  21, expected read =  21 
+#                 3620 :full flag is passed
+#                 3620 :empty flag is passed
+#                 3620 :almost full is passed
+#                 3620 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3660 :read pointer = 15,write pointer =  0 
+#                 3660 :read data is passed
+#                 3660 :actual read = 241, expected read = 241 
+#                 3660 :full flag is passed
+#                 3660 :empty flag is passed
+#                 3660 :almost full is passed
+#                 3660 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3700 :read pointer =  0,write pointer =  0 
+#                 3700 :read data is passed
+#                 3700 :actual read = 217, expected read = 217 
+#                 3700 :full flag is passed
+#                 3700 :empty flag is passed
+#                 3700 :almost full is passed
+#                 3700 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4140 :read pointer =  1,write pointer =  0 
+#                 4140 :read data is passed
+#                 4140 :actual read =  98, expected read =  98 
+#                 4140 :full flag is passed
+#                 4140 :empty flag is passed
+#                 4140 :almost full is passed
+#                 4140 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4180 :read pointer =  2,write pointer =  0 
+#                 4180 :read data is passed
+#                 4180 :actual read =  76, expected read =  76 
+#                 4180 :full flag is passed
+#                 4180 :empty flag is passed
+#                 4180 :almost full is passed
+#                 4180 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4220 :read pointer =  3,write pointer =  0 
+#                 4220 :read data is passed
+#                 4220 :actual read = 159, expected read = 159 
+#                 4220 :full flag is passed
+#                 4220 :empty flag is passed
+#                 4220 :almost full is passed
+#                 4220 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4260 :read pointer =  4,write pointer =  0 
+#                 4260 :read data is passed
+#                 4260 :actual read = 143, expected read = 143 
+#                 4260 :full flag is passed
+#                 4260 :empty flag is passed
+#                 4260 :almost full is passed
+#                 4260 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4300 :read pointer =  5,write pointer =  0 
+#                 4300 :read data is passed
+#                 4300 :actual read = 248, expected read = 248 
+#                 4300 :full flag is passed
+#                 4300 :empty flag is passed
+#                 4300 :almost full is passed
+#                 4300 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4340 :read pointer =  6,write pointer =  0 
+#                 4340 :read data is passed
+#                 4340 :actual read = 183, expected read = 183 
+#                 4340 :full flag is passed
+#                 4340 :empty flag is passed
+#                 4340 :almost full is passed
+#                 4340 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4380 :read pointer =  7,write pointer =  0 
+#                 4380 :read data is passed
+#                 4380 :actual read = 159, expected read = 159 
+#                 4380 :full flag is passed
+#                 4380 :empty flag is passed
+#                 4380 :almost full is passed
+#                 4380 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4420 :read pointer =  8,write pointer =  0 
+#                 4420 :read data is passed
+#                 4420 :actual read =  92, expected read =  92 
+#                 4420 :full flag is passed
+#                 4420 :empty flag is passed
+#                 4420 :almost full is passed
+#                 4420 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4460 :read pointer =  9,write pointer =  0 
+#                 4460 :read data is passed
+#                 4460 :actual read =  91, expected read =  91 
+#                 4460 :full flag is passed
+#                 4460 :empty flag is passed
+#                 4460 :almost full is passed
+#                 4460 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4500 :read pointer = 10,write pointer =  0 
+#                 4500 :read data is passed
+#                 4500 :actual read = 137, expected read = 137 
+#                 4500 :full flag is passed
+#                 4500 :empty flag is passed
+#                 4500 :almost full is passed
+#                 4500 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4540 :read pointer = 11,write pointer =  0 
+#                 4540 :read data is passed
+#                 4540 :actual read =  73, expected read =  73 
+#                 4540 :full flag is passed
+#                 4540 :empty flag is passed
+#                 4540 :almost full is passed
+#                 4540 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4580 :read pointer = 12,write pointer =  0 
+#                 4580 :read data is passed
+#                 4580 :actual read = 208, expected read = 208 
+#                 4580 :full flag is passed
+#                 4580 :empty flag is passed
+#                 4580 :almost full is passed
+#                 4580 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4620 :read pointer = 13,write pointer =  0 
+#                 4620 :read data is passed
+#                 4620 :actual read = 215, expected read = 215 
+#                 4620 :full flag is passed
+#                 4620 :empty flag is passed
+#                 4620 :almost full is passed
+#                 4620 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4660 :read pointer = 14,write pointer =  0 
+#                 4660 :read data is passed
+#                 4660 :actual read =  81, expected read =  81 
+#                 4660 :full flag is passed
+#                 4660 :empty flag is passed
+#                 4660 :almost full is passed
+#                 4660 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4700 :read pointer = 15,write pointer =  0 
+#                 4700 :read data is passed
+#                 4700 :actual read = 150, expected read = 150 
+#                 4700 :full flag is passed
+#                 4700 :empty flag is passed
+#                 4700 :almost full is passed
+#                 4700 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4740 :read pointer =  0,write pointer =  0 
+#                 4740 :read data is passed
+#                 4740 :actual read =  12, expected read =  12 
+#                 4740 :full flag is passed
+#                 4740 :empty flag is passed
+#                 4740 :almost full is passed
+#                 4740 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4800 :read pointer =  0,write pointer =  0 
+#                 4800 :read data is passed
+#                 4800 :actual read =   0, expected read =   0 
+#                 4800 :full flag is passed
+#                 4800 :empty flag is passed
+#                 4800 :almost full is passed
+#                 4800 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5180 :read pointer =  1,write pointer =  0 
+#                 5180 :read data is passed
+#                 5180 :actual read = 194, expected read = 194 
+#                 5180 :full flag is passed
+#                 5180 :empty flag is passed
+#                 5180 :almost full is passed
+#                 5180 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5220 :read pointer =  2,write pointer =  0 
+#                 5220 :read data is passed
+#                 5220 :actual read = 200, expected read = 200 
+#                 5220 :full flag is passed
+#                 5220 :empty flag is passed
+#                 5220 :almost full is passed
+#                 5220 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5260 :read pointer =  3,write pointer =  1 
+#                 5260 :read data is passed
+#                 5260 :actual read = 119, expected read = 119 
+#                 5260 :full flag is passed
+#                 5260 :empty flag is passed
+#                 5260 :almost full is passed
+#                 5260 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5300 :read pointer =  4,write pointer =  2 
+#                 5300 :read data is passed
+#                 5300 :actual read =  61, expected read =  61 
+#                 5300 :full flag is passed
+#                 5300 :empty flag is passed
+#                 5300 :almost full is passed
+#                 5300 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5340 :read pointer =  5,write pointer =  3 
+#                 5340 :read data is passed
+#                 5340 :actual read =  18, expected read =  18 
+#                 5340 :full flag is passed
+#                 5340 :empty flag is passed
+#                 5340 :almost full is passed
+#                 5340 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5400 :read pointer =  0,write pointer =  0 
+#                 5400 :read data is passed
+#                 5400 :actual read =   0, expected read =   0 
+#                 5400 :full flag is passed
+#                 5400 :empty flag is passed
+#                 5400 :almost full is passed
+#                 5400 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5780 :read pointer =  1,write pointer =  0 
+#                 5780 :read data is passed
+#                 5780 :actual read = 156, expected read = 156 
+#                 5780 :full flag is passed
+#                 5780 :empty flag is passed
+#                 5780 :almost full is passed
+#                 5780 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5820 :read pointer =  2,write pointer =  0 
+#                 5820 :read data is passed
+#                 5820 :actual read = 250, expected read = 250 
+#                 5820 :full flag is passed
+#                 5820 :empty flag is passed
+#                 5820 :almost full is passed
+#                 5820 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5860 :read pointer =  3,write pointer =  1 
+#                 5860 :read data is passed
+#                 5860 :actual read =  38, expected read =  38 
+#                 5860 :full flag is passed
+#                 5860 :empty flag is passed
+#                 5860 :almost full is passed
+#                 5860 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5900 :read pointer =  4,write pointer =  2 
+#                 5900 :read data is passed
+#                 5900 :actual read = 115, expected read = 115 
+#                 5900 :full flag is passed
+#                 5900 :empty flag is passed
+#                 5900 :almost full is passed
+#                 5900 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5940 :read pointer =  5,write pointer =  3 
+#                 5940 :read data is passed
+#                 5940 :actual read = 163, expected read = 163 
+#                 5940 :full flag is passed
+#                 5940 :empty flag is passed
+#                 5940 :almost full is passed
+#                 5940 :almost empty is passed
+# --------------------------------------------------------------------
+# ** Note: $finish    : tb.v(249)
+#    Time: 6010 ns  Iteration: 0  Instance: /tb
+# End time: 23:29:02 on Apr 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -lib work work.tb -c -do "run -all; quit -f" "+sanity_test" "+fifo_full" "+fifo_empty" "+simultaneous_rw" "+continuous_rw" "+fifo_half_full" 
+# Start time: 23:33:25 on Apr 17,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.tb(fast)
+# run -all
+# --------------------------------------------------------------------
+#                    1 :read pointer =  0,write pointer =  0 
+#                    1 :read data is passed
+#                    1 :actual read =   0, expected read =   0 
+#                    1 :full flag is passed
+#                    1 :empty flag is passed
+#                    1 :almost full is passed
+#                    1 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  181 :read pointer =  1,write pointer =  3 
+#                  181 :read data is passed
+#                  181 :actual read =  23, expected read =  23 
+#                  181 :full flag is passed
+#                  181 :empty flag is passed
+#                  181 :almost full is passed
+#                  181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  221 :read pointer =  2,write pointer =  3 
+#                  221 :read data is passed
+#                  221 :actual read =  56, expected read =  56 
+#                  221 :full flag is passed
+#                  221 :empty flag is passed
+#                  221 :almost full is passed
+#                  221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  281 :read pointer =  0,write pointer =  0 
+#                  281 :read data is passed
+#                  281 :actual read =   0, expected read =   0 
+#                  281 :full flag is passed
+#                  281 :empty flag is passed
+#                  281 :almost full is passed
+#                  281 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  701 :read pointer =  1,write pointer =  0 
+#                  701 :read data is passed
+#                  701 :actual read =  36, expected read =  36 
+#                  701 :full flag is passed
+#                  701 :empty flag is passed
+#                  701 :almost full is passed
+#                  701 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  741 :read pointer =  2,write pointer =  0 
+#                  741 :read data is passed
+#                  741 :actual read = 129, expected read = 129 
+#                  741 :full flag is passed
+#                  741 :empty flag is passed
+#                  741 :almost full is passed
+#                  741 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  781 :read pointer =  3,write pointer =  0 
+#                  781 :read data is passed
+#                  781 :actual read =   9, expected read =   9 
+#                  781 :full flag is passed
+#                  781 :empty flag is passed
+#                  781 :almost full is passed
+#                  781 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  821 :read pointer =  4,write pointer =  0 
+#                  821 :read data is passed
+#                  821 :actual read =  99, expected read =  99 
+#                  821 :full flag is passed
+#                  821 :empty flag is passed
+#                  821 :almost full is passed
+#                  821 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  861 :read pointer =  5,write pointer =  0 
+#                  861 :read data is passed
+#                  861 :actual read =  13, expected read =  13 
+#                  861 :full flag is passed
+#                  861 :empty flag is passed
+#                  861 :almost full is passed
+#                  861 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  901 :read pointer =  6,write pointer =  0 
+#                  901 :read data is passed
+#                  901 :actual read = 141, expected read = 141 
+#                  901 :full flag is passed
+#                  901 :empty flag is passed
+#                  901 :almost full is passed
+#                  901 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  941 :read pointer =  7,write pointer =  0 
+#                  941 :read data is passed
+#                  941 :actual read = 101, expected read = 101 
+#                  941 :full flag is passed
+#                  941 :empty flag is passed
+#                  941 :almost full is passed
+#                  941 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                  981 :read pointer =  8,write pointer =  0 
+#                  981 :read data is passed
+#                  981 :actual read =  18, expected read =  18 
+#                  981 :full flag is passed
+#                  981 :empty flag is passed
+#                  981 :almost full is passed
+#                  981 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1021 :read pointer =  9,write pointer =  0 
+#                 1021 :read data is passed
+#                 1021 :actual read =   1, expected read =   1 
+#                 1021 :full flag is passed
+#                 1021 :empty flag is passed
+#                 1021 :almost full is passed
+#                 1021 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1061 :read pointer = 10,write pointer =  0 
+#                 1061 :read data is passed
+#                 1061 :actual read =  13, expected read =  13 
+#                 1061 :full flag is passed
+#                 1061 :empty flag is passed
+#                 1061 :almost full is passed
+#                 1061 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1101 :read pointer = 11,write pointer =  0 
+#                 1101 :read data is passed
+#                 1101 :actual read = 118, expected read = 118 
+#                 1101 :full flag is passed
+#                 1101 :empty flag is passed
+#                 1101 :almost full is passed
+#                 1101 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1141 :read pointer = 12,write pointer =  0 
+#                 1141 :read data is passed
+#                 1141 :actual read =  61, expected read =  61 
+#                 1141 :full flag is passed
+#                 1141 :empty flag is passed
+#                 1141 :almost full is passed
+#                 1141 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1181 :read pointer = 13,write pointer =  0 
+#                 1181 :read data is passed
+#                 1181 :actual read = 237, expected read = 237 
+#                 1181 :full flag is passed
+#                 1181 :empty flag is passed
+#                 1181 :almost full is passed
+#                 1181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1221 :read pointer = 14,write pointer =  0 
+#                 1221 :read data is passed
+#                 1221 :actual read = 140, expected read = 140 
+#                 1221 :full flag is passed
+#                 1221 :empty flag is passed
+#                 1221 :almost full is passed
+#                 1221 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1261 :read pointer = 15,write pointer =  0 
+#                 1261 :read data is passed
+#                 1261 :actual read = 249, expected read = 249 
+#                 1261 :full flag is passed
+#                 1261 :empty flag is passed
+#                 1261 :almost full is passed
+#                 1261 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1301 :read pointer =  0,write pointer =  0 
+#                 1301 :read data is passed
+#                 1301 :actual read = 198, expected read = 198 
+#                 1301 :full flag is passed
+#                 1301 :empty flag is passed
+#                 1301 :almost full is passed
+#                 1301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 1721 :read pointer =  0,write pointer =  0 
+#                 1721 :read data is passed
+#                 1721 :actual read =   0, expected read =   0 
+#                 1721 :full flag is passed
+#                 1721 :empty flag is passed
+#                 1721 :almost full is passed
+#                 1721 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2141 :read pointer =  1,write pointer =  0 
+#                 2141 :read data is passed
+#                 2141 :actual read = 128, expected read = 128 
+#                 2141 :full flag is passed
+#                 2141 :empty flag is passed
+#                 2141 :almost full is passed
+#                 2141 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2181 :read pointer =  2,write pointer =  0 
+#                 2181 :read data is passed
+#                 2181 :actual read =  32, expected read =  32 
+#                 2181 :full flag is passed
+#                 2181 :empty flag is passed
+#                 2181 :almost full is passed
+#                 2181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2221 :read pointer =  3,write pointer =  0 
+#                 2221 :read data is passed
+#                 2221 :actual read = 170, expected read = 170 
+#                 2221 :full flag is passed
+#                 2221 :empty flag is passed
+#                 2221 :almost full is passed
+#                 2221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2261 :read pointer =  4,write pointer =  0 
+#                 2261 :read data is passed
+#                 2261 :actual read = 157, expected read = 157 
+#                 2261 :full flag is passed
+#                 2261 :empty flag is passed
+#                 2261 :almost full is passed
+#                 2261 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2301 :read pointer =  5,write pointer =  0 
+#                 2301 :read data is passed
+#                 2301 :actual read = 150, expected read = 150 
+#                 2301 :full flag is passed
+#                 2301 :empty flag is passed
+#                 2301 :almost full is passed
+#                 2301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2341 :read pointer =  6,write pointer =  0 
+#                 2341 :read data is passed
+#                 2341 :actual read =  19, expected read =  19 
+#                 2341 :full flag is passed
+#                 2341 :empty flag is passed
+#                 2341 :almost full is passed
+#                 2341 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2381 :read pointer =  7,write pointer =  0 
+#                 2381 :read data is passed
+#                 2381 :actual read =  13, expected read =  13 
+#                 2381 :full flag is passed
+#                 2381 :empty flag is passed
+#                 2381 :almost full is passed
+#                 2381 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2421 :read pointer =  8,write pointer =  0 
+#                 2421 :read data is passed
+#                 2421 :actual read =  83, expected read =  83 
+#                 2421 :full flag is passed
+#                 2421 :empty flag is passed
+#                 2421 :almost full is passed
+#                 2421 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 2681 :read pointer =  0,write pointer =  0 
+#                 2681 :read data is passed
+#                 2681 :actual read =   0, expected read =   0 
+#                 2681 :full flag is passed
+#                 2681 :empty flag is passed
+#                 2681 :almost full is passed
+#                 2681 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3101 :read pointer =  1,write pointer =  0 
+#                 3101 :read data is passed
+#                 3101 :actual read = 235, expected read = 235 
+#                 3101 :full flag is passed
+#                 3101 :empty flag is passed
+#                 3101 :almost full is passed
+#                 3101 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3141 :read pointer =  2,write pointer =  0 
+#                 3141 :read data is passed
+#                 3141 :actual read = 182, expected read = 182 
+#                 3141 :full flag is passed
+#                 3141 :empty flag is passed
+#                 3141 :almost full is passed
+#                 3141 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3181 :read pointer =  3,write pointer =  0 
+#                 3181 :read data is passed
+#                 3181 :actual read = 198, expected read = 198 
+#                 3181 :full flag is passed
+#                 3181 :empty flag is passed
+#                 3181 :almost full is passed
+#                 3181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3221 :read pointer =  4,write pointer =  0 
+#                 3221 :read data is passed
+#                 3221 :actual read = 174, expected read = 174 
+#                 3221 :full flag is passed
+#                 3221 :empty flag is passed
+#                 3221 :almost full is passed
+#                 3221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3261 :read pointer =  5,write pointer =  0 
+#                 3261 :read data is passed
+#                 3261 :actual read = 188, expected read = 188 
+#                 3261 :full flag is passed
+#                 3261 :empty flag is passed
+#                 3261 :almost full is passed
+#                 3261 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3301 :read pointer =  6,write pointer =  0 
+#                 3301 :read data is passed
+#                 3301 :actual read =  42, expected read =  42 
+#                 3301 :full flag is passed
+#                 3301 :empty flag is passed
+#                 3301 :almost full is passed
+#                 3301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3341 :read pointer =  7,write pointer =  0 
+#                 3341 :read data is passed
+#                 3341 :actual read =  11, expected read =  11 
+#                 3341 :full flag is passed
+#                 3341 :empty flag is passed
+#                 3341 :almost full is passed
+#                 3341 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3381 :read pointer =  8,write pointer =  0 
+#                 3381 :read data is passed
+#                 3381 :actual read = 113, expected read = 113 
+#                 3381 :full flag is passed
+#                 3381 :empty flag is passed
+#                 3381 :almost full is passed
+#                 3381 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3421 :read pointer =  9,write pointer =  0 
+#                 3421 :read data is passed
+#                 3421 :actual read = 133, expected read = 133 
+#                 3421 :full flag is passed
+#                 3421 :empty flag is passed
+#                 3421 :almost full is passed
+#                 3421 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3461 :read pointer = 10,write pointer =  0 
+#                 3461 :read data is passed
+#                 3461 :actual read =  79, expected read =  79 
+#                 3461 :full flag is passed
+#                 3461 :empty flag is passed
+#                 3461 :almost full is passed
+#                 3461 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3501 :read pointer = 11,write pointer =  0 
+#                 3501 :read data is passed
+#                 3501 :actual read =  59, expected read =  59 
+#                 3501 :full flag is passed
+#                 3501 :empty flag is passed
+#                 3501 :almost full is passed
+#                 3501 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3541 :read pointer = 12,write pointer =  0 
+#                 3541 :read data is passed
+#                 3541 :actual read =  58, expected read =  58 
+#                 3541 :full flag is passed
+#                 3541 :empty flag is passed
+#                 3541 :almost full is passed
+#                 3541 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3581 :read pointer = 13,write pointer =  0 
+#                 3581 :read data is passed
+#                 3581 :actual read = 126, expected read = 126 
+#                 3581 :full flag is passed
+#                 3581 :empty flag is passed
+#                 3581 :almost full is passed
+#                 3581 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3621 :read pointer = 14,write pointer =  0 
+#                 3621 :read data is passed
+#                 3621 :actual read =  21, expected read =  21 
+#                 3621 :full flag is passed
+#                 3621 :empty flag is passed
+#                 3621 :almost full is passed
+#                 3621 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3661 :read pointer = 15,write pointer =  0 
+#                 3661 :read data is passed
+#                 3661 :actual read = 241, expected read = 241 
+#                 3661 :full flag is passed
+#                 3661 :empty flag is passed
+#                 3661 :almost full is passed
+#                 3661 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 3701 :read pointer =  0,write pointer =  0 
+#                 3701 :read data is passed
+#                 3701 :actual read = 217, expected read = 217 
+#                 3701 :full flag is passed
+#                 3701 :empty flag is passed
+#                 3701 :almost full is passed
+#                 3701 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4141 :read pointer =  1,write pointer =  0 
+#                 4141 :read data is passed
+#                 4141 :actual read =  98, expected read =  98 
+#                 4141 :full flag is passed
+#                 4141 :empty flag is passed
+#                 4141 :almost full is passed
+#                 4141 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4181 :read pointer =  2,write pointer =  0 
+#                 4181 :read data is passed
+#                 4181 :actual read =  76, expected read =  76 
+#                 4181 :full flag is passed
+#                 4181 :empty flag is passed
+#                 4181 :almost full is passed
+#                 4181 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4221 :read pointer =  3,write pointer =  0 
+#                 4221 :read data is passed
+#                 4221 :actual read = 159, expected read = 159 
+#                 4221 :full flag is passed
+#                 4221 :empty flag is passed
+#                 4221 :almost full is passed
+#                 4221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4261 :read pointer =  4,write pointer =  0 
+#                 4261 :read data is passed
+#                 4261 :actual read = 143, expected read = 143 
+#                 4261 :full flag is passed
+#                 4261 :empty flag is passed
+#                 4261 :almost full is passed
+#                 4261 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4301 :read pointer =  5,write pointer =  0 
+#                 4301 :read data is passed
+#                 4301 :actual read = 248, expected read = 248 
+#                 4301 :full flag is passed
+#                 4301 :empty flag is passed
+#                 4301 :almost full is passed
+#                 4301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4341 :read pointer =  6,write pointer =  0 
+#                 4341 :read data is passed
+#                 4341 :actual read = 183, expected read = 183 
+#                 4341 :full flag is passed
+#                 4341 :empty flag is passed
+#                 4341 :almost full is passed
+#                 4341 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4381 :read pointer =  7,write pointer =  0 
+#                 4381 :read data is passed
+#                 4381 :actual read = 159, expected read = 159 
+#                 4381 :full flag is passed
+#                 4381 :empty flag is passed
+#                 4381 :almost full is passed
+#                 4381 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4421 :read pointer =  8,write pointer =  0 
+#                 4421 :read data is passed
+#                 4421 :actual read =  92, expected read =  92 
+#                 4421 :full flag is passed
+#                 4421 :empty flag is passed
+#                 4421 :almost full is passed
+#                 4421 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4461 :read pointer =  9,write pointer =  0 
+#                 4461 :read data is passed
+#                 4461 :actual read =  91, expected read =  91 
+#                 4461 :full flag is passed
+#                 4461 :empty flag is passed
+#                 4461 :almost full is passed
+#                 4461 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4501 :read pointer = 10,write pointer =  0 
+#                 4501 :read data is passed
+#                 4501 :actual read = 137, expected read = 137 
+#                 4501 :full flag is passed
+#                 4501 :empty flag is passed
+#                 4501 :almost full is passed
+#                 4501 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4541 :read pointer = 11,write pointer =  0 
+#                 4541 :read data is passed
+#                 4541 :actual read =  73, expected read =  73 
+#                 4541 :full flag is passed
+#                 4541 :empty flag is passed
+#                 4541 :almost full is passed
+#                 4541 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4581 :read pointer = 12,write pointer =  0 
+#                 4581 :read data is passed
+#                 4581 :actual read = 208, expected read = 208 
+#                 4581 :full flag is passed
+#                 4581 :empty flag is passed
+#                 4581 :almost full is passed
+#                 4581 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4621 :read pointer = 13,write pointer =  0 
+#                 4621 :read data is passed
+#                 4621 :actual read = 215, expected read = 215 
+#                 4621 :full flag is passed
+#                 4621 :empty flag is passed
+#                 4621 :almost full is passed
+#                 4621 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4661 :read pointer = 14,write pointer =  0 
+#                 4661 :read data is passed
+#                 4661 :actual read =  81, expected read =  81 
+#                 4661 :full flag is passed
+#                 4661 :empty flag is passed
+#                 4661 :almost full is passed
+#                 4661 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4701 :read pointer = 15,write pointer =  0 
+#                 4701 :read data is passed
+#                 4701 :actual read = 150, expected read = 150 
+#                 4701 :full flag is passed
+#                 4701 :empty flag is passed
+#                 4701 :almost full is passed
+#                 4701 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4741 :read pointer =  0,write pointer =  0 
+#                 4741 :read data is passed
+#                 4741 :actual read =  12, expected read =  12 
+#                 4741 :full flag is passed
+#                 4741 :empty flag is passed
+#                 4741 :almost full is passed
+#                 4741 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 4801 :read pointer =  0,write pointer =  0 
+#                 4801 :read data is passed
+#                 4801 :actual read =   0, expected read =   0 
+#                 4801 :full flag is passed
+#                 4801 :empty flag is passed
+#                 4801 :almost full is passed
+#                 4801 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5181 :read pointer =  1,write pointer =  0 
+#                 5181 :read data is passed
+#                 5181 :actual read = 194, expected read = 194 
+#                 5181 :full flag is passed
+#                 5181 :empty flag is passed
+#                 5181 :almost full is passed
+#                 5181 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5221 :read pointer =  2,write pointer =  0 
+#                 5221 :read data is passed
+#                 5221 :actual read = 200, expected read = 200 
+#                 5221 :full flag is passed
+#                 5221 :empty flag is passed
+#                 5221 :almost full is passed
+#                 5221 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5261 :read pointer =  3,write pointer =  1 
+#                 5261 :read data is passed
+#                 5261 :actual read = 119, expected read = 119 
+#                 5261 :full flag is passed
+#                 5261 :empty flag is passed
+#                 5261 :almost full is passed
+#                 5261 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5301 :read pointer =  4,write pointer =  2 
+#                 5301 :read data is passed
+#                 5301 :actual read =  61, expected read =  61 
+#                 5301 :full flag is passed
+#                 5301 :empty flag is passed
+#                 5301 :almost full is passed
+#                 5301 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5341 :read pointer =  5,write pointer =  3 
+#                 5341 :read data is passed
+#                 5341 :actual read =  18, expected read =  18 
+#                 5341 :full flag is passed
+#                 5341 :empty flag is passed
+#                 5341 :almost full is passed
+#                 5341 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5401 :read pointer =  0,write pointer =  0 
+#                 5401 :read data is passed
+#                 5401 :actual read =   0, expected read =   0 
+#                 5401 :full flag is passed
+#                 5401 :empty flag is passed
+#                 5401 :almost full is passed
+#                 5401 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5781 :read pointer =  1,write pointer =  0 
+#                 5781 :read data is passed
+#                 5781 :actual read = 156, expected read = 156 
+#                 5781 :full flag is passed
+#                 5781 :empty flag is passed
+#                 5781 :almost full is passed
+#                 5781 :almost empty is failed 
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5821 :read pointer =  2,write pointer =  0 
+#                 5821 :read data is passed
+#                 5821 :actual read = 250, expected read = 250 
+#                 5821 :full flag is passed
+#                 5821 :empty flag is passed
+#                 5821 :almost full is passed
+#                 5821 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5861 :read pointer =  3,write pointer =  1 
+#                 5861 :read data is passed
+#                 5861 :actual read =  38, expected read =  38 
+#                 5861 :full flag is passed
+#                 5861 :empty flag is passed
+#                 5861 :almost full is passed
+#                 5861 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5901 :read pointer =  4,write pointer =  2 
+#                 5901 :read data is passed
+#                 5901 :actual read = 115, expected read = 115 
+#                 5901 :full flag is passed
+#                 5901 :empty flag is passed
+#                 5901 :almost full is passed
+#                 5901 :almost empty is passed
+# --------------------------------------------------------------------
+# --------------------------------------------------------------------
+#                 5941 :read pointer =  5,write pointer =  3 
+#                 5941 :read data is passed
+#                 5941 :actual read = 163, expected read = 163 
+#                 5941 :full flag is passed
+#                 5941 :empty flag is passed
+#                 5941 :almost full is passed
+#                 5941 :almost empty is passed
+# --------------------------------------------------------------------
+# ** Note: $finish    : tb.v(249)
+#    Time: 6010 ns  Iteration: 0  Instance: /tb
+# End time: 23:33:26 on Apr 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

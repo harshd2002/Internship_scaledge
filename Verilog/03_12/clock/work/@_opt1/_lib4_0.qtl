@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/users/Admin/Documents/Internship_Indeeksha/Verilog/03_12/clock
+T_opt
+!s110 1710310985
+VPF9`?Xm<eX8_JZ`hzX_g@0
+Z1 04 5 4 work intra fast 0
+=1-54ee7509668a-65f14649-f0-18dc
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1710311343
+V4lZkIPHj8VNXFMg`k4CTI1
+R1
+=1-54ee7509668a-65f147af-119-1fcc
+o-quiet -auto_acc_if_foreign -work work +acc
+R2
+n@_opt1
+R3
+vintra
+!s110 1710311338
+!i10b 1
+!s100 VW4=K3A5CQ0k96LhXFPJT3
+IihfX_<:GS4FbimHodzZNH3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1710311334
+8clock.v
+Fclock.v
+L0 4
+OL;L;10.7c;67
+r1
+!s85 0
+31
+!s108 1710311338.000000
+!s107 clock.v|
+!s90 -reportprogress|300|clock.v|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2

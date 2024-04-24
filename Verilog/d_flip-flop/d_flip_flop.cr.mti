@@ -1,0 +1,13 @@
+C:/Users/Lenovo/Documents/internship_verilog/d_flip-flop/test.v {0 {vlog -work work -vopt -stats=none {C:\Users\Lenovo\Documents\internship_verilog\d_flip-flop\test.v}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module test
+** Error: (vlog-13069) C:\Users\Lenovo\Documents\internship_verilog\d_flip-flop\test.v(11): near "and": syntax error, unexpected and, expecting or or ')' or ','.
+
+} {4.0 5.0} {}} C:/Users/Lenovo/Documents/internship_verilog/d_flip-flop/tb.v {1 {vlog -work work -vopt -stats=none {C:\Users\Lenovo\Documents\internship_verilog\d_flip-flop\tb.v}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}}

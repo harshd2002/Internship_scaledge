@@ -1,0 +1,34 @@
+$date
+	Wed Apr 17 23:33:26 2024
+$end
+$version
+	QuestaSim Version 10.7c
+$end
+$timescale
+	1ps
+$end
+
+$scope module tb $end
+
+$scope task wr_resetn $end
+$upscope $end
+
+$scope task rd_resetn $end
+$upscope $end
+
+$scope task write $end
+$upscope $end
+
+$scope task read $end
+$upscope $end
+
+$scope module dut $end
+
+$scope function grey_binary $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+$end
