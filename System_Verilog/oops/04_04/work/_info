@@ -1,0 +1,67 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/Internship_Indeeksha/System_Verilog/04_04
+T_opt
+!s110 1712310827
+VP>G`N1a<1Gz<In8ZocUI31
+04 19 4 work constant_ex_sv_unit fast 0
+04 16 4 work constant_example fast 0
+=1-54ee7509668a-660fca2b-11c-3720
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+Xconstant_ex_sv_unit
+Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+V4GWRN`gkg43=boHMX>alW3
+r1
+!s85 0
+!i10b 1
+!s100 FBk@<RWiCZBg5h]^B`X8`1
+I4GWRN`gkg43=boHMX>alW3
+!i103 1
+S1
+R0
+Z3 w1712310821
+Z4 8constant_ex.sv
+Z5 Fconstant_ex.sv
+L0 1
+Z6 OL;L;10.7c;67
+31
+Z7 !s108 1712310825.000000
+Z8 !s107 constant_ex.sv|
+Z9 !s90 constant_ex.sv|
+!i113 0
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vconstant_example
+R2
+DXx4 work 19 constant_ex_sv_unit 0 22 4GWRN`gkg43=boHMX>alW3
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 Z:ILZ9iKS@D0cNn<`UAcQ2
+IUFh?]JB?L^GYJjXgBbYLS1
+!s105 constant_ex_sv_unit
+S1
+R0
+R3
+R4
+R5
+L0 9
+R6
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1

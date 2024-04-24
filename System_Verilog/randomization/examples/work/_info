@@ -1,0 +1,391 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/Internship_Indeeksha/System_Verilog/randomization
+T_opt
+!s110 1713860085
+V[<2fULjQMZkCUgjBXG^QY2
+04 21 4 work random_handle_sv_unit fast 0
+04 13 4 work random_handle fast 0
+=1-54ee7509668a-66276df5-2b5-2498
+Z1 o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+T_opt1
+!s110 1713859986
+VmNT^f5FAcQ[@_lXNK@d8Q3
+04 23 4 work rand_constraint_sv_unit fast 0
+04 15 4 work rand_constraint fast 0
+=1-54ee7509668a-66276d92-268-4014
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1712820418
+V<^^Pm3kM2Q7AF7;aV8nfd2
+04 30 4 work constraint_implication_sv_unit fast 0
+04 16 4 work constraint_types fast 0
+=1-54ee7509668a-661790c1-2ae-1758
+R1
+R2
+n@_opt2
+R3
+R0
+Xconstraint_implication_sv_unit
+Z4 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+VKk5P_9gS[ENQX9YZXSo9C2
+r1
+!s85 0
+!i10b 1
+!s100 59Gm:dYD>ah=POelbJX7B3
+IKk5P_9gS[ENQX9YZXSo9C2
+!i103 1
+S1
+R0
+Z5 w1712820414
+Z6 8constraint_implication.sv
+Z7 Fconstraint_implication.sv
+L0 1
+Z8 OL;L;10.7c;67
+31
+Z9 !s108 1712820415.000000
+Z10 !s107 constraint_implication.sv|
+Z11 !s90 constraint_implication.sv|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+Xconstraint_soft_sv_unit
+R4
+V36M=SkgfLT5N^mlK`_I<41
+r1
+!s85 0
+!i10b 1
+!s100 [ZJI?d5F;D<;>PO3Bbd@43
+I36M=SkgfLT5N^mlK`_I<41
+!i103 1
+S1
+R0
+w1712749502
+8constraint_soft.sv
+Fconstraint_soft.sv
+L0 1
+R8
+31
+!s108 1712751327.000000
+!s107 constraint_soft.sv|
+!s90 constraint_soft.sv|
+!i113 0
+R12
+R2
+vconstraint_types
+R4
+DXx4 work 30 constraint_implication_sv_unit 0 22 Kk5P_9gS[ENQX9YZXSo9C2
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 DGG4cG2_hhU4R`gUKHSZ43
+I;@M`meBV;4;7QzM0m0c_Q2
+!s105 constraint_implication_sv_unit
+S1
+R0
+R5
+R6
+R7
+L0 15
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R2
+Xconstraint_types_sv_unit
+R4
+V]D6AjP6AOh29g^KFemR7F3
+r1
+!s85 0
+!i10b 1
+!s100 [K3c`UDGQj^HBS>gCnAP<0
+I]D6AjP6AOh29g^KFemR7F3
+!i103 1
+S1
+R0
+w1712747034
+8constraint_types.sv
+Fconstraint_types.sv
+L0 1
+R8
+31
+!s108 1712747035.000000
+!s107 constraint_types.sv|
+!s90 constraint_types.sv|
+!i113 0
+R12
+R2
+vpattern_consrtaint
+R4
+!s110 1712663485
+!i10b 1
+!s100 FB^gT5oaSgKUCPBIHSWjl2
+IF<]3`dBDLYNee7Ub`@aM;0
+R13
+!s105 pattern_consttraint_sv_unit
+S1
+R0
+Z14 w1712663464
+Z15 8pattern_consttraint.sv
+Z16 Fpattern_consttraint.sv
+L0 20
+R8
+r1
+!s85 0
+31
+Z17 !s108 1712663484.000000
+Z18 !s107 pattern_consttraint.sv|
+Z19 !s90 pattern_consttraint.sv|
+!i113 0
+R12
+R2
+Xpattern_consttraint_sv_unit
+R4
+!i10b 1
+!s100 EXeKZ6;?o<Ao7O?^hhW0d0
+I4Sb_Q1QfBAOC@cmk;YNYQ3
+V4Sb_Q1QfBAOC@cmk;YNYQ3
+!i103 1
+S1
+R0
+R14
+R15
+R16
+L0 1
+R8
+31
+R17
+R18
+R19
+!i113 0
+R12
+R2
+vrand_constraint
+R4
+DXx4 work 23 rand_constraint_sv_unit 0 22 Z^02d;3g:RMS]Zn87Vcbn2
+R13
+r1
+!s85 0
+!i10b 1
+!s100 5LioTe==dVgiBTIQlkS^^1
+I:f<SIH?F[of:o;73V78o_1
+!s105 rand_constraint_sv_unit
+S1
+Z20 dC:/Users/Admin/Documents/Internship_Indeeksha/System_Verilog/randomization/examples
+Z21 w1712743392
+Z22 8rand_constraint.sv
+Z23 Frand_constraint.sv
+Z24 L0 24
+R8
+31
+Z25 !s108 1713859983.000000
+Z26 !s107 rand_constraint.sv|
+Z27 !s90 rand_constraint.sv|
+!i113 0
+R12
+R2
+Xrand_constraint_sv_unit
+R4
+VZ^02d;3g:RMS]Zn87Vcbn2
+r1
+!s85 0
+!i10b 1
+!s100 >JVgh<]Wnd>c^^b9iXA`X3
+IZ^02d;3g:RMS]Zn87Vcbn2
+!i103 1
+S1
+R20
+R21
+R22
+R23
+L0 1
+R8
+31
+R25
+R26
+R27
+!i113 0
+R12
+R2
+vrand_inher
+R4
+DXx4 work 18 rand_inher_sv_unit 0 22 I8An`d6dLSL3IB3TQ?^]20
+R13
+r1
+!s85 0
+!i10b 1
+!s100 U6GoNbd[2V99zQeRQaQUQ3
+I=gM_<SMMnTc2JYcdT3e4U2
+!s105 rand_inher_sv_unit
+S1
+R0
+Z28 w1712746384
+Z29 8rand_inher.sv
+Z30 Frand_inher.sv
+L0 33
+R8
+31
+Z31 !s108 1712746386.000000
+Z32 !s107 rand_inher.sv|
+Z33 !s90 rand_inher.sv|
+!i113 0
+R12
+R2
+Xrand_inher_sv_unit
+R4
+VI8An`d6dLSL3IB3TQ?^]20
+r1
+!s85 0
+!i10b 1
+!s100 >Q3UBC?Wa9f]hn?1JZSK63
+II8An`d6dLSL3IB3TQ?^]20
+!i103 1
+S1
+R0
+R28
+R29
+R30
+L0 1
+R8
+31
+R31
+R32
+R33
+!i113 0
+R12
+R2
+vrandom_handle
+R4
+DXx4 work 21 random_handle_sv_unit 0 22 U`agkCHXKklLVQfADQeQZ1
+R13
+r1
+!s85 0
+!i10b 1
+!s100 bgB3[2K:_F[:DdLR^5A7a0
+IXIGGcDaKVojfl^6gO2?5g1
+!s105 random_handle_sv_unit
+S1
+R20
+Z34 w1713860082
+Z35 8random_handle.sv
+Z36 Frandom_handle.sv
+L0 18
+R8
+31
+Z37 !s108 1713860083.000000
+Z38 !s107 random_handle.sv|
+Z39 !s90 random_handle.sv|
+!i113 0
+R12
+R2
+Xrandom_handle_sv_unit
+R4
+VU`agkCHXKklLVQfADQeQZ1
+r1
+!s85 0
+!i10b 1
+!s100 6[jReJYM1?nXYZH<UzMg@1
+IU`agkCHXKklLVQfADQeQZ1
+!i103 1
+S1
+R20
+R34
+R35
+R36
+L0 4
+R8
+31
+R37
+R38
+R39
+!i113 0
+R12
+R2
+vrandomization_rand
+R4
+DXx4 work 35 randomization_wo_constraint_sv_unit 0 22 W<RGZWFWcN>WaVk2nDkhX0
+R13
+r1
+!s85 0
+!i10b 1
+!s100 ]:[KXJiWCfhf]dA@V5>d_1
+I^OM`^B^JE<z<C[icXmMb71
+!s105 randomization_wo_constraint_sv_unit
+S1
+R0
+Z40 w1712570632
+Z41 8randomization_wo_constraint.sv
+Z42 Frandomization_wo_constraint.sv
+R24
+R8
+31
+Z43 !s108 1712576073.000000
+Z44 !s107 randomization_wo_constraint.sv|
+Z45 !s90 randomization_wo_constraint.sv|
+!i113 0
+R12
+R2
+Xrandomization_sv_unit
+R4
+Vl?7geg?_VLh<h9Li7cHCg3
+r1
+!s85 0
+!i10b 1
+!s100 aJ1JD=2EN[[M1m^df>kTJ3
+Il?7geg?_VLh<h9Li7cHCg3
+!i103 1
+S1
+R0
+w1712564136
+8randomization.sv
+Frandomization.sv
+L0 1
+R8
+31
+!s108 1712564139.000000
+!s107 randomization.sv|
+!s90 randomization.sv|
+!i113 0
+R12
+R2
+Xrandomization_wo_constraint_sv_unit
+R4
+VW<RGZWFWcN>WaVk2nDkhX0
+r1
+!s85 0
+!i10b 1
+!s100 @@QJWz6MVoKfS>;z[bgmG2
+IW<RGZWFWcN>WaVk2nDkhX0
+!i103 1
+S1
+R0
+R40
+R41
+R42
+L0 1
+R8
+31
+R43
+R44
+R45
+!i113 0
+R12
+R2

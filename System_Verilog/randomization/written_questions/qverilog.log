@@ -1,0 +1,46 @@
+Start time: 18:29:25 on Apr 18,2024
+qverilog q10.sv 
+-- Compiling package q10_sv_unit
+-- Compiling module q10
+
+Top level modules:
+	q10
+# vsim -lib work work.q10_sv_unit work.q10 -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.q10_sv_unit(fast)
+# Loading work.q10(fast)
+# run -all
+# randomized values are: 0 0 x
+# randomized values are: 3 55 5
+# randomized values are: 13 105 4
+# randomized values are: 8 -119 3
+# randomized values are: 0 -23 10
+# randomized values are: 5 23 3
+# randomized values are: 5 23 3
+# randomized values are: 5 23 3
+# randomized values are: 5 23 3
+# randomized values are: 5 23 3
+# randomized values are: 5 23 3
+# randomized values are: 12 118 9
+# randomized values are: 10 103 15
+# randomized values are: 4 -1 6
+# randomized values are: 12 -20 7
+# randomized values are: 14 -109 11
+#  quit -f
+# End time: 18:29:28 on Apr 18,2024, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0

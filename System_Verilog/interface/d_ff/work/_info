@@ -1,0 +1,126 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/admin/Documents/Internship_Indeeksha/System_Verilog/interface/d_ff
+T_opt
+!s110 1713777240
+VX0E[Q7Sb8ID[Wf=:7D;X]0
+Z1 04 7 4 work dff_top fast 0
+=1-54ee7509668a-66262a58-50-192c
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1713779114
+V2aUnZRGYDKC0XOFk7U<jJ2
+R1
+=1-54ee7509668a-662631aa-25a-3634
+o-quiet -auto_acc_if_foreign -work work +acc
+R2
+n@_opt1
+R3
+R0
+Ydff_intf
+Z4 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z5 !s110 1713779407
+!i10b 1
+!s100 [Wdk13jA]n3[cB8]1Z:FC1
+IEUN:T2YJ<_3F39A9;c5[[0
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 !s105 dff_top_sv_unit
+S1
+R0
+w1713776577
+8dff_intf.sv
+Fdff_intf.sv
+L0 3
+Z8 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z9 !s108 1713779407.000000
+!s107 dff_intf.sv|dff_rtl.sv|dff_tb.sv|dff_top.sv|
+Z10 !s90 -reportprogress|300|dff_top.sv|
+!i113 0
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vdff_rtl
+R4
+R5
+!i10b 1
+!s100 81ih61D7hJK^nBYYGOOkG3
+IFkd1;E<0Q[4b8WebZVOFh1
+R6
+R7
+S1
+R0
+w1713778124
+8dff_rtl.sv
+Fdff_rtl.sv
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+Z12 !s107 dff_intf.sv|dff_rtl.sv|dff_tb.sv|dff_top.sv|
+R10
+!i113 0
+R11
+R2
+vdff_tb
+R4
+R5
+!i10b 1
+!s100 `KEl_FjJ13Tl@gS=nhO4?1
+IORR9C]S[zMa8?:d:ATazU3
+R6
+R7
+S1
+R0
+w1713777230
+8dff_tb.sv
+Fdff_tb.sv
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R12
+R10
+!i113 0
+R11
+R2
+vdff_top
+R4
+R5
+!i10b 1
+!s100 BEzN2NR3nmS:;VK=67<0C3
+I6N^2l9g;F;@6GeaE@DENo2
+R6
+R7
+S1
+R0
+w1713774061
+8dff_top.sv
+Fdff_top.sv
+L0 7
+R8
+r1
+!s85 0
+31
+R9
+R12
+R10
+!i113 0
+R11
+R2

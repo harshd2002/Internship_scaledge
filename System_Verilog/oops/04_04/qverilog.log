@@ -1,0 +1,5 @@
+Start time: 17:21:09 on Apr 05,2024
+qverilog constant_ex.sv 
+** Error: (qverilog-13069) constant_ex.sv(5): near "pro1": syntax error, unexpected IDENTIFIER, expecting ';'.
+End time: 17:21:09 on Apr 05,2024, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0

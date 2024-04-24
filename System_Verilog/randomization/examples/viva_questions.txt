@@ -1,0 +1,12 @@
+Why APb to SPI Bridge as project?
+Why you have used FIFO only?
+What is the requirement of Bridge?
+Where APB and SPI are used?
+What is the max frequency difference of APB and SPI?
+What is FIFO?
+Why asynchronus FIFO is used?
+
+
+
+What have you learned during your training?
+

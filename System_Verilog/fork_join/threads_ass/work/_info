@@ -1,0 +1,125 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/Internship_Indeeksha/System_Verilog/fork_join/threads_ass
+T_opt
+!s110 1713528543
+V8c5Ih?PoLWO<Rjmb4LEf52
+04 17 4 work question2_sv_unit fast 0
+04 10 4 work threads_q1 fast 0
+=1-54ee7509668a-66225edf-2c2-450
+Z1 o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+T_opt1
+!s110 1713272391
+VUF5:2m9E]XCUfPEz6b=`S2
+04 17 4 work question1_sv_unit fast 0
+04 9 4 work question1 fast 0
+=1-54ee7509668a-661e7647-178-1fc8
+R1
+R2
+n@_opt1
+R3
+R0
+vquestion1
+Z4 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+DXx4 work 17 question1_sv_unit 0 22 eedSe;PMEo8h>>fLbMUW@3
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 X]]5SD7V_e:l3O4Mj8;Kb3
+I3go=8KVE>jbG;T32T^R=03
+!s105 question1_sv_unit
+S1
+R0
+Z6 w1713272386
+Z7 8question1.sv
+Z8 Fquestion1.sv
+L0 15
+Z9 OL;L;10.7c;67
+31
+Z10 !s108 1713272389.000000
+Z11 !s107 question1.sv|
+Z12 !s90 question1.sv|
+!i113 0
+Z13 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+Xquestion1_sv_unit
+R4
+VeedSe;PMEo8h>>fLbMUW@3
+r1
+!s85 0
+!i10b 1
+!s100 Qe3Yfc^n7:KR@glPZDWYh1
+IeedSe;PMEo8h>>fLbMUW@3
+!i103 1
+S1
+R0
+R6
+R7
+R8
+L0 1
+R9
+31
+R10
+R11
+R12
+!i113 0
+R13
+R2
+Xquestion2_sv_unit
+R4
+V[RKTWoij^BnY3;d]U`B9D1
+r1
+!s85 0
+!i10b 1
+!s100 mhB^l]lQ7BI;kg:=1HPBE1
+I[RKTWoij^BnY3;d]U`B9D1
+!i103 1
+S1
+R0
+Z14 w1713528541
+Z15 8question2.sv
+Z16 Fquestion2.sv
+L0 1
+R9
+31
+Z17 !s108 1713528541.000000
+Z18 !s107 question2.sv|
+Z19 !s90 question2.sv|
+!i113 0
+R13
+R2
+vthreads_q1
+R4
+DXx4 work 17 question2_sv_unit 0 22 [RKTWoij^BnY3;d]U`B9D1
+R5
+r1
+!s85 0
+!i10b 1
+!s100 R:CXh0RN_9PR@TG8>?RiH3
+Id^JFoOLFMBK9Koh8G9SEo3
+!s105 question2_sv_unit
+S1
+R0
+R14
+R15
+R16
+L0 9
+R9
+31
+R17
+R18
+R19
+!i113 0
+R13
+R2

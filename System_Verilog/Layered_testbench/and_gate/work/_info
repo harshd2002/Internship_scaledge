@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/Internship_Indeeksha/System_Verilog/alpha_practice
+T_opt
+!s110 1713790497
+VBlc]@9^8>Q[IM:dA_U8nN2
+04 15 4 work and_top_sv_unit fast 0
+04 7 4 work and_top fast 0
+=1-54ee7509668a-66265e21-102-4254
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+Yand_intf
+Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z3 DXx4 work 15 and_top_sv_unit 0 22 2lW7Z1HbOcN7Z0WC[S_Qb2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 MJU666bfFLeKIRPYZWn[72
+I_jH^KFb06XgGnMC<iTk>k3
+Z5 !s105 and_top_sv_unit
+S1
+R0
+w1713780651
+8and_intf.sv
+Z6 Fand_intf.sv
+L0 3
+Z7 OL;L;10.7c;67
+31
+Z8 !s108 1713790495.000000
+Z9 !s107 and_env.sv|and_rtl.sv|and_intf.sv|and_drv.sv|and_gen.sv|and_transaction.sv|and_test.sv|and_top.sv|
+Z10 !s90 and_top.sv|
+!i113 0
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vand_rtl
+R2
+R3
+R4
+r1
+!s85 0
+!i10b 1
+!s100 XCmMg3f_0F154?HWz@b?H2
+IR2iKza@Ygl76<0Mi9``2G3
+R5
+S1
+R0
+w1713788203
+8and_rtl.sv
+Z12 Fand_rtl.sv
+L0 3
+R7
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vand_test
+R2
+R3
+R4
+r1
+!s85 0
+!i10b 1
+!s100 86681_=1M08Ze7jI^eZE<2
+IRFSCF?LSC_964LClJ`<BX1
+R5
+S1
+R0
+w1713785498
+8and_test.sv
+Z13 Fand_test.sv
+L0 10
+R7
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vand_top
+R2
+R3
+R4
+r1
+!s85 0
+!i10b 1
+!s100 kR>nU3V8Hez?z`e4Yd]k]1
+I2miYII1XnA_CiiZhD8Q^d1
+R5
+S1
+R0
+w1713785173
+Z14 8and_top.sv
+Z15 Fand_top.sv
+L0 6
+R7
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+Xand_top_sv_unit
+!s115 and_intf
+R2
+V2lW7Z1HbOcN7Z0WC[S_Qb2
+r1
+!s85 0
+!i10b 1
+!s100 65K1U5[4B_m]bQJ5dUU;e0
+I2lW7Z1HbOcN7Z0WC[S_Qb2
+!i103 1
+S1
+R0
+w1713790493
+R14
+R15
+R13
+Fand_transaction.sv
+Fand_gen.sv
+Fand_drv.sv
+R6
+R12
+Fand_env.sv
+L0 3
+R7
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1

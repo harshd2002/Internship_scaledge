@@ -1,0 +1,48 @@
+Start time: 11:15:07 on Apr 05,2024
+qverilog associative_arr.sv 
+-- Compiling module associative_array
+
+Top level modules:
+	associative_array
+# vsim -lib work work.associative_array -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.associative_array(fast)
+# run -all
+# -------------------------------------
+# arr_a[8] = 103
+# arr_a[12] = 102
+# arr_a[14] = 53
+# arr_a[21] = 174
+# arr_a[22] = 114
+# arr_a[26] = 227
+# arr_a[28] = 106
+# arr_a[32] = 111
+# arr_a[40] = 198
+# arr_a[49] = 219
+# -------------------------------------
+# arr_a:  {8:103} {12:102} {14:53} {21:174} {22:114} {26:227} {28:106} {32:111} {40:198} {49:219} 
+# -------------------------------------
+# ** Error (suppressible): (vsim-8005) Packed-type key expected.
+# 
+#    Time: 0 ns  Iteration: 0  Process: /associative_array/#INITIAL#5 File: associative_arr.sv Line: 16
+# arr_a:  {8:103} {12:102} {14:53} {21:174} {22:114} {26:227} {28:106} {32:111} {40:198} {49:219} 
+# -------------------------------------
+# -------------------------------------
+#  quit -f
+# End time: 11:15:10 on Apr 05,2024, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0

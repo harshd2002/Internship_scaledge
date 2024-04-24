@@ -1,0 +1,48 @@
+Start time: 18:24:55 on Apr 22,2024
+qverilog and_top.sv 
+** Warning: ** while parsing file included at and_top.sv(3)
+** at and_intf.sv(3): (qverilog-2275) 'and_intf' already exists and will be overwritten.
+** Warning: ** while parsing file included at and_top.sv(4)
+** at and_rtl.sv(3): (qverilog-2275) 'and_rtl' already exists and will be overwritten.
+-- Compiling package and_top_sv_unit
+** Warning: and_gen.sv(19): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+-- Compiling interface and_intf
+-- Compiling module and_rtl
+-- Compiling module and_test
+-- Compiling interface and_intf
+-- Compiling module and_rtl
+-- Compiling module and_top
+
+Top level modules:
+	and_top
+# vsim -lib work work.and_top_sv_unit work.and_top -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: and_gen.sv(19): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.and_top_sv_unit(fast)
+# Loading work.and_top(fast)
+# Loading work.and_test(fast)
+# Loading work.and_rtl(fast)
+# Loading work.and_intf(fast)
+# run -all
+#                    0 : 1: generator put data: '{a_i:0, b_i:1, y_o:0}
+#                    0 : 0: driver get data: '{a_i:0, b_i:1, y_o:0}
+# passed values to interface.
+#                    1 : 0: data: '{a_i:0, b_i:1, y_o:0}
+#  quit -f
+# End time: 18:24:58 on Apr 22,2024, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 4

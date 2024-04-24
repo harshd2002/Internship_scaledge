@@ -1,0 +1,126 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/Internship_Indeeksha/System_Verilog/mailbox/personalized_mailbox
+T_opt
+!s110 1713532867
+VD]h5X6i@BjUXPZHJd9Ogn1
+04 21 4 work class_mailbox_sv_unit fast 0
+04 12 4 work mail_methods fast 0
+=1-54ee7509668a-66226fc2-368-388
+Z1 o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1713601736
+VSGm<Z<9bgCQaHiD8[:WHR1
+04 19 4 work multi_class_sv_unit fast 0
+04 10 4 work multi_mbox fast 0
+=1-54ee7509668a-66237cc8-64-1b68
+R1
+R2
+n@_opt1
+R3
+Xclass_mailbox_sv_unit
+Z4 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+VFEEFR1cKd<hWf:RE0fI]f0
+r1
+!s85 0
+!i10b 1
+!s100 F4CH?Xf>>B^AUZb?P=MlZ0
+IFEEFR1cKd<hWf:RE0fI]f0
+!i103 1
+S1
+R0
+Z5 w1713532863
+Z6 8class_mailbox.sv
+Z7 Fclass_mailbox.sv
+L0 3
+Z8 OL;L;10.7c;67
+31
+Z9 !s108 1713532865.000000
+Z10 !s107 class_mailbox.sv|
+Z11 !s90 class_mailbox.sv|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vmail_methods
+R4
+DXx4 work 21 class_mailbox_sv_unit 0 22 FEEFR1cKd<hWf:RE0fI]f0
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 @`ibL37<TnKmO3z[cG^hd2
+IUie;=2Q4JMLJ8iN7;i>VT0
+!s105 class_mailbox_sv_unit
+S1
+R0
+R5
+R6
+R7
+L0 90
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R2
+Xmulti_class_sv_unit
+R4
+VfOB9obBa@SMgC]K4DhWfV0
+r1
+!s85 0
+!i10b 1
+!s100 z5m;Roa<XhfkREY2@Xj?L3
+IfOB9obBa@SMgC]K4DhWfV0
+!i103 1
+S1
+R0
+Z14 w1713601728
+Z15 8multi_class.sv
+Z16 Fmulti_class.sv
+R7
+L0 3
+R8
+31
+Z17 !s108 1713601734.000000
+Z18 !s107 class_mailbox.sv|multi_class.sv|
+Z19 !s90 multi_class.sv|
+!i113 0
+R12
+R2
+vmulti_mbox
+R4
+DXx4 work 19 multi_class_sv_unit 0 22 fOB9obBa@SMgC]K4DhWfV0
+R13
+r1
+!s85 0
+!i10b 1
+!s100 6@QeJg;MAMZLndMlo4mT11
+I:@JHKHKeUdiJb_cjAl`ZM1
+!s105 multi_class_sv_unit
+S1
+R0
+R14
+R15
+R16
+L0 65
+R8
+31
+R17
+R18
+R19
+!i113 0
+R12
+R2

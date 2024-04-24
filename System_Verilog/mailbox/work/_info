@@ -1,0 +1,101 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/Internship_Indeeksha/System_Verilog/mailbox
+T_opt
+!s110 1713243166
+V4cM;5<lVP4385;UZLim:;0
+04 15 4 work mailbox_example fast 0
+=1-54ee7509668a-661e041e-2f4-56c
+Z1 o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1713262887
+VXTMPLa9RR<TgV7DWlW4Wf0
+04 14 4 work mail_1_sv_unit fast 0
+04 12 4 work mail_methods fast 0
+=1-54ee7509668a-661e5127-2b-3040
+R1
+R2
+n@_opt1
+R3
+Xmail_1_sv_unit
+Z4 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+VnOb5cbM_VX5Ya2Uk^zBOz0
+r1
+!s85 0
+!i10b 1
+!s100 UCFhl:Y0ll9QoX3iHBnOX0
+InOb5cbM_VX5Ya2Uk^zBOz0
+!i103 1
+S1
+R0
+Z5 w1713262884
+Z6 8mail_1.sv
+Z7 Fmail_1.sv
+L0 1
+Z8 OL;L;10.7c;67
+31
+Z9 !s108 1713262885.000000
+Z10 !s107 mail_1.sv|
+Z11 !s90 mail_1.sv|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vmail_methods
+R4
+DXx4 work 14 mail_1_sv_unit 0 22 nOb5cbM_VX5Ya2Uk^zBOz0
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 [7=JDW<N5WcUBf7EVN5DW1
+IjKG78izPLdolC1eVn@:Hi1
+!s105 mail_1_sv_unit
+S1
+R0
+R5
+R6
+R7
+L0 21
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R2
+vmailbox_example
+R4
+!s110 1713243165
+!i10b 1
+!s100 6V@:;5z5hS[2>c@?:Do5H3
+I9URVBZ2e`2HJ2W9BWYm3j0
+R13
+!s105 mailbox_in_sv_sv_unit
+S1
+R0
+w1713243156
+8mailbox_in_sv.sv
+Fmailbox_in_sv.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1713243165.000000
+!s107 mailbox_in_sv.sv|
+!s90 mailbox_in_sv.sv|
+!i113 0
+R12
+R2

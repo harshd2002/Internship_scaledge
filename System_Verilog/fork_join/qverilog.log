@@ -1,0 +1,39 @@
+Start time: 17:17:58 on Apr 16,2024
+qverilog fork_join_in_sv.sv 
+-- Compiling module fork_join_in_sv
+
+Top level modules:
+	fork_join_in_sv
+# vsim -lib work work.fork_join_in_sv -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.fork_join_in_sv(fast)
+# run -all
+#                    0 : at 0ns Before fork join
+#                   10 : at 10ns Before fork join
+#                   20 : at after fork join
+#                   20 : at 0ns in fork join : before begin
+#                   20 : at 10ns in fork join : after begin
+#                   30 : at 20ns in fork join : before begin
+#                   40 : at 30ns in fork join : in begin
+#                   50 : at 30ns after fork join
+#                   80 : at 40ns in fork join : in begin
+#                  100 : at 90ns in fork join : after begin
+#                  130 : at 80ns after fork join
+#  quit -f
+# End time: 17:18:01 on Apr 16,2024, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0

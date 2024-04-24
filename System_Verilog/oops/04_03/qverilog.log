@@ -1,0 +1,7 @@
+Start time: 16:03:54 on Apr 04,2024
+qverilog singleton_class.sv 
+-- Compiling package singleton_class_sv_unit
+-- Compiling module singleton_class
+** Error (suppressible): (qverilog-13276) singleton_class.sv(29): Could not find field/method name (ret_add) in 'obj1' of 'obj1.ret_add'.
+End time: 16:03:54 on Apr 04,2024, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0

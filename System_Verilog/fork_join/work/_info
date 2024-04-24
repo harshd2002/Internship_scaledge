@@ -1,0 +1,43 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/Internship_Indeeksha/System_Verilog/fork_join
+T_opt
+!s110 1713268080
+V]d]iOk`MJ6GRVCH^h150I2
+04 15 4 work fork_join_in_sv fast 0
+=1-54ee7509668a-661e6570-db-458
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+vfork_join_in_sv
+DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+!s110 1713268078
+!i10b 1
+!s100 oohGU=_FS7Z3l;9ajCRDF2
+I`_hfk1BJB5lKRXHll0;J03
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 fork_join_in_sv_sv_unit
+S1
+R0
+w1713268072
+8fork_join_in_sv.sv
+Ffork_join_in_sv.sv
+L0 1
+OL;L;10.7c;67
+r1
+!s85 0
+31
+!s108 1713268078.000000
+!s107 fork_join_in_sv.sv|
+!s90 fork_join_in_sv.sv|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
