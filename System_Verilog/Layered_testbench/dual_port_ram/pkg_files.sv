@@ -1,6 +1,7 @@
 //RAM files are included
 
 package pkg_files;
+	event item_done;
 	`include "ram_trans.sv"
 	`include "ram_gen.sv"
 	`include "ram_drv.sv"

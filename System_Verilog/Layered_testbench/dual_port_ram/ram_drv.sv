@@ -14,41 +14,39 @@ class mem_drv;
 	endfunction
 	//converting transaction level data to pin level
 	task run();
+		forever @(vintf.mem_cb) begin
 		gen_drv.get(trans_obj);
 		$display($time," : driver: %0p", trans_obj);
 
 		//logic for pins
-		case(trans_obj.ops)
+		case(trans_obj.ops_e)
 		0: begin
 			vintf.wr_enbl = 1;
+			trans_obj.wr_enbl = 1;
 			vintf.wr_addr = trans_obj.wr_addr;
 			vintf.wr_data = trans_obj.wr_data;
 			vintf.rd_enbl = 0;
+			trans_obj.rd_enbl = 0;
+			vintf.rd_addr = trans_obj.rd_addr;
 		end
 		1: begin
 			vintf.wr_enbl = 0;
+			trans_obj.wr_enbl = 0;
+			vintf.wr_addr = trans_obj.wr_addr;
+			vintf.wr_data = trans_obj.wr_data;
 			vintf.rd_enbl = 1;
+			trans_obj.rd_enbl = 1;
 			vintf.rd_addr = trans_obj.rd_addr;
 		end
 		2: begin
 			vintf.wr_enbl = 1;
+			trans_obj.wr_enbl = 1;
 			vintf.wr_addr = trans_obj.wr_addr;
 			vintf.wr_data = trans_obj.wr_data;
 			vintf.rd_enbl = 1;
+			trans_obj.rd_enbl = 1;
 			vintf.rd_addr = trans_obj.rd_addr;
 		end
 		endcase
-	endtask
-	task print_drv();
-		$display("---------------------------driver--------------------");
-		$display("Time\tName\t\tValue");
-		$display("-------------------------------------------------------");
-		$display("%0d\twr_enbl\t\t%0d", $time, vintf.wr_enbl);
-		$display("%0d\trd_enbl\t\t%0d", $time, vintf.rd_enbl);
-		$display("%0d\twr_addr\t\t%0d", $time, vintf.wr_addr);
-		$display("%0d\trd_addr\t\t%0d", $time, vintf.rd_addr);
-		$display("%0d\twr_data\t\t%0d", $time, vintf.wr_data);
-		$display("%0d\trd_data\t\t%0d", $time, vintf.rd_data);
-		$display("-------------------------------------------------------");
 	endtask
 endclass

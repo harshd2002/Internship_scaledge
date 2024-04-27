@@ -15,10 +15,13 @@ class mem_gen;
 
 	//task to generate and store data
 	task run();
+		repeat(5) begin
+		wait(item_done.triggered);
 		trans_obj = new();
 		trans_obj.randomize();
 		gen_drv.put(trans_obj);
 		$display($time," : generator: %0p", trans_obj);
+		end
 	endtask
 
 endclass

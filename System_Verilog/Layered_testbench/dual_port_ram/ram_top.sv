@@ -9,10 +9,13 @@ import pkg_files::*;
 
 module mem_top();
 
+	//clock
 	bit clk;
-
+	//object of test class to call tasks
 	mem_test test_obj;
+	//reference model memory
 	mem_intf #(.DEPTH(256), .DWIDTH(8)) intf(clk);
+	//dut instantiation
 	ram_rtl dut(.clk(clk),
 					.rst(intf.rst),
 					.wr_enbl(intf.wr_enbl),
@@ -22,6 +25,7 @@ module mem_top();
 					.rd_addr(intf.rd_addr),
 					.rd_data(intf.rd_data)
 					);
+	//initializing variables and calling tasks
 	initial begin
 		intf.rst = 0;
 		repeat(2) @(posedge clk);
@@ -35,6 +39,7 @@ module mem_top();
 		#100;
 		$finish;
 	end
+	//generating clock
 	always #5 clk = ~clk;
 endmodule
 

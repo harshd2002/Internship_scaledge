@@ -1,14 +1,13 @@
-//////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //Project: layered testbench of dualport RAM
-//
-//
-//
-//
-//
+//component: transaction block
+//File name: ram_trans.sv
+//class: transaction class
+//File path: C:\Users\Admin\Documents\git_internship\System_Verilog\Layered_testbench\dual_port_ram
 //Date: 	 23rd april, 2024
 //
-//////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //RAM transaction class
 
@@ -17,20 +16,34 @@ typedef enum {WRITE, READ, WRITE_READ} operation;
 
 class mem_trans #(byte DWIDTH = 8, byte AWIDTH = 8 );
 
-	// enum to determine operation 
+	//enum to determine operation 
 	//ops value
 	//WRITE: write operation
 	//READ: read operation
 	//WRITE_READ: simultaneous read write operation
-	rand operation ops;
+	rand operation ops_e;
 
 	//write read address 
 	rand bit [AWIDTH-1:0] wr_addr, rd_addr;
 	//write data 
 	rand bit [DWIDTH-1:0] wr_data;
-
+	//enable signals
+	bit wr_enbl, rd_enbl;
 	//output read data of memory
 	bit [DWIDTH-1:0] rd_data;
-	constraint c1 { wr_addr == rd_addr ;}
+
+	//print data
+	task print_trans();
+		$display("-------------------transaction class-------------------");
+		$display("Time\t|\tName\t\t|\tValue");
+		$display("-------------------------------------------------------");
+		$display("%0d\t|\twr_enbl\t\t|\t%0d", $time, wr_enbl);
+		$display("%0d\t|\trd_enbl\t\t|\t%0d", $time, rd_enbl);
+		$display("%0d\t|\twr_addr\t\t|\t%0d", $time, wr_addr);
+		$display("%0d\t|\trd_addr\t\t|\t%0d", $time, rd_addr);
+		$display("%0d\t|\twr_data\t\t|\t%0d", $time, wr_data);
+		$display("%0d\t|\trd_data\t\t|\t%0d", $time, rd_data);
+		$display("-------------------------------------------------------");
+	endtask
 
 endclass

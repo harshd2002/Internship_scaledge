@@ -1,13 +1,19 @@
 //RAM scoreboard class
 
 class mem_scrbd;
+	//handle for expected and actual data
 	mem_trans exp_trans_obj, act_trans_obj;
+	//mailbox from monitor and predictor
 	mailbox #(mem_trans) mon_pred_scrbd;
 	mailbox #(mem_trans) pred_scrbd;
-	function new(mailbox #(mem_trans) mon_pred_scrbd, mailbox #(mem_trans) pred_scrbd);
+
+	//connecting mailbox
+	function new(mailbox #(mem_trans) mon_pred_scrbd, pred_scrbd);
 		this.mon_pred_scrbd = mon_pred_scrbd;
 		this.pred_scrbd = pred_scrbd;
 	endfunction
+
+	//comparing outputs
 	task run();
 		mon_pred_scrbd.get(act_trans_obj);
 		pred_scrbd.get(exp_trans_obj);
@@ -19,15 +25,5 @@ class mem_scrbd;
 			else
 				$display("read fail");
 	endtask
-	//printing data
-	task print_scrbd();
-		$display("---------------------------scoreboard--------------------");
-		$display("Time\tName\t\tValue");
-		$display("-------------------------------------------------------");
-		$display("%0d\toperation\t\t%0s", $time, act_trans_obj.ops.name());
-		$display("%0d\trd_addr\t\t%0d", $time, act_trans_obj.rd_addr);
-		$display("%0d\tactual rd_data\t\t%0d", $time, act_trans_obj.wr_data);
-		$display("%0d\texpected rd_data\t\t%0d", $time, exp_trans_obj.rd_data);
-		$display("-------------------------------------------------------");
-	endtask
+
 endclass
