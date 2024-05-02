@@ -1,11 +1,18 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//Project: dualport RAM verification
+//File name: ram_top.sv
+//description: top module
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
 //RAM top level module
 `ifndef RAM_TOP
 `define RAM_TOP
 
-`include "ram_intf.sv"
-`include "pkg_files.sv"
-import pkg_files::*;
 `include "ram_rtl.sv"
+`include "pkg_files.sv"
+
+import pkg_files::*;
 
 module mem_top();
 
@@ -25,22 +32,39 @@ module mem_top();
 					.rd_addr(intf.rd_addr),
 					.rd_data(intf.rd_data)
 					);
-	//initializing variables and calling tasks
-	initial begin
-		intf.rst = 0;
-		repeat(2) @(posedge clk);
+
+  //reset task
+  //always begin
+    //wait(reset_done.triggered)
+    task reset();
 		intf.rst = 1;
 		repeat(2) @(posedge clk);
 		intf.rst = 0;
-		repeat(2) @(posedge clk);
+    endtask
 
-		test_obj = new(intf);
-		test_obj.build_run();
+	//initializing variables and calling tasks
+	initial begin
+
+		test_obj = new();
+    fork
+		run_test();
+    reset();
+    join_any
 		#100;
 		$finish;
 	end
 	//generating clock
 	always #5 clk = ~clk;
-endmodule
 
+  //run_test
+  task run_test();
+    test_obj.build();
+		test_obj.connect(intf);
+    //fork
+    //-> reset_done;
+    test_obj.run();
+    //join
+  endtask
+
+endmodule
 `endif

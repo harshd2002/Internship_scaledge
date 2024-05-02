@@ -1,4 +1,13 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//Project: dualport RAM verification
+//File name: ram_rtl.sv
+//description: RTL
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
 //RAM design
+`ifndef RAM_DESIGN
+`define RAM_DESIGN
 `define ADDR_WIDTH 8
 `define DEPTH 256
 `define DATA_WIDTH 8 
@@ -26,12 +35,12 @@ module ram_rtl (clk,
 
 
  //internal memory
- reg [`DATA_WIDTH-1:0] ram [0:`DEPTH-1];
+ bit [`DATA_WIDTH-1:0] ram [0:`DEPTH-1];
 
  reg [`ADDR_WIDTH:0] i;
 
  //implementation
- always @(posedge clk)
+ always @(posedge clk or posedge rst)
   if (rst) begin
      rd_data <= `DATA_WIDTH'd0;
 	 //memory initialisation
@@ -48,3 +57,4 @@ module ram_rtl (clk,
   end
 
 endmodule
+`endif

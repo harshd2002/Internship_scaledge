@@ -1,18 +1,18 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//Project: layered testbench of dualport RAM
-//component: transaction block
+//Project: dualport RAM verification
 //File name: ram_trans.sv
-//class: transaction class
-//File path: C:\Users\Admin\Documents\git_internship\System_Verilog\Layered_testbench\dual_port_ram
-//Date: 	 23rd april, 2024
+//description: transaction class
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //RAM transaction class
 
 //enum type variable to select operation type
-typedef enum {WRITE, READ, WRITE_READ} operation;
+//typedef enum {WRITE, READ, WRITE_READ} operation;
+
+`ifndef RAM_TRANSACTION
+`define RAM_TRANSACTION
 
 class mem_trans #(byte DWIDTH = 8, byte AWIDTH = 8 );
 
@@ -33,8 +33,8 @@ class mem_trans #(byte DWIDTH = 8, byte AWIDTH = 8 );
 	bit [DWIDTH-1:0] rd_data;
 
 	//print data
-	task print_trans();
-		$display("-------------------transaction class-------------------");
+	task print_trans(string block);
+		$display("-------------------%0s class-------------------", block);
 		$display("Time\t|\tName\t\t|\tValue");
 		$display("-------------------------------------------------------");
 		$display("%0d\t|\twr_enbl\t\t|\t%0d", $time, wr_enbl);
@@ -47,3 +47,4 @@ class mem_trans #(byte DWIDTH = 8, byte AWIDTH = 8 );
 	endtask
 
 endclass
+`endif
