@@ -9,10 +9,11 @@
 `ifndef RAM_TOP
 `define RAM_TOP
 
-`include "ram_rtl.sv"
+//`include "ram_rtl.sv"
 `include "pkg_files.sv"
 
 import pkg_files::*;
+`include "ram_intf.sv"
 
 module mem_top();
 
@@ -34,13 +35,14 @@ module mem_top();
 					);
 
   //reset task
-  //always begin
-    //wait(reset_done.triggered)
-    task reset();
+  always begin
+    @(reset_done)
+  //task reset();
+  //-> reset_done;
 		intf.rst = 1;
 		repeat(2) @(posedge clk);
 		intf.rst = 0;
-    endtask
+  end
 
 	//initializing variables and calling tasks
 	initial begin
@@ -48,9 +50,9 @@ module mem_top();
 		test_obj = new();
     fork
 		run_test();
-    reset();
-    join_any
-		#100;
+    -> reset_done;
+    join
+		#10;
 		$finish;
 	end
 	//generating clock

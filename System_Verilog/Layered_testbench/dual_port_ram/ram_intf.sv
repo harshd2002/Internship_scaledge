@@ -17,7 +17,7 @@ interface mem_intf #(int DEPTH = 16, byte DWIDTH = 8, byte AWIDTH = $clog2(DEPTH
 	logic [AWIDTH-1:0] wr_addr, rd_addr;
 
 	clocking mem_cb @(posedge clk);
-		default input #0 output #8;
+		default input #0 output #SKEW_DEL;
 		output wr_enbl, wr_data, wr_addr, rd_enbl, rd_addr;
 		//input rd_data;
 	endclocking

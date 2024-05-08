@@ -13,9 +13,10 @@
 
 	//enum type variable to select operation type
 	typedef enum {WRITE = 1, READ, WRITE_READ} operation;
-  byte unsigned num_it;
+  int unsigned num_itr = 5;
 	event item_done;
 	event reset_done;
+  parameter SKEW_DEL = 8;
 
 	//task to print values
 	/*task print(mem_trans trans_obj);

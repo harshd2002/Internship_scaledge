@@ -29,6 +29,8 @@ class mem_pred;
 	//converting pin level to transaction level
 	task run();
     forever begin
+    fork
+    begin: predictor_b
 		//getting inputs
 		mon_pred_scrbd.peek(trans_obj);
 		//shallow copy of object from monitor
@@ -57,6 +59,13 @@ class mem_pred;
     //$display($time, "predictor");
 		pred_scrbd.put(exp_trans_obj);
     trans_obj.print_trans("predictcor");
+    end
+    begin: reset_b
+      @(reset_done)
+      foreach(rf_ram[i])
+        rf_ram[i] = 0;
+    end
+    join_any
     end
 	endtask
 endclass

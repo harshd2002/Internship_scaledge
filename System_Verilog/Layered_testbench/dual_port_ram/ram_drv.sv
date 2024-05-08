@@ -25,20 +25,22 @@ class mem_drv;
 	//converting transaction level data to pin level
 	task run();
 		forever begin
-    if(vintf.rst) begin
-      //@(reset_done)
-			vintf.wr_enbl = 0;
-			vintf.wr_addr = 0;
-			vintf.wr_data = 0;
-			vintf.rd_enbl = 0;
-			vintf.rd_addr = 0;
+    fork
+    begin: reset_b
+    $display("reset block");
+      @(reset_done);
+      disable drive_b;
+			vintf.wr_enbl <= 0;
+			vintf.wr_addr <= 0;
+			vintf.wr_data <= 0;
+			vintf.rd_enbl <= 0;
+			vintf.rd_addr <= 0;
       $display($time, " :reset asserted");
-      @(negedge vintf.rst);
+      @(negedge vintf.rst)
       $display($time, " :reset deasserted");
-    end
-    else begin
-    @(posedge vintf.mem_cb)
-    -> item_done;
+    end: reset_b
+    begin: drive_b
+    @(vintf.mem_cb)
 		gen_drv.get(trans_obj);
 		$display($time," : driver: %0p", trans_obj);
 
@@ -72,9 +74,13 @@ class mem_drv;
 			vintf.mem_cb.rd_addr <= trans_obj.rd_addr;
 		end
 		endcase
-    //$display($time, "driver");
     trans_obj.print_trans("driver");
-    end
+    #SKEW_DEL -> item_done;
+    disable reset_b;
+    //end
+    end: drive_b
+    join
+    //wait fork;
     end
 	endtask
 endclass

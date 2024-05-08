@@ -24,7 +24,7 @@ class mem_trans #(byte DWIDTH = 8, byte AWIDTH = 8 );
 	rand operation ops_e;
 
 	//write read address 
-	rand bit [AWIDTH-1:0] wr_addr, rd_addr;
+	randc bit [AWIDTH-1:0] wr_addr, rd_addr;
 	//write data 
 	rand bit [DWIDTH-1:0] wr_data;
 	//enable signals

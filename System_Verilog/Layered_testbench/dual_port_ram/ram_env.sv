@@ -50,7 +50,7 @@ class mem_env;
   		mon_obj.run();
 			pred_obj.run();
 			scrbd_obj.run();
-		join
+		join_any
 	endtask
 endclass
 `endif

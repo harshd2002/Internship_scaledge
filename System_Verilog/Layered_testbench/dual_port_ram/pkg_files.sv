@@ -10,13 +10,16 @@
 `ifndef RAM_PACKKAGE
 `define RAM_PACKKAGE
 
-`include "ram_intf.sv"
 
 package pkg_files;
   `include "pkg_global.sv"
 	`include "ram_trans.sv"
 	`include "ram_gen.sv"
   `include "ram_gen_sanity_test.sv"
+  `include "ram_gen_continuous_wr.sv"
+  `include "ram_gen_simultaneous_wr.sv"
+  `include "ram_gen_backtoback_wr.sv"
+  `include "ram_gen_inbetween_reset.sv"
 	`include "ram_drv.sv"
 	`include "ram_mon.sv"
 	`include "ram_pred.sv"

@@ -34,6 +34,7 @@ class mem_scrbd;
 		$display($time," : scoreboard actual: %0p", act_trans_obj);
     act_trans_obj.print_trans("scoreboard");
 		//scoreboard logic 
+		if(act_trans_obj.rd_enbl || act_trans_obj.wr_enbl)
 			if(exp_trans_obj.rd_data == act_trans_obj.rd_data)
 				$display($time," :read pass");
 			else

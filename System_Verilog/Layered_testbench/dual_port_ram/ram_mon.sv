@@ -24,7 +24,8 @@ class mem_mon;
 	endfunction
 	//converting pin level data into transaction level data
 	task run();
-		forever @(vintf.mem_cb) begin
+		forever @(vintf.mem_cb_mon) begin
+   // if(vintf.mem_cb_mon.rd_enbl) begin
 		trans_obj = new();
 		//logic to generate transaction level data
 		trans_obj.wr_enbl = vintf.mem_cb_mon.wr_enbl;
