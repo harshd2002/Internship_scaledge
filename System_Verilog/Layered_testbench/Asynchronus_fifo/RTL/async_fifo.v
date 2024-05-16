@@ -6,15 +6,15 @@
 module  async_fifo #(parameter WIDTH = 8,
                                DEPTH = 16,
                                SIZE = $clog2(DEPTH),
-							   DIFF = 2
+							                 DIFF = 2
                     )
                    (input wr_clk, rd_clk,
                     input wr_rstn, rd_rstn,
                     input wr_en, rd_en,
                     input [WIDTH-1'b1 : 0] wr_data,
                     output reg [WIDTH-1'b1 : 0] rd_data,
-					output reg full, empty, almost_full, almost_empty,
-					output reg overflow, underflow
+          					output reg full, empty, almost_full, almost_empty,
+					          output reg overflow, underflow
                     );
 
     reg [WIDTH-1'b1:0] mem [0 : DEPTH-1'b1];

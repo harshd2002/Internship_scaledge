@@ -10,9 +10,8 @@
 `ifndef RAM_DEFINE
 `define RAM_DEFINE
 //package pkg_global;
-
 	//enum type variable to select operation type
-	typedef enum {WRITE = 1, READ, WRITE_READ} operation;
+	typedef enum bit [1:0] {RESET, WRITE, READ, WRITE_READ} operation;
   int unsigned num_itr = 5;
 	event item_done;
 	event reset_done;

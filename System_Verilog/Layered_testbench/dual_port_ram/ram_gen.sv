@@ -13,7 +13,7 @@
 virtual class mem_gen;
 
 	//object of transaction class to store data
-	mem_trans trans_obj;
+	mem_trans trans_h;
 
 	//mailbox to store data 
 	mailbox #(mem_trans) gen_drv;
@@ -28,10 +28,10 @@ virtual class mem_gen;
 		/*repeat(5) begin
     @(item_done)
 		//wait(item_done.triggered);
-		trans_obj = new();
-		trans_obj.randomize() with {wr_addr==rd_addr;};
-		gen_drv.put(trans_obj);
-		$display($time," : generator: %0p", trans_obj);
+		trans_h = new();
+		trans_h.randomize() with {wr_addr==rd_addr;};
+		gen_drv.put(trans_h);
+		$display($time," : generator: %0p", trans_h);
 		end
 	endtask*/
 

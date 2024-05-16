@@ -1,57 +1,45 @@
 //environment class
 
-class environmentt;
+class environment;
 	//virtual interface to pass ports
-	virtual mem_intf #(.DEPTH(256), .DWIDTH(8)) vintf;
+	virtual mux_interface vintf;
 	//main mailbox declarations
-	mailbox #(mem_trans) gen_drv = new();
-	mailbox #(mem_trans) mon_pred_scrbd = new();
-	mailbox #(mem_trans) pred_scrbd = new();
+	mailbox #(transaction) gen_drv = new();
+	mailbox #(transaction) mon_pred_scrbd = new();
+	mailbox #(transaction) pred_scrbd = new();
 	//handles of blocks inside environment
-	mem_gen gen_obj;
-	mem_drv drv_obj;
-	mem_mon mon_obj;
-	mem_pred pred_obj;
-	mem_scrbd scrbd_obj;
+	generator gen_h;
+	driver drv_h;
+	monitor mon_h;
+	predictor pred_h;
+	scoreboard scrbd_h;
 
-	//passing virtual function
-	function new(virtual mem_intf #(.DEPTH(256), .DWIDTH(8)) vintf);
-		this.vintf = vintf;
-	endfunction
-	//connection interface and mailbox
+  ////building objects oh each component
 	task build();
-		gen_obj = new(gen_drv);
-		drv_obj = new(gen_drv, vintf);
-		mon_obj = new(mon_pred_scrbd, vintf);
-		pred_obj = new(mon_pred_scrbd, pred_scrbd);
-		scrbd_obj = new(mon_pred_scrbd, pred_scrbd);
+		//gen_h = new();
+		drv_h = new();
+		mon_h = new();
+		pred_h = new();
+		scrbd_h = new();
+	endtask
+  //connnecting mailbox and interface
+	task connect(virtual mux_interface vintf);
+		this.vintf = vintf;
+		gen_h.connect(gen_drv);
+		drv_h.connect(gen_drv, vintf);
+		mon_h.connect(mon_pred_scrbd, vintf);
+		pred_h.connect(mon_pred_scrbd, pred_scrbd);
+		scrbd_h.connect(mon_pred_scrbd, pred_scrbd);
 	endtask
 	//generating and passing values
 	task run();
-		repeat(2) begin
-			@(vintf.mem_cb);
-			#2;
 		fork
-			gen_obj.run();
-			begin
-			drv_obj.run();
-			drv_obj.trans_obj.print_trans();
-			end
-			begin
-			mon_obj.run();
-			mon_obj.trans_obj.print_trans();
-			end
-			begin
-				pred_obj.run();
-				pred_obj.trans_obj.print_trans();
-			end
-			begin
-				scrbd_obj.run();
-				scrbd_obj.exp_trans_obj.print_trans();
-				scrbd_obj.act_trans_obj.print_trans();
-			end
-		join
+			gen_h.run();
+			drv_h.run();
+			mon_h.run();
+			pred_h.run();
+			scrbd_h.run();
+		join_any
 			$display("env run completed");
-		end
 	endtask
 endclass

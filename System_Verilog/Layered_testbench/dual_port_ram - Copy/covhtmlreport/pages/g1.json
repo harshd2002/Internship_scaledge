@@ -1,0 +1,7 @@
+var g_data = {
+g29:[{dummy:0},
+{name:'cvg',f:1,type:1,id:30,tb:'25',h:'25',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],parent:'29'},
+{name:'\\/pkg_files::mem_scrbd::cvg ',f:1,type:2,id:44,tb:'25',h:'25',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],cvg:'cvg',parent:'30'}],
+dummyEnd:0
+};
+processCovergroupsData(g_data);

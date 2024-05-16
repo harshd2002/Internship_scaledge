@@ -1,0 +1,24 @@
+use logic in place of bit i transaction class and observe.
+abstract classs memory allocation.
+Can e use case in driver?
+why blocking is used in monitor?
+
+
+
+
+//dual port ram
+Associative array
+abstract class handle
+try implementing with queue
+insert wait statement in scoreboard
+$finish logic
+use modport
+raise and drop objection
+toggle using wildcard bin
+
+//mux
+add macro for defincg common dimensions
+complete pred scoreboard of mux.
+
+
+sed and awk can be used to edit in all files

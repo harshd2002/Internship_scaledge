@@ -1,8 +1,108 @@
-Start time: 17:17:25 on Apr 26,2024
-qverilog driver.sv generator.sv monitor.sv transaction.sv 
+Start time: 18:00:54 on May 15,2024
+qverilog top.sv 
+-- Compiling package pkg_files
+-- Compiling interface mux_interface
+-- Compiling package top_sv_unit
+-- Importing package pkg_files
+-- Compiling module mux
+-- Compiling module top
 
 Top level modules:
-	--none--
-** Error: (qverilog-2105) There are no top-level modules on which vsim can be invoked.
-End time: 17:17:25 on Apr 26,2024, Elapsed time: 0:00:00
-Errors: 1, Warnings: 0
+	top
+# vsim -lib work work.top_sv_unit work.top -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: driver.sv(17): (vopt-8637) A modport ('DRV_MP') should not be used in a hierarchical path.
+# ** Warning: driver.sv(17): (vopt-8637) A modport ('DRV_MP') should not be used in a hierarchical path.
+# ** Warning: monitor.sv(17): (vopt-8637) A modport ('MON_MP') should not be used in a hierarchical path.
+# ** Warning: monitor.sv(17): (vopt-8637) A modport ('MON_MP') should not be used in a hierarchical path.
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.mux_interface(fast)
+# Loading work.pkg_files(fast)
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# ** Warning: (vsim-8637) A modport ('DRV_MP') should not be used in a hierarchical path.
+#    Time: 0 ns  Iteration: 0  Region: /pkg_files File: driver.sv Line: 17
+# ** Warning: (vsim-8637) A modport ('MON_MP') should not be used in a hierarchical path.
+#    Time: 0 ns  Iteration: 0  Region: /pkg_files File: monitor.sv Line: 17
+# run -all
+# ** Error: (vsim-3971) $cast to type 'enum int pkg_files::operation' from 'reg[3:0]' failed in file monitor.sv at line 20.
+#    Time: 5 ns  Iteration: 1  Region: /pkg_files::environment::run
+# -------------------monitor class-------------------
+# Time	|	Name		|	Value
+# -------------------------------------------------------
+# 5	|	ENABLE		|	0
+# 5	|	SEL		|	0
+# 5	|	A		|	0
+# 5	|	B		|	0
+# 5	|	C		|	0
+# 5	|	D		|	0
+# 5	|	OUT		|	0
+# -------------------------------------------------------
+# -------------------predictor class-------------------
+# Time	|	Name		|	Value
+# -------------------------------------------------------
+# 5	|	ENABLE		|	0
+# 5	|	SEL		|	0
+# 5	|	A		|	0
+# 5	|	B		|	0
+# 5	|	C		|	0
+# 5	|	D		|	0
+# 5	|	OUT		|	0
+# -------------------------------------------------------
+#                    5 : scoreboard expected: BIT_AND 0 0 0 0 0 0 0
+# -------------------scoreboard class-------------------
+# Time	|	Name		|	Value
+# -------------------------------------------------------
+# 5	|	ENABLE		|	0
+# 5	|	SEL		|	0
+# 5	|	A		|	0
+# 5	|	B		|	0
+# 5	|	C		|	0
+# 5	|	D		|	0
+# 5	|	OUT		|	0
+# -------------------------------------------------------
+#                    5 : scoreboard actual: BIT_AND 0 0 0 0 0 0 0
+# -------------------scoreboard class-------------------
+# Time	|	Name		|	Value
+# -------------------------------------------------------
+# 5	|	ENABLE		|	0
+# 5	|	SEL		|	0
+# 5	|	A		|	0
+# 5	|	B		|	0
+# 5	|	C		|	0
+# 5	|	D		|	0
+# 5	|	OUT		|	0
+# -------------------------------------------------------
+# read pass
+#                    5 : generator: MASK0_B 1230668374 1862437834 2051462357 2185603796 0 0 0
+# -------------------generator class-------------------
+# Time	|	Name		|	Value
+# -------------------------------------------------------
+# 5	|	ENABLE		|	0
+# 5	|	SEL		|	0
+# 5	|	A		|	1230668374
+# 5	|	B		|	1862437834
+# 5	|	C		|	2051462357
+# 5	|	D		|	2185603796
+# 5	|	OUT		|	0
+# -------------------------------------------------------
+# env run completed
+# test build_run completed
+# ** Note: $finish    : top.sv(31)
+#    Time: 5 ns  Iteration: 2  Instance: /top
+# End time: 18:00:57 on May 15,2024, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 6

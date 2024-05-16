@@ -12,7 +12,7 @@
 
 class mem_test;
 	//environment object
-	mem_env env_obj;
+	mem_env env_h;
   //sanity testcase handle
   mem_gen_sanity_test sanity_test;
   //simultaneous write_read testcase handle
@@ -27,37 +27,37 @@ class mem_test;
 	virtual mem_intf #(.DEPTH(256), .DWIDTH(8)) vintf;
   //building
   task build();
-		env_obj = new();
-		env_obj.build();
+		env_h = new();
+		env_h.build();
   endtask
 	//passing interface
 	function connect(virtual mem_intf #(.DEPTH(256), .DWIDTH(8)) vintf);
 		this.vintf = vintf;
     if($test$plusargs("SANITY_TEST")) begin
       sanity_test = new();
-      env_obj.gen_obj = sanity_test;
+      env_h.gen_h = sanity_test;
     end
     if($test$plusargs("SIMULTANEOUS_WR")) begin
       simultaneous_wr = new();
-      env_obj.gen_obj = simultaneous_wr;
+      env_h.gen_h = simultaneous_wr;
     end
     if($test$plusargs("CONTINUOUS_WR")) begin
       continuous_wr = new();
-      env_obj.gen_obj = continuous_wr;
+      env_h.gen_h = continuous_wr;
     end
     if($test$plusargs("BACKTOBACK_WR")) begin
       backtoback_wr = new();
-      env_obj.gen_obj = backtoback_wr;
+      env_h.gen_h = backtoback_wr;
     end
     if($test$plusargs("INBETWEEN_RESET")) begin
       inbetween_reset = new();
-      env_obj.gen_obj = inbetween_reset;
+      env_h.gen_h = inbetween_reset;
     end
-		env_obj.connect(vintf);
+		env_h.connect(vintf);
 	endfunction
 	// running
 	task run();
-		env_obj.run();
+		env_h.run();
 	endtask
 endclass
 `endif

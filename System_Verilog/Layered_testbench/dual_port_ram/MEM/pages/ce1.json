@@ -1,0 +1,28 @@
+var g_data = {
+c126:[{dummy:0}
+,{anchor:'cvg129',cr:'m',items:[{s:'3',x:'FC',z:'(this.act_trans_h.rd_enbl || this.act_trans_h.wr_enbl)',c:'R',p:'0.00',d:'0',m:'0',F:'1'}
+,{}
+,{z:'this.act_trans_h.rd_enbl',c:'r',r:'\'_1\' not hit',i:'Hit \'_1\''}
+,{z:'this.act_trans_h.wr_enbl',c:'r',r:'\'_1\' not hit',i:'Hit \'_1\''}
+,{}
+,{n:'1',z:'this.act_trans_h.rd_enbl_0',h1:'5',t:'c',c1:'~this.act_trans_h.wr_enbl'}
+,{n:'2',z:'this.act_trans_h.rd_enbl_1',h1:'0',t:'c',c1:'-'}
+,{n:'3',z:'this.act_trans_h.wr_enbl_0',h1:'5',t:'c',c1:'~this.act_trans_h.rd_enbl'}
+,{n:'4',z:'this.act_trans_h.wr_enbl_1',h1:'0',t:'c',c1:'~this.act_trans_h.rd_enbl'}
+]}
+],
+c255:[{dummy:0}
+,{anchor:'cvg258',cr:'m',items:[{s:'3',x:'FC',z:'(this.act_trans_h.rd_enbl || this.act_trans_h.wr_enbl)',c:'R',p:'0.00',d:'0',m:'0',F:'1'}
+,{}
+,{z:'this.act_trans_h.rd_enbl',c:'r',r:'\'_1\' not hit',i:'Hit \'_1\''}
+,{z:'this.act_trans_h.wr_enbl',c:'r',r:'\'_1\' not hit',i:'Hit \'_1\''}
+,{}
+,{n:'1',z:'this.act_trans_h.rd_enbl_0',h1:'5',t:'c',c1:'~this.act_trans_h.wr_enbl'}
+,{n:'2',z:'this.act_trans_h.rd_enbl_1',h1:'0',t:'c',c1:'-'}
+,{n:'3',z:'this.act_trans_h.wr_enbl_0',h1:'5',t:'c',c1:'~this.act_trans_h.rd_enbl'}
+,{n:'4',z:'this.act_trans_h.wr_enbl_1',h1:'0',t:'c',c1:'~this.act_trans_h.rd_enbl'}
+]}
+],
+dummyEnd:0
+};
+processCondExprData(g_data);

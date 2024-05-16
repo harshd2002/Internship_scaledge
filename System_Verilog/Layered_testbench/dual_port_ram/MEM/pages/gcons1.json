@@ -1,0 +1,5 @@
+var g_db_data = [
+{dummy:0},
+{name:'cvg',f:1,type:6,id:90,tb:'57',h:'43',m:'14',hp:'75.43%',cov:['94.50%','G'],g:'100.00%',gp:['94.50%','G'],hdlPath:'/pkg_files/mem_scrbd',parent:'87'},
+{name:'cvg',f:1,type:6,id:216,tb:'57',h:'43',m:'14',hp:'75.43%',cov:['94.50%','G'],g:'100.00%',gp:['94.50%','G'],hdlPath:'work.pkg_files::mem_scrbd',parent:'213'}];
+processConsCovergroupsData(g_db_data);

@@ -32,17 +32,19 @@ class mem_trans #(byte DWIDTH = 8, byte AWIDTH = 8 );
 	//output read data of memory
 	bit [DWIDTH-1:0] rd_data;
 
+  //constraint for reset
+  constraint rst_c { ops_e != RESET; }
 	//print data
 	task print_trans(string block);
 		$display("-------------------%0s class-------------------", block);
 		$display("Time\t|\tName\t\t|\tValue");
 		$display("-------------------------------------------------------");
-		$display("%0d\t|\twr_enbl\t\t|\t%0d", $time, wr_enbl);
-		$display("%0d\t|\trd_enbl\t\t|\t%0d", $time, rd_enbl);
-		$display("%0d\t|\twr_addr\t\t|\t%0d", $time, wr_addr);
-		$display("%0d\t|\trd_addr\t\t|\t%0d", $time, rd_addr);
-		$display("%0d\t|\twr_data\t\t|\t%0d", $time, wr_data);
-		$display("%0d\t|\trd_data\t\t|\t%0d", $time, rd_data);
+		$display("%0t\t|\twr_enbl\t\t|\t%0d", $time, wr_enbl);
+		$display("%0t\t|\trd_enbl\t\t|\t%0d", $time, rd_enbl);
+		$display("%0t\t|\twr_addr\t\t|\t%0d", $time, wr_addr);
+		$display("%0t\t|\trd_addr\t\t|\t%0d", $time, rd_addr);
+		$display("%0t\t|\twr_data\t\t|\t%0d", $time, wr_data);
+		$display("%0t\t|\trd_data\t\t|\t%0d", $time, rd_data);
 		$display("-------------------------------------------------------");
 	endtask
 

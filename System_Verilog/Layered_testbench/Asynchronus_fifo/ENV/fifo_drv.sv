@@ -1,16 +1,16 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//Project: dualport RAM verification
-//File name: ram_drv.sv
-//description: driver class
+//Project: Asynchronous FIFO verification
+//File name: fifo_rd_drv.sv
+//description: read driver class
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-//RAM driver class
+//Async FIFO read driver class
 
-`ifndef RAM_DRIVER
-`define RAM_DRIVER
+`ifndef FIFO_READ_DRIVER
+`define FIFO_READ_DRIVER
 
-class mem_drv;
+class fifo_drv;
 	//object of transaction class to store data
 	mem_trans trans_obj;
 	//mailbox to get data from generator
@@ -30,11 +30,8 @@ class mem_drv;
     $display("reset block");
       @(reset_done);
       disable drive_b;
-			vintf.wr_enbl <= 0;
-			vintf.wr_addr <= 0;
-			vintf.wr_data <= 0;
 			vintf.rd_enbl <= 0;
-			vintf.rd_addr <= 0;
+			vintf.rd_data <= 0;
       $display($time, " :reset asserted");
       @(negedge vintf.rst)
       $display($time, " :reset deasserted");
@@ -47,34 +44,19 @@ class mem_drv;
 		//logic for pins
 		case(trans_obj.ops_e)
 		1: begin
-			trans_obj.wr_enbl = 1;
 			trans_obj.rd_enbl = 0;
-			vintf.mem_cb.wr_enbl <= 1;
-			vintf.mem_cb.wr_addr <= trans_obj.wr_addr;
-			vintf.mem_cb.wr_data <= trans_obj.wr_data;
 			vintf.mem_cb.rd_enbl <= 0;
-			vintf.mem_cb.rd_addr <= trans_obj.rd_addr;
 		end
 		2: begin
-			trans_obj.wr_enbl = 0;
 			trans_obj.rd_enbl = 1;
-			vintf.mem_cb.wr_enbl <= 0;
-			vintf.mem_cb.wr_addr <= trans_obj.wr_addr;
-			vintf.mem_cb.wr_data <= trans_obj.wr_data;
 			vintf.mem_cb.rd_enbl <= 1;
-			vintf.mem_cb.rd_addr <= trans_obj.rd_addr;
 		end
 		3: begin
 			trans_obj.rd_enbl = 1;
-			trans_obj.wr_enbl = 1;
-			vintf.mem_cb.wr_enbl <= 1;
-			vintf.mem_cb.wr_addr <= trans_obj.wr_addr;
-			vintf.mem_cb.wr_data <= trans_obj.wr_data;
 			vintf.mem_cb.rd_enbl <= 1;
-			vintf.mem_cb.rd_addr <= trans_obj.rd_addr;
 		end
 		endcase
-    trans_obj.print_trans("driver");
+    trans_obj.print_trans("rd_driver");
     #SKEW_DEL -> item_done;
     disable reset_b;
     //end

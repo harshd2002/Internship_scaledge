@@ -1,0 +1,3 @@
+Write constraints for randomly generating an array of numbers with a size ranging from 20 to 30. the array index should hold prime values , array elements should be between 5 and 30 and sum should be 300.
+
+interface passing without virtual 

@@ -20,7 +20,7 @@ module mem_top();
 	//clock
 	bit clk;
 	//object of test class to call tasks
-	mem_test test_obj;
+	mem_test test_h;
 	//reference model memory
 	mem_intf #(.DEPTH(256), .DWIDTH(8)) intf(clk);
 	//dut instantiation
@@ -47,9 +47,10 @@ module mem_top();
 	//initializing variables and calling tasks
 	initial begin
 
-		test_obj = new();
+		test_h = new();
     fork
 		run_test();
+    //initial reset
     -> reset_done;
     join
 		#10;
@@ -60,12 +61,9 @@ module mem_top();
 
   //run_test
   task run_test();
-    test_obj.build();
-		test_obj.connect(intf);
-    //fork
-    //-> reset_done;
-    test_obj.run();
-    //join
+    test_h.build();
+		test_h.connect(intf);
+    test_h.run();
   endtask
 
 endmodule

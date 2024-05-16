@@ -15,15 +15,15 @@ class mem_gen_backtoback_wr extends mem_gen;
 	//task to generate and store data
 	task run();
     $display($time, " :generator_backtoback_wr");
-		trans_obj = new();
+		trans_h = new();
 		repeat(num_itr) begin
-		trans_obj.randomize() with {wr_addr==rd_addr; ops_e == WRITE;};
-		gen_drv.put(trans_obj);
-		$display($time," : generator: %0p", trans_obj);
+		trans_h.randomize() with {wr_addr==rd_addr; ops_e == WRITE;};
+		gen_drv.put(trans_h);
+		$display($time," : generator: %0p", trans_h);
     @(item_done);
-    trans_obj.ops_e = READ;
-		gen_drv.put(trans_obj);
-		$display($time," : generator: %0p", trans_obj);
+    trans_h.ops_e = READ;
+		gen_drv.put(trans_h);
+		$display($time," : generator: %0p", trans_h);
     @(item_done);
 		end
 	endtask

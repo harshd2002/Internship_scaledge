@@ -1,19 +1,28 @@
 //RAM test class
 
-class mem_test;
-	//environment object
-	mem_env env_obj;
+class test;
+  //gen_sanity handle
+  gen_sanity sanity_h;
+	//environment handle
+	environment env_h;
 	//virtual interface to pass interface
-	virtual mem_intf #(.DEPTH(256), .DWIDTH(8)) vintf;
-	//passing interface
-	function new(virtual mem_intf #(.DEPTH(256), .DWIDTH(8)) vintf);
-		this.vintf = vintf;
-	endfunction
+	virtual mux_interface vintf;
 	//building and running
-	task build_run();
-		env_obj = new(vintf);
-		env_obj.build();
-		env_obj.run();
+	task build();
+		env_h = new();
+		env_h.build();
+  endtask
+
+  //calling connect method
+  task connect(virtual mux_interface vintf);
+		this.vintf = vintf;
+    sanity_h = new();
+    env_h.gen_h = sanity_h;
+    env_h.connect(vintf);
+  endtask
+  //calling run method
+  task run();
+		env_h.run();
 		$display("test build_run completed");
 	endtask
 endclass

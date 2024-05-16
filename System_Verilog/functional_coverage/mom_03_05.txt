@@ -1,0 +1,21 @@
+why non-blockinhg in driver?
+  --> glitchs can be induced in output while updating inputs when blocking statements are used.
+why non-blockinhg in monitor
+  --> zero will be obtained in output while updating inputs when non-blocking statements are used.
+
+why we need functional coverage?
+difference between code and functional coverage?
+types of code coverage?
+
+
+axi is usd in memory while apb can be used in low databandwidth like csr or registers
+
+
+preponed - values are sampled as per clocking block input skew
+
+re-active, re-inactive, re-nba - for program block
+
+test
+
+
+

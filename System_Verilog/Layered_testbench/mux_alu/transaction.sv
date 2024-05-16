@@ -13,9 +13,6 @@
 
 //transaction class
 
-//enum type variable to select operation type
-typedef enum {BIT_AND, SUB, ADD, SQ_A, SQ_B, MASK1_A, MASK0_B, INVALID} operation;
-
 class transaction #(byte IN_WIDTH = 32, byte SEL_WIDTH = 4);
 
 	//enum to determine operation 
@@ -34,21 +31,23 @@ class transaction #(byte IN_WIDTH = 32, byte SEL_WIDTH = 4);
 	rand bit [IN_WIDTH-1:0] A, B, C, D;
 	//select line
 	bit [SEL_WIDTH-1:0] sel_i;
+  bit enb;
 	//output 
 	bit [IN_WIDTH:0] out;
 
-	/*//print data
-	task print_trans();
-		$display("-------------------transaction class-------------------");
+	//print data
+	task print_trans(string block);
+		$display("-------------------%0s class-------------------", block);
 		$display("Time\t|\tName\t\t|\tValue");
 		$display("-------------------------------------------------------");
-		$display("%0d\t|\twr_enbl\t\t|\t%0d", $time, wr_enbl);
-		$display("%0d\t|\trd_enbl\t\t|\t%0d", $time, rd_enbl);
-		$display("%0d\t|\twr_addr\t\t|\t%0d", $time, wr_addr);
-		$display("%0d\t|\trd_addr\t\t|\t%0d", $time, rd_addr);
-		$display("%0d\t|\twr_data\t\t|\t%0d", $time, wr_data);
-		$display("%0d\t|\trd_data\t\t|\t%0d", $time, rd_data);
+		$display("%0t\t|\tENABLE\t\t|\t%0d", $time, enb);
+		$display("%0t\t|\tSEL\t\t|\t%0d", $time, sel_i);
+		$display("%0t\t|\tA\t\t|\t%0d", $time, A);
+		$display("%0t\t|\tB\t\t|\t%0d", $time, B);
+		$display("%0t\t|\tC\t\t|\t%0d", $time, C);
+		$display("%0t\t|\tD\t\t|\t%0d", $time, D);
+		$display("%0t\t|\tOUT\t\t|\t%0d", $time, out);
 		$display("-------------------------------------------------------");
 	endtask
-*/
+
 endclass

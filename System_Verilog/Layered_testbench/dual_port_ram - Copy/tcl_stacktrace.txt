@@ -1,0 +1,16 @@
+Wed May 08 10:56:45 IST 2024
+Trace back: Macro Break
+    while executing
+"macroMark"
+    (procedure "update" line 6)
+    invoked from within
+"update"
+    (procedure "Memtool::CleanUpDataPane" line 6)
+    invoked from within
+"Memtool::CleanUpDataPane $vsimMem(dPane2cs:$memdatawin)"
+    (procedure "Memtool::DelayUpdateMemData" line 10)
+    invoked from within
+"Memtool::DelayUpdateMemData .main_pane.memdata.interior.cs.body /mem_top/test_obj.env_obj.pred_obj.rf_ram 1"
+    (command bound to event)
+  <2:C:/questasim64_10.7c/win64/tk8.6/bgerror.tcl:106: ::tkerror {Macro Break}
+  <1:proc:153: ::tk::dialog::error::bgerror {Macro Break}

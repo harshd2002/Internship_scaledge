@@ -1,29 +1,33 @@
-//RAM scoreboard class
+//scoreboard class
 
-class mem_scrbd;
+class scoreboard;
 	//handle for expected and actual data
-	mem_trans exp_trans_obj, act_trans_obj;
+	transaction exp_trans_h, act_trans_h;
 	//mailbox from monitor and predictor
-	mailbox #(mem_trans) mon_pred_scrbd;
-	mailbox #(mem_trans) pred_scrbd;
+	mailbox #(transaction) mon_pred_scrbd;
+	mailbox #(transaction) pred_scrbd;
 
 	//connecting mailbox
-	function new(mailbox #(mem_trans) mon_pred_scrbd, pred_scrbd);
+	function void connect(mailbox #(transaction) mon_pred_scrbd, pred_scrbd);
 		this.mon_pred_scrbd = mon_pred_scrbd;
 		this.pred_scrbd = pred_scrbd;
 	endfunction
 
 	//comparing outputs
 	task run();
-		mon_pred_scrbd.get(act_trans_obj);
-		pred_scrbd.get(exp_trans_obj);
-		$display($time," : scoreboard expected: %0p", exp_trans_obj);
-		$display($time," : scoreboard actual: %0p", act_trans_obj);
-		//scoreboard logic 
-			if(exp_trans_obj.rd_data == act_trans_obj.rd_data)
-				$display("read pass");
-			else
-				$display("read fail");
+    forever begin
+		  mon_pred_scrbd.get(act_trans_h);
+		  pred_scrbd.get(exp_trans_h);
+		  $display($time," : scoreboard expected: %0p", exp_trans_h);
+      exp_trans_h.print_trans("scoreboard");
+		  $display($time," : scoreboard actual: %0p", act_trans_h);
+      act_trans_h.print_trans("scoreboard");
+		  //scoreboard logic 
+		  if(exp_trans_h.out == act_trans_h.out)
+		  	$display("read pass");
+		  else
+		  	$display("read fail");
+    end
 	endtask
 
 endclass
