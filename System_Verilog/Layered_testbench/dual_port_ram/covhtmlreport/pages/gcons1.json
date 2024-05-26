@@ -1,4 +1,0 @@
-var g_db_data = [
-{dummy:0},
-{name:'cvg',f:1,type:6,id:30,tb:'57',h:'13',m:'44',hp:'22.80%',cov:['17.64%','R'],g:'100.00%',gp:['17.64%','R'],hdlPath:'/pkg_files/mem_scrbd',parent:'29'}];
-processConsCovergroupsData(g_db_data);

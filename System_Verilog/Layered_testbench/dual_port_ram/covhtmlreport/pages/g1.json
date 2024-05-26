@@ -1,7 +1,0 @@
-var g_data = {
-g29:[{dummy:0},
-{name:'cvg',f:1,type:1,id:30,tb:'57',h:'13',m:'44',hp:'22.80%',cov:['17.64%','R'],g:'100.00%',gp:['17.64%','R'],parent:'29'},
-{name:'\\/pkg_files::mem_scrbd::cvg ',f:1,type:2,id:48,tb:'57',h:'13',m:'44',hp:'22.80%',cov:['17.64%','R'],g:'100.00%',gp:['17.64%','R'],cvg:'cvg',parent:'30'}],
-dummyEnd:0
-};
-processCovergroupsData(g_data);
