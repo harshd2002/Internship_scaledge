@@ -1,63 +1,58 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//Project: dualport RAM verification
-//File name: ram_test.sv
+//Project:Asynchronous FIFO verification
+//File name: fifo_test.sv
 //description: test class
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-//RAM test class
+//Async FIFO test class
 
-`ifndef RAM_TEST
-`define RAM_TEST
+`ifndef FIFO_TEST
+`define FIFO_TEST
 
-class mem_test;
+class fifo_test;
 	//environment object
-	mem_env env_obj;
+	fifo_env env_h;
   //sanity testcase handle
-  mem_gen_sanity_test sanity_test;
-  //simultaneous write_read testcase handle
-  mem_gen_simultaneous_wr simultaneous_wr;
-  //continuous write_read testcase handle
-  mem_gen_continuous_wr continuous_wr;
-  //back to back write_read testcase handle
-  mem_gen_backtoback_wr backtoback_wr;
-  //Inbetween reset testcase handle
-  mem_gen_inbetween_reset inbetween_reset;
+  fifo_gen_sanity sanity_h;
 	//virtual interface to pass interface
-	virtual mem_intf #(.DEPTH(256), .DWIDTH(8)) vintf;
+	virtual fifo_intf vintf;
+
   //building
   task build();
-		env_obj = new();
-		env_obj.build();
+		env_h = new();
+		env_h.build();
   endtask
 	//passing interface
-	function connect(virtual mem_intf #(.DEPTH(256), .DWIDTH(8)) vintf);
+	function void connect(virtual fifo_intf vintf);
 		this.vintf = vintf;
-    if($test$plusargs("SANITY_TEST")) begin
-      sanity_test = new();
-      env_obj.gen_obj = sanity_test;
-    end
+    if($test$plusargs("SANITY")) begin
+      sanity_h = new();
+      env_h.gen_h = sanity_h;
+    end/*
     if($test$plusargs("SIMULTANEOUS_WR")) begin
       simultaneous_wr = new();
-      env_obj.gen_obj = simultaneous_wr;
+      env_h.gen_h = simultaneous_wr;
     end
     if($test$plusargs("CONTINUOUS_WR")) begin
       continuous_wr = new();
-      env_obj.gen_obj = continuous_wr;
+      env_h.gen_h = continuous_wr;
     end
     if($test$plusargs("BACKTOBACK_WR")) begin
       backtoback_wr = new();
-      env_obj.gen_obj = backtoback_wr;
+      env_h.gen_h = backtoback_wr;
     end
     if($test$plusargs("INBETWEEN_RESET")) begin
       inbetween_reset = new();
-      env_obj.gen_obj = inbetween_reset;
-    end
-		env_obj.connect(vintf);
+      env_h.gen_h = inbetween_reset;
+    end*/
+		env_h.connect(vintf);
 	endfunction
+
 	// running
 	task run();
-		env_obj.run();
+		env_h.run();
 	endtask
+
 endclass
 `endif

@@ -16,7 +16,7 @@ class fifo_drv;
 	//mailbox to get data from generator
 	mailbox #(fifo_trans) gen_drv;
 	//virtual interface to connect with original interface (fifo_intf)
-	virtual fifo_intf #(.DEPTH(256), .DWIDTH(8)) vintf;
+	virtual fifo_intf vintf;
 	//connecting mailbox and virtual interface
 	function connect(mailbox #(fifo_trans) gen_drv, virtual fifo_intf #(.DEPTH(256), .DWIDTH(8)) vintf);
 		this.gen_drv = gen_drv;

@@ -43,13 +43,8 @@ class fifo_drv;
 
   //task to drive write data
   task wr_driver();
-    forever begin
-          if(vintf.rstn) begin
           $display("write driver started");
             if(!`WR_DRV.overflow) begin
-              wr_gen_drv.get(wr_trans_h);
-              object_raise();
-              @(vintf.wr_drv_mp.wr_drv_cb);
               `WR_DRV.wr_enbl <= wr_trans_h.wr_enbl;
               `WR_DRV.wr_data <= wr_trans_h.wr_data;
             end
@@ -58,39 +53,47 @@ class fifo_drv;
               `WR_DRV.wr_enbl <= wr_trans_h.wr_enbl;
               `WR_DRV.wr_data <= wr_trans_h.wr_data;
             end
-            object_drop();
-          end
-      reset_n();
-    end
   endtask
 
   //task to drive read data
   task rd_driver();
-    forever begin
-      if(vintf.rstn) begin
-      $display("read driver started");
-        if(!`RD_DRV.underflow) begin
-          rd_gen_drv.get(rd_trans_h);
-          object_raise();
-          @(vintf.rd_drv_mp.rd_drv_cb);
-          `RD_DRV.rd_enbl <= rd_trans_h.rd_enbl;
-        end
-        else begin
-          wait(!`RD_DRV.empty && !`RD_DRV.underflow)
-          `RD_DRV.rd_enbl <= rd_trans_h.rd_enbl;
-        end
-        object_drop();
-      end
-      reset_n();
-    end
+          $display("read driver started");
+            if(!`RD_DRV.underflow) begin
+              rd_gen_drv.get(rd_trans_h);
+              object_raise();
+              `RD_DRV.rd_enbl <= rd_trans_h.rd_enbl;
+            end
+            else begin
+              wait(!`RD_DRV.empty && !`RD_DRV.underflow)
+              `RD_DRV.rd_enbl <= rd_trans_h.rd_enbl;
+            end
   endtask
 
 	//converting transaction level data to pin level
 	task run();
-  fork
-    wr_driver();
-    rd_driver();
-  join
+    forever begin
+      fork
+        begin
+          @(negedge vintf.rstn);
+        end
+        begin
+          if(vintf.rstn) begin
+            fork
+              wr_gen_drv.get(wr_trans_h);
+              rd_gen_drv.get(rd_trans_h);
+            join_any
+            object_raise();
+            fork
+              wr_driver();
+              rd_driver();
+            join
+            object_drop();
+          end
+        end
+      join_any
+      disable fork;
+      reset_n();
+    end
 	endtask
 
 endclass

@@ -7,42 +7,57 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //Async FIFO monitor class
 
-`ifndef FIFO_WR_MONITOR
-`define FIFO_WR_MONITOR
+`ifndef FIFO_MONITOR
+`define FIFO_MONITOR
 
-class fifo_wr_mon;
+class fifo_mon;
 	//object of transaction class to store data
-	fifo_trans trans_obj;
+	fifo_trans wr_trans_h, rd_trans_h;
 	//mailbox to pass data to predictor and scoreboard
-	mailbox #(fifo_trans) wr_mon_pred_scrbd;
+	mailbox #(fifo_trans) mon_pred_scrbd;
 	//virtual interface to connect with original interface (fifo_intf)
-	virtual fifo_intf #(.DEPTH(256), .DWIDTH(8)) vintf;
+	virtual fifo_intf vintf;
+
 	//connecting mailbox and virtual interface
-	function connect(mailbox #(fifo_trans) wr_mon_pred_scrbd, virtual fifo_intf #(.DEPTH(256), .DWIDTH(8)) vintf);
-		this.wr_mon_pred_scrbd = wr_mon_pred_scrbd;
+	function void connect(mailbox #(fifo_trans) mon_pred_scrbd, virtual fifo_intf vintf);
+		this.mon_pred_scrbd = mon_pred_scrbd;
 		this.vintf = vintf;
 	endfunction
-	//converting pin level data into transaction level data
+	
+  //converting pin level data into transaction level data
 	task run();
-		forever @(vintf.fifo_cb_wr_mon) begin
-		trans_obj = new();
+		forever begin
+		trans_h = new();
+    $display("monitor started");
 		//logic to generate transaction level data
-		trans_obj.wr_enbl = vintf.fifo_cb_wr_mon.wr_enbl;
-		trans_obj.wr_data = vintf.fifo_cb_wr_mon.wr_data;
-		trans_obj.wr_addr = vintf.fifo_cb_wr_mon.wr_addr;
-		case({vintf.fifo_cb_wr_mon.wr_enbl, vintf.fifo_cb_wr_mon.rd_enbl})
-			2'b10: begin
-				trans_obj.ops_e = WRITE;
-			end
-			2'b11: begin
-				trans_obj.ops_e = WRITE_READ;
-			end
-      default
-		endcase
-		//storing data for scoreboard and oeredictor
-		wr_mon_pred_scrbd.put(trans_obj);
-    //$display($time, "monitor");
-    trans_obj.print_trans("monitor");
+    fork
+      $display("monitor started");
+      begin: wr_mon_b
+        @(`WR_MON);
+        object_raise();
+	    	trans_h.wr_enbl     = `WR_MON.wr_enbl;
+	    	trans_h.wr_data     = `WR_MON.wr_data;
+        trans_h.full        = `WR_MON.full;
+        trans_h.almost_full = `WR_MON.almost_full;
+        trans_h.overflow    = `WR_MON.overflow;
+      end
+      begin: rd_mon_b
+        @(`RD_MON);
+        object_raise();
+		    trans_h.rd_enbl      = `RD_MON.rd_enbl;
+        trans_h.rd_data      = `RD_MON.rd_data;
+        trans_h.empty        = `RD_MON.empty;
+        trans_h.almost_empty = `RD_MON.almost_empty;
+        trans_h.underflow    = `RD_MON.underflow;
+      end
+    join_any
+    disable fork;
+    $cast(trans_h.ops_e,{`RD_MON.rd_enbl, `WR_MON.wr_enbl});
+		//storing data for scoreboard and predictor
+		mon_pred_scrbd.put(trans_h);
+    trans_h.print_trans("monitor");
+    object_drop();
+    object_drop();
     end
 	endtask
 endclass

@@ -1,72 +1,77 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//Project: dualport RAM verification
-//File name: ram_top.sv
+//Project: Asunchronous FIFO verification
+//File name: fifo_top.sv
 //description: top module
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-//RAM top level module
-`ifndef RAM_TOP
-`define RAM_TOP
 
-//`include "ram_rtl.sv"
-`include "pkg_files.sv"
+//Async FIFO top level module
+`ifndef FIFO_TOP
+`define FIFO_TOP
 
-import pkg_files::*;
-`include "ram_intf.sv"
+import fifo_pack::*;
 
-module mem_top();
+module fifo_top();
 
-	//clock
-	bit clk;
+	//clock and reset
+	bit wr_clk, rd_clk, rstn;
 	//object of test class to call tasks
-	mem_test test_obj;
+	fifo_test test_h;
 	//reference model memory
-	mem_intf #(.DEPTH(256), .DWIDTH(8)) intf(clk);
+	fifo_intf intf(wr_clk, rd_clk, rstn);
+
 	//dut instantiation
-	ram_rtl dut(.clk(clk),
-					.rst(intf.rst),
-					.wr_enbl(intf.wr_enbl),
-					.wr_addr(intf.wr_addr),
-					.wr_data(intf.wr_data),
-					.rd_enbl(intf.rd_enbl),
-					.rd_addr(intf.rd_addr),
-					.rd_data(intf.rd_data)
-					);
+	async_fifo dut(.wr_clk(wr_clk),
+                .rd_clk(rd_clk),
+					      .rstn(rstn),
+					      .wr_en(intf.wr_enbl),
+					      .rd_en(intf.rd_enbl),
+					      .wr_data(intf.wr_data),
+					      .rd_data(intf.rd_data),
+                .full(intf.full),
+                .empty(intf.empty),
+                .almost_full(intf.almost_full),
+                .almost_empty(intf.almost_empty),
+                .overflow(intf.overflow),
+                .underflow(intf.underflow)
+					      );
 
   //reset task
   always begin
-    @(reset_done)
-  //task reset();
-  //-> reset_done;
-		intf.rst = 1;
-		repeat(2) @(posedge clk);
-		intf.rst = 0;
+    @(rst_evt)
+		rstn = 0;
+		#RST_TIME;
+		rstn = 1;
   end
+
+  //initial reset
+  task initial_rstn();
+    rstn = 0;
+    $display("reset will be asserted for %0d.", RST_TIME);
+		#RST_TIME;
+		rstn = 1;
+  endtask
 
 	//initializing variables and calling tasks
 	initial begin
-
-		test_obj = new();
+		test_h = new();
+    test_h.build();
+		test_h.connect(intf);
     fork
-		run_test();
-    -> reset_done;
-    join
-		#10;
+      initial_rstn();
+      test_h.run();
+    join_none
+    //wait(!object_count);
+    #10;
 		$finish;
 	end
-	//generating clock
-	always #5 clk = ~clk;
 
-  //run_test
-  task run_test();
-    test_obj.build();
-		test_obj.connect(intf);
-    //fork
-    //-> reset_done;
-    test_obj.run();
-    //join
-  endtask
+	//generating write clock
+	always #3 wr_clk = ~wr_clk;
+
+	//generating read clock
+	always #5 rd_clk = ~rd_clk;
 
 endmodule
 `endif

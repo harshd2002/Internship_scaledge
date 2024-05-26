@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//Project: Asunchronous FIFO verification
+//Project: Asynchronous FIFO verification
 //File name: fifo_trans.sv
 //description: transaction class
 //
@@ -29,24 +29,23 @@ class fifo_trans #(byte DWIDTH = 8, byte AWIDTH = 8 );
 	bit wr_enbl, rd_enbl;
 	//output read data of memory
 	bit [DWIDTH-1:0] rd_data;
+  //FIFO flags 
   bit full, empty, almost_full, almost_empty, overflow, underflow;
+  //variable to store all the flags
+  bit [5:0] flags;
+  
+  //constraint for not randomizing reset 
+  constraint rst_cnst { ops_e != RESET;}
 
-  constraint rst_cnst { ops_e != RESET; };
 	//print data
-  /*
 	task print_trans(string block);
-		$display("-------------------%0s class-------------------", block);
-		$display("Time\t|\twr_wnb\t|\trd_wnb\t|\twr_data\t|\trd_data\t|\twr_data\t\t|\tValue");
-		$display("-------------------------------------------------------");
-		$display("%0d\t|\twr_enbl\t\t|\t%0d", $time, wr_enbl);
-		$display("%0d\t|\trd_enbl\t\t|\t%0d", $time, rd_enbl);
-		$display("%0d\t|\twr_addr\t\t|\t%0d", $time, wr_addr);
-		$display("%0d\t|\trd_addr\t\t|\t%0d", $time, rd_addr);
-		$display("%0d\t|\twr_data\t\t|\t%0d", $time, wr_data);
-		$display("%0d\t|\trd_data\t\t|\t%0d", $time, rd_data);
-		$display("-------------------------------------------------------");
+    flags = { full, empty, almost_full, almost_empty, overflow, underflow };
+		$display("--------------------------%0s class-------------------------", block);
+		$display("Time\t|\twr_enbl\t|\trd_enbl\t|\twr_data\t|\trd_data\t|\tFlags\t\t|");
+		$display("-----------------------------------------------------------------");
+		$display("%0t\t|\t%0b\t|\t%0b\t|\t%0h\t|\t%0h\t|\t%0b\t\t|", $time, wr_enbl, rd_enbl, wr_data, rd_data, flags);
+		$display("-------------------------------------------------------------------");
 	endtask
-  */
 
 endclass
 `endif

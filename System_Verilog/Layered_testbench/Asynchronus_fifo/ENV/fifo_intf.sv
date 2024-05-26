@@ -1,33 +1,52 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//Project: dualport RAM verification
-//File name: ram_intf.sv
+//Project: Asynchronous FIFO verification
+//File name: fifo_intf.sv
 //description: interface
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-//RAM interface
+//FIFO interface
 
-`ifndef RAM_INTERFACE
-`define RAM_INTERFACE
+`ifndef FIFO_INTERFACE
+`define FIFO_INTERFACE
 
-interface mem_intf #(int DEPTH = 16, byte DWIDTH = 8, byte AWIDTH = $clog2(DEPTH)) (input bit clk);
-	logic rst;
+interface fifo_intf (input wr_clk, input rd_clk, input rstn);
 	logic wr_enbl,rd_enbl;
-	logic [DWIDTH-1:0] wr_data, rd_data;
-	logic [AWIDTH-1:0] wr_addr, rd_addr;
+	logic [7:0] wr_data, rd_data;
+	logic full, empty, almost_full, almost_empty, overflow, underflow;
 
-	clocking mem_cb @(posedge clk);
-		default input #0 output #SKEW_DEL;
-		output wr_enbl, wr_data, wr_addr, rd_enbl, rd_addr;
-		//input rd_data;
-	endclocking
-	clocking mem_cb_mon @(posedge clk);
+	clocking wr_drv_cb @(posedge wr_clk);
 		default input #0 output #1;
-		input wr_enbl, wr_data, wr_addr, rd_enbl, rd_addr;
-		input rd_data;
+		output wr_enbl, wr_data;
+		input full, overflow;
 	endclocking
 
-	modport MEM_TB(clocking mem_cb,
-									output rst);
+	clocking rd_drv_cb @(posedge rd_clk);
+		default input #0 output #1;
+		output rd_enbl;
+		input empty, underflow;
+	endclocking
+
+	clocking wr_mon_cb @(posedge wr_clk);
+		default input #0 output #1;
+		input wr_enbl, wr_data;
+		input full, almost_full, overflow;
+	endclocking
+
+	clocking rd_mon_cb @(posedge rd_clk);
+		default input #0 output #1;
+		input rd_enbl, rd_data;
+		input empty, almost_empty, underflow;
+	endclocking
+
+	modport wr_drv_mp(clocking wr_drv_cb,
+									  input wr_clk);
+	modport rd_drv_mp(clocking rd_drv_cb,
+									  input rd_clk);
+	modport wr_mon_mp(clocking wr_mon_cb,
+						        input wr_clk);
+	modport rd_mon_mp(clocking rd_mon_cb,
+									  input rd_clk);
+
 endinterface
 `endif

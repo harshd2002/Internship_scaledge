@@ -1,0 +1,139 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/users/Admin/Documents/git_internship/System_Verilog/Layered_testbench/Asynchronus_fifo/SIM
+vasync_fifo
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 oj>ZeA^eMMA?6NdRe7e3F0
+IIDoWYOMZgL=GOX4B_J3ZA2
+Z1 dC:/Users/Admin/Documents/git_internship/System_Verilog/Layered_testbench/Asynchronus_fifo/SIM
+w1716547776
+8../RTL/async_fifo.v
+F../RTL/async_fifo.v
+L0 3
+Z2 OL;L;10.7c;67
+31
+Z3 !s108 1716550963.000000
+Z4 !s107 ../TEST/fifo_test.sv|../ENV/fifo_env.sv|../ENV/fifo_scrbd.sv|../ENV/fifo_pred.sv|../ENV/fifo_mon.sv|../ENV/fifo_drv.sv|../ENV/fifo_gen_sanity.sv|../ENV/fifo_gen.sv|../ENV/fifo_trans.sv|../ENV/fifo_intf.sv|../ENV/fifo_def.sv|../TOP/fifo_top.sv|../TEST/fifo_pack.sv|../RTL/async_fifo.v|
+Z5 !s90 -reportprogress|300|../RTL/async_fifo.v|../TEST/fifo_pack.sv|../TOP/fifo_top.sv|+incdir+../ENV|+incdir+../TEST|
+!i113 0
+Z6 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 !s92 +incdir+../ENV +incdir+../TEST -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 tCvgOpt 0
+Yfifo_intf
+Z9 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+R0
+r1
+!s85 0
+!i10b 1
+!s100 N89AE2NdAFQjkA?K6Hl5L2
+IHZ0P8213BEhd4z>g65cLm1
+!s105 fifo_pack_sv_unit
+S1
+R1
+w1716544802
+8../ENV/fifo_intf.sv
+F../ENV/fifo_intf.sv
+Z10 L0 13
+R2
+31
+R3
+R4
+R5
+!i113 0
+R6
+R7
+R8
+Xfifo_pack
+!s115 fifo_intf
+R9
+VflQnBMChMe0bVnOAX1>?X2
+r1
+!s85 0
+!i10b 1
+!s100 SGg^zg7k4Vc8JSF3i66EE0
+IflQnBMChMe0bVnOAX1>?X2
+S1
+R1
+w1716550945
+8../TEST/fifo_pack.sv
+F../TEST/fifo_pack.sv
+F../ENV/fifo_trans.sv
+F../ENV/fifo_gen.sv
+F../ENV/fifo_gen_sanity.sv
+F../ENV/fifo_drv.sv
+F../ENV/fifo_mon.sv
+F../ENV/fifo_pred.sv
+F../ENV/fifo_scrbd.sv
+F../ENV/fifo_env.sv
+F../TEST/fifo_test.sv
+L0 17
+R2
+31
+R3
+R4
+R5
+!i113 0
+R6
+R7
+R8
+vfifo_top
+R9
+Z11 DXx4 work 9 fifo_pack 0 22 flQnBMChMe0bVnOAX1>?X2
+DXx4 work 16 fifo_top_sv_unit 0 22 S7TZh?i_WG8FXEgJhK5hM1
+R0
+r1
+!s85 0
+!i10b 1
+!s100 W?ZN6H=m;M@nPofn4Jz052
+IF06lM4Fz;_LaNe<9S:9Dz1
+!s105 fifo_top_sv_unit
+S1
+R1
+Z12 w1716548965
+Z13 8../TOP/fifo_top.sv
+Z14 F../TOP/fifo_top.sv
+L0 15
+R2
+31
+R3
+R4
+R5
+!i113 0
+R6
+R7
+R8
+Xfifo_top_sv_unit
+R9
+R11
+VS7TZh?i_WG8FXEgJhK5hM1
+r1
+!s85 0
+!i10b 1
+!s100 HnUh0fDB>g?n:3`i9h@X`0
+IS7TZh?i_WG8FXEgJhK5hM1
+!i103 1
+S1
+R1
+R12
+R13
+R14
+R10
+R2
+31
+R3
+R4
+R5
+!i113 0
+R6
+R7
+R8

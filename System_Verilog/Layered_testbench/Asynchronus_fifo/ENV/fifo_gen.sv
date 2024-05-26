@@ -13,14 +13,16 @@
 virtual class fifo_gen;
 
 	//object of transaction class to store data
-	fifo_trans trans_obj;
+	fifo_trans trans_h;
 
 	//mailbox to store data 
-	mailbox #(fifo_trans) gen_drv;
+	mailbox #(fifo_trans) wr_gen_drv;
+	mailbox #(fifo_trans) rd_gen_drv;
 
 	//function to connect mailbox
-	function connect(mailbox #(fifo_trans) gen_drv);
-		this.gen_drv = gen_drv;
+	function void connect(mailbox #(fifo_trans) wr_gen_drv, rd_gen_drv);
+		this.wr_gen_drv = wr_gen_drv;
+    this.rd_gen_drv = rd_gen_drv;
 	endfunction
 
 	//task to generate and store data

@@ -1,56 +1,56 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//Project: dualport RAM verification
-//File name: ram_env.sv
+//Project:Asynchronous FIFO verification
+//File name: fifo_env.sv
 //description: environment class
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-//RAM environment class
+//Async FIFO environment class
 
-`ifndef RAM_ENVIRONMENT
-`define RAM_ENVIRONMENT
+`ifndef FIFO_ENVIRONMENT
+`define FIFO_ENVIRONMENT
 
-class mem_env;
-	//virtual interface to pass ports
-	//virtual mem_intf #(.DEPTH(256), .DWIDTH(8)) vintf;
+class fifo_env;
 	//main mailbox declarations
-	mailbox #(mem_trans) gen_drv = new();
-	mailbox #(mem_trans) mon_pred_scrbd = new();
-	mailbox #(mem_trans) pred_scrbd = new();
+	mailbox #(fifo_trans) wr_gen_drv = new();
+	mailbox #(fifo_trans) rd_gen_drv = new();
+	mailbox #(fifo_trans) mon_pred_scrbd = new();
+	mailbox #(fifo_trans) pred_scrbd = new();
+
 	//handles of blocks inside environment
-	mem_gen gen_obj;
-	mem_drv drv_obj;
-	mem_mon mon_obj;
-	mem_pred pred_obj;
-	mem_scrbd scrbd_obj;
+	fifo_gen gen_h;
+	fifo_drv drv_h;
+	fifo_mon mon_h;
+	fifo_pred pred_h;
+	fifo_scrbd scrbd_h;
 
 	//passing virtual function
 	task build();
-		//this.vintf = vintf;
-		//gen_obj = new();
-		drv_obj = new();
-		mon_obj = new();
-		pred_obj = new();
-		scrbd_obj = new();
+		drv_h = new();
+		mon_h = new();
+		pred_h = new();
+		scrbd_h = new();
 	endtask
+
 	//connecting interface and mailbox
-	task connect(virtual mem_intf #(.DEPTH(256), .DWIDTH(8)) vintf);
-		gen_obj.connect(gen_drv);
-		drv_obj.connect(gen_drv, vintf);
-		mon_obj.connect(mon_pred_scrbd, vintf);
-		pred_obj.connect(mon_pred_scrbd, pred_scrbd);
-		scrbd_obj.connect(mon_pred_scrbd, pred_scrbd);
+	task connect(virtual fifo_intf vintf);
+		gen_h.connect(wr_gen_drv, rd_gen_drv);
+		drv_h.connect(wr_gen_drv, rd_gen_drv, vintf);
+		mon_h.connect(mon_pred_scrbd, vintf);
+		pred_h.connect(mon_pred_scrbd, pred_scrbd);
+		scrbd_h.connect(mon_pred_scrbd, pred_scrbd);
 	endtask
+
 	//generating and passing values
 	task run();
 		$display("env run started");
 		fork
-			gen_obj.run();
-  		drv_obj.run();
-  		mon_obj.run();
-			pred_obj.run();
-			scrbd_obj.run();
-		join_any
+			gen_h.run();
+  		drv_h.run();
+  		mon_h.run();
+			//pred_h.run();
+			//scrbd_h.run();
+		join
 	endtask
 endclass
 `endif

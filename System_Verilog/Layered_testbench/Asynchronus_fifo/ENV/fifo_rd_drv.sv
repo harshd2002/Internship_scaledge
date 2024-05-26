@@ -12,7 +12,7 @@
 
 class fifo_drv;
 	//object of transaction class to store data
-	fifo_trans trans_obj;
+	fifo_trans trans_h;
 	//mailbox to get data from generator
 	mailbox #(fifo_trans) gen_drv;
 	//virtual interface to connect with original interface (fifo_intf)
@@ -38,25 +38,25 @@ class fifo_drv;
         end: reset_b
         begin: drive_b
           @(vintf.fifo_cb_rd_drv)
-		      gen_drv.get(trans_obj);
-		      $display($time," : driver: %0p", trans_obj);
+		      gen_drv.get(trans_h);
+		      $display($time," : driver: %0p", trans_h);
 
 		      //logic for pins
-		      case(trans_obj.ops_e)
+		      case(trans_h.ops_e)
 		      1: begin
-		      	trans_obj.rd_enbl = 0;
+		      	trans_h.rd_enbl = 0;
 		      	vintf.fifo_cb_rd_drv.rd_enbl <= 0;
 		      end
 		      2: begin
-		      	trans_obj.rd_enbl = 1;
+		      	trans_h.rd_enbl = 1;
 		      	vintf.fifo_cb_rd_drv.rd_enbl <= 1;
 		      end
 		      3: begin
-		      	trans_obj.rd_enbl = 1;
+		      	trans_h.rd_enbl = 1;
 		      	vintf.fifo_cb_rd_drv.rd_enbl <= 1;
 		      end
 		      endcase
-          trans_obj.print_trans("rd_driver");
+          trans_h.print_trans("rd_driver");
           #SKEW_DEL -> item_done;
           disable reset_b;
           //end

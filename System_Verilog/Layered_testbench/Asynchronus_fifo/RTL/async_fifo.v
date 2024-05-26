@@ -1,7 +1,4 @@
 //Design - Asynchronus FIFO
-//
-
-`timescale 1ns / 1ps
 
 module  async_fifo #(parameter WIDTH = 8,
                                DEPTH = 16,
@@ -9,7 +6,7 @@ module  async_fifo #(parameter WIDTH = 8,
 							                 DIFF = 2
                     )
                    (input wr_clk, rd_clk,
-                    input wr_rstn, rd_rstn,
+                    input rstn, 
                     input wr_en, rd_en,
                     input [WIDTH-1'b1 : 0] wr_data,
                     output reg [WIDTH-1'b1 : 0] rd_data,
@@ -53,11 +50,12 @@ module  async_fifo #(parameter WIDTH = 8,
 	end
 	endfunction
 
-	always @(posedge wr_clk or negedge wr_rstn) begin
-		if(!wr_rstn) begin
+	always @(posedge wr_clk or negedge rstn) begin
+		if(!rstn) begin
 			wr_ptr <= 'd0;
 			full <= 1'b0;
 			almost_full <= 1'b0;
+			overflow <= 1'b0;
 		end
 		else if(wr_en && !full) begin
 			mem[wr_ptr[SIZE-1'b1 : 0]] <= wr_data;
@@ -65,12 +63,13 @@ module  async_fifo #(parameter WIDTH = 8,
 		end
 	end
 
-	always @(posedge rd_clk or negedge rd_rstn) begin
-		if(!rd_rstn) begin
+	always @(posedge rd_clk or negedge rstn) begin
+		if(!rstn) begin
 			rd_ptr <= 'd0;
 			empty <= 1'b1;
 			rd_data <= 'd0;
 			almost_empty <= 1'b0;
+			underflow <= 1'b0;
 		end
 		else if(rd_en && !empty) begin
 			rd_data <= mem[rd_ptr[SIZE-1'b1 : 0]] ;
@@ -78,8 +77,8 @@ module  async_fifo #(parameter WIDTH = 8,
 		end
 	end
 
-	always @(posedge wr_clk or negedge wr_rstn) begin
-		if(!wr_rstn) begin
+	always @(posedge wr_clk or negedge rstn) begin
+		if(!rstn) begin
 			rd_ptr_1 <= 'd0;
 			rd_ptr_3 <= 'd0;
 		end
@@ -89,8 +88,8 @@ module  async_fifo #(parameter WIDTH = 8,
 		end
 	end
 
-	always @(posedge rd_clk or negedge rd_rstn) begin
-		if(!rd_rstn) begin
+	always @(posedge rd_clk or negedge rstn) begin
+		if(!rstn) begin
 			wr_ptr_1 <= 'd0;
 			wr_ptr_3 <= 'd0;
 		end
