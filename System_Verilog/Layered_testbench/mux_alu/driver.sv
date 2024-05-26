@@ -14,8 +14,15 @@ class driver;
 	endfunction
 	//converting transaction level data to pin level
 	task run();
-  forever @(posedge vintf.DRV_MP.clk) begin
+  //@(posedge vintf.DRV_MP.rstn)
+  forever begin
+  fork
+  begin
+    @(negedge vintf.DRV_MP.rstn);
+  end
+  begin
 		gen_drv.get(trans_h);
+    @(posedge vintf.DRV_MP.clk) 
 		$display($time," : driver: %0p", trans_h);
 
 		//logic for pins
@@ -27,7 +34,22 @@ class driver;
 		vintf.C = trans_h.C;
 		vintf.D = trans_h.D;
     trans_h.print_trans("driver");
-    -> item_done;
   end
+  join_any
+  disable fork;
+  if(!vintf.rstn) begin
+    $info($time, " :Reset asserted");
+    vintf.sel_i <= 0;
+    vintf.enb <= 0;
+		vintf.A <= 0;
+		vintf.B <= 0;
+		vintf.C <= 0;
+		vintf.D <= 0;
+    @(posedge vintf.DRV_MP.rstn);
+    $info($time, " :Reset de-asserted");
+    $display("mailbox size is %0d ", gen_drv.num());
+  end
+  end
+    -> item_done;
 	endtask
 endclass

@@ -7,7 +7,7 @@ interface mux_interface(input clk, input rstn);
   logic enb;
 
 	modport DRV_MP(output A, B, C, D, sel_i,enb,
-								 input clk);
+								 input clk, rstn);
   modport MON_MP(input A, B, C, D, sel_i,enb,
 								 input clk);
 endinterface

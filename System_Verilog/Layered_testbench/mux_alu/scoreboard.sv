@@ -23,11 +23,22 @@ class scoreboard;
 		  $display($time," : scoreboard actual: %0p", act_trans_h);
       act_trans_h.print_trans("scoreboard");
 		  //scoreboard logic 
-		  if(exp_trans_h.out == act_trans_h.out)
-		  	$display("read pass");
-		  else
-		  	$display("read fail");
+      checker_run();
     end
 	endtask
+
+  task checker_run();
+      fork
+      begin
+		    wait(exp_trans_h.out == act_trans_h.out)
+		  	  $display("%0t: read pass", $time);
+      end
+      begin
+		    #TIME_OUT
+		  	  $display("%0t: read fail", $time);
+      end
+      join_any
+      disable fork;
+  endtask
 
 endclass

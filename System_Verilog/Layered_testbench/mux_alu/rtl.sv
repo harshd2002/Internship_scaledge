@@ -13,14 +13,14 @@
 
 //RTL design
 
-module mux(output reg[32:0]out,
+module mux(output logic [32:0]out,
            input [31:0]A,[31:0]B,[31:0]C,[31:0]D,[3:0]sel_i,
            input clk,rstn,enb
            );
 
 always @(*) begin
   if(!rstn)begin
-    out='d0;
+    out = 33'd0;
   end
   else if(enb) begin
     case(sel_i)
@@ -45,11 +45,8 @@ always @(*) begin
       3'd6  : begin
         out = 'h0000 & B;
       end
-      3'd7  : begin
-        out = 'd0;
-      end
       default: begin
-        out = 'd0;
+        out = 33'd0;
       end
     endcase
   end

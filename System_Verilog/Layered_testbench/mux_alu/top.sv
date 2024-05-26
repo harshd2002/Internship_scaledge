@@ -8,7 +8,7 @@ import pkg_files::*;
 module top();
 
 	//clock
-	bit rstn=1;
+	bit rstn;
 	//object of test class to call tasks
 	test test_h;
 	//reference model memory
@@ -24,24 +24,30 @@ module top();
 					.out(intf.out),
           .enb(intf.enb)
 					);
-	//initializing variables and calling tasks
-	initial begin
-		test_h = new();
-		test_h.build();
-    test_h.connect(intf);
-    test_h.run();
-    #20;
-		$finish;
-	end
 
   //reset block
   always @(reset_evt) begin
+    $display("reset asserted");
 		rstn = 0;
 		#RST_DEL;
 		rstn = 1;
   end
+	
+  //initializing variables and calling tasks
+	initial begin
+		test_h = new();
+		test_h.build();
+    test_h.connect(intf);
+    fork
+    test_h.run();
+    -> reset_evt;
+    join
+    #10;
+		$finish;
+	end
+
 	//generating clock
-	always #5 clk = ~clk;
+	always #2 clk = ~clk;
 
 endmodule
 

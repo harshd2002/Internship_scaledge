@@ -14,7 +14,7 @@ class monitor;
 	endfunction
 	//converting pin level data into transaction level data
 	task run();
-  forever @(posedge vintf.MON_MP.clk) begin
+  forever @(negedge vintf.MON_MP.clk) begin
 		trans_h = new();
 		//logic to generate transaction level data
 		$cast(trans_h.ops_e,vintf.sel_i);
@@ -24,7 +24,8 @@ class monitor;
 		trans_h.B = vintf.B;
 		trans_h.C = vintf.C;
 		trans_h.D = vintf.D;
-		//storing data for scoreboard and oeredictor
+    trans_h.out = vintf.out;
+		//storing data for scoreboard and predictor
 		mon_pred_scrbd.put(trans_h);
     trans_h.print_trans("monitor");
   end

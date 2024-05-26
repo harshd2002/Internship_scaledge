@@ -42,12 +42,17 @@ class transaction #(byte IN_WIDTH = 32, byte SEL_WIDTH = 4);
 		$display("-------------------------------------------------------");
 		$display("%0t\t|\tENABLE\t\t|\t%0d", $time, enb);
 		$display("%0t\t|\tSEL\t\t|\t%0d", $time, sel_i);
-		$display("%0t\t|\tA\t\t|\t%0d", $time, A);
-		$display("%0t\t|\tB\t\t|\t%0d", $time, B);
-		$display("%0t\t|\tC\t\t|\t%0d", $time, C);
-		$display("%0t\t|\tD\t\t|\t%0d", $time, D);
-		$display("%0t\t|\tOUT\t\t|\t%0d", $time, out);
+		$display("%0t\t|\tA\t\t|\t%0h", $time, A);
+		$display("%0t\t|\tB\t\t|\t%0h", $time, B);
+		$display("%0t\t|\tC\t\t|\t%0h", $time, C);
+		$display("%0t\t|\tD\t\t|\t%0h", $time, D);
+		$display("%0t\t|\tOUT\t\t|\t%0h", $time, out);
 		$display("-------------------------------------------------------");
 	endtask
+
+  //postrandomize manipulations
+  function void post_randomize();
+    enb = 1;
+  endfunction
 
 endclass

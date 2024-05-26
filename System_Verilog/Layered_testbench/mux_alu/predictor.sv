@@ -51,7 +51,8 @@ class predictor;
              exp_trans_h.out = 'h0000 & exp_trans_h.B;
 		    	end
           default: begin
-            exp_trans_h.out = 'h0000;
+            exp_trans_h.out = 33'h000000000;
+            $error("Invalid selection value");
           end
 		    endcase
 		  end
