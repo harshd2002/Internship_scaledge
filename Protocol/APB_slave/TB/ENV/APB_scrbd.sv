@@ -8,8 +8,8 @@
 
 //APB scoreboard class
 
-`ifndef APB_PREDICTOR
-`define APB_PREDICTOR
+`ifndef APB_SCOREBOARD
+`define APB_SCOREBOARD
 
 class apb_scrbd;
   //transaction class handle
@@ -30,10 +30,18 @@ class apb_scrbd;
     forever begin
       mon_scrbd.get(act_trans_h);
       pred_scrbd.get(exp_trans_h);
+      act_trans_h.print_trans("SCOREBOARD");
+      exp_trans_h.print_trans("SCOREBOARD");
+      //checking queue for inorder scoreboard
+      wait(exp_q.size() && act_q.size()) begin
+        if(exp_q.pop_back() == act_q.pop_back())
+          $info($time, " :read operation pass.");
+        else
+          $info($time, " :read operation fail.");
+      end
     end
   endtask
 
-  
 endclass
 
 `endif

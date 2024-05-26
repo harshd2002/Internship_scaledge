@@ -29,10 +29,48 @@ class apb_drv;
 
   //run method
   task run;
-    forever @(`DRV_PATH) begin
-      gen_drv.get(trans_h);
-      `DRV_PATH.Paddr <= trans_h.Paddr;
-      `DRV_PATH.Pwdata <= trans_h.Pwdata;
+    forever  begin
+      fork
+      begin: RESET_BLOCK
+        @(negedge vintf.Presetn);
+        $info($time," :reset found");
+      end
+      begin: DRIVER_BLOCK
+        if(`DRV_PATH.Psel !== 1)
+          @(`DRV_PATH);
+
+          gen_drv.get(trans_h);
+          trans_h.print_trans("driver");
+
+          if(trans_h.transfer)
+            `DRV_PATH.Psel <= 1;
+          else
+            `DRV_PATH.Psel <= 0;
+            `DRV_PATH.Penable <= 0;
+            `DRV_PATH.Paddr   <= trans_h.Paddr;
+            `DRV_PATH.Pwrite  <= trans_h.Pwrite;
+            `DRV_PATH.Pwdata  <= trans_h.Pwdata;
+
+        @(`DRV_PATH)
+          `DRV_PATH.Penable <= 1;
+        
+        wait(`DRV_PATH.Pready);
+
+        -> item_done;
+
+      end: DRIVER_BLOCK
+      join_any
+      disable fork;
+      if(!vintf.Presetn) begin
+        $info($time, " :RESET asserted");
+        vintf.Psel    <= 0;
+        vintf.Penable <= 0;
+        vintf.Pwdata  <= 0;
+        vintf.Paddr   <= 0;
+        vintf.Pwrite  <= 0;
+        @(posedge vintf.Presetn);
+        $info($time, " :RESET de-asserted");
+      end
     end
   endtask
 

@@ -28,9 +28,11 @@ class apb_pred;
   //run method
   task run;
     forever begin
-      mon_scrbd.get(trans_h);
+      mon_pred.get(trans_h);
       exp_trans_h = new trans_h;
-      scrbd_pred.put(exp_trans_h);
+      if(trans_h.Pwrite)
+        exp_q.push_front(trans_h.Pwdata);
+      pred_scrbd.put(exp_trans_h);
     end
   endtask
 

@@ -1,0 +1,173 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/git_internship/Protocol/APB_slave/TB/SIM
+T_opt
+!s110 1716447742
+VWBUW7^eQYagQMCO:7hQhk3
+Z1 04 7 4 work apb_top fast 0
+=1-54ee7509668a-664ee9fd-2cc-4558
+o-quiet -auto_acc_if_foreign -work work -suppress 12110 +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1716468898
+VXFEzUWjJRIDzCga1_KJY>1
+R1
+=1-54ee7509668a-664f3ca1-3b9-408c
+o-quiet -auto_acc_if_foreign -work work -suppress 12110
+R2
+n@_opt1
+R3
+Yapb_intf
+Z4 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z5 !s110 1716468896
+!i10b 1
+!s100 9zARjT6nTh08>o7oVQd?[1
+IdTVaTToLo<7ONhT3BoTF:3
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+!s105 APB_pack_sv_unit
+S1
+R0
+w1716375452
+8../ENV/APB_intf.sv
+F../ENV/APB_intf.sv
+Z7 L0 14
+Z8 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z9 !s108 1716468896.000000
+Z10 !s107 ../TEST/APB_test.sv|../ENV/APB_env.sv|../ENV/APB_scrbd.sv|../ENV/APB_pred.sv|../ENV/APB_func_cvg.sv|../ENV/APB_mon.sv|../ENV/APB_drv.sv|../ENV/APB_back2back_wr_ws.sv|../ENV/APB_back2back_wr.sv|../ENV/APB_wait_state_wr.sv|../ENV/APB_sanity.sv|../ENV/APB_gen.sv|../ENV/APB_trans.sv|../ENV/APB_intf.sv|../ENV/def_global.sv|../TOP/APB_top.sv|../TEST/APB_pack.sv|../RTL/APB_slave.v|
+Z11 !s90 -coveropt|3|+acc|+cover|../RTL/APB_slave.v|../TEST/APB_pack.sv|../TOP/APB_top.sv|+incdir+../ENV|+incdir+../TEST|
+!i113 0
+Z12 !s102 -coveropt 3 +cover
+Z13 o-coveropt 3 +acc +cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 !s92 -coveropt 3 +acc +cover +incdir+../ENV +incdir+../TEST -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+Xapb_pack
+Z15 !s115 apb_intf
+R4
+R5
+!i10b 1
+!s100 >K6S`jRUn@8LCgOmUM5W31
+I?ORdCT673Pd>5iQe^G2`02
+V?ORdCT673Pd>5iQe^G2`02
+S1
+R0
+w1716468894
+8../TEST/APB_pack.sv
+F../TEST/APB_pack.sv
+F../ENV/APB_trans.sv
+F../ENV/APB_gen.sv
+F../ENV/APB_sanity.sv
+F../ENV/APB_wait_state_wr.sv
+F../ENV/APB_back2back_wr.sv
+F../ENV/APB_back2back_wr_ws.sv
+F../ENV/APB_drv.sv
+F../ENV/APB_mon.sv
+F../ENV/APB_func_cvg.sv
+F../ENV/APB_pred.sv
+F../ENV/APB_scrbd.sv
+F../ENV/APB_env.sv
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R14
+R2
+vAPB_slave
+R5
+!i10b 1
+!s100 _Bd<[ahe;0]R878ASFCMk0
+IfDP:kFSj=?Eo[5o1eP;3^1
+R6
+R0
+w1716372655
+8../RTL/APB_slave.v
+F../RTL/APB_slave.v
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R14
+R2
+n@a@p@b_slave
+vapb_top
+R4
+Z16 DXx4 work 8 apb_pack 0 22 ?ORdCT673Pd>5iQe^G2`02
+DXx4 work 15 APB_top_sv_unit 0 22 a9<3?fl9H1cO?oWY<b4z>3
+R6
+r1
+!s85 0
+!i10b 1
+!s100 6H?@?B02YKB;PRk=3H1bP2
+Inf_EP_WA`@;WOi20nlMN80
+!s105 APB_top_sv_unit
+S1
+R0
+w1716377082
+Z17 8../TOP/APB_top.sv
+Z18 F../TOP/APB_top.sv
+L0 17
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R14
+R2
+XAPB_top_sv_unit
+R15
+R4
+R16
+Va9<3?fl9H1cO?oWY<b4z>3
+r1
+!s85 0
+!i10b 1
+!s100 H]U;ALRO<3o0G@O`1W@052
+Ia9<3?fl9H1cO?oWY<b4z>3
+!i103 1
+S1
+R0
+w1716447088
+R17
+R18
+F../TEST/APB_test.sv
+R7
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R14
+R2
+n@a@p@b_top_sv_unit

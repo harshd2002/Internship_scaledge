@@ -1,0 +1,86 @@
+
+        if(vintf.Presetn) begin
+          -> item_done;
+          gen_drv.get(trans_h);
+          trans_h.print_trans("Driver");
+ 
+		//if(vintf.drv_cb.PSELs)
+		@(posedge vintf.Pclk);
+			$info("Driving signals");
+      if(trans_h.transfer)
+        `DRV_PATH.Psel <= 1;
+      else
+        `DRV_PATH.Psel <= 0;
+
+      `DRV_PATH.Penable <= 0;
+      `DRV_PATH.Paddr   <= trans_h.Paddr;
+      `DRV_PATH.Pwrite  <= trans_h.Pwrite;
+			if(trans_h.Pwrite)
+          `DRV_PATH.Pwdata  <= trans_h.Pwdata;
+			else 
+          `DRV_PATH.Pwdata  <= 0;
+	 	@(posedge vintf.Pclk);
+      `DRV_PATH.Penable <= 1;
+	 // if(!vintf.PREADYs)@(posedge vintf.clk);
+    //@(posedge vintf.clk iff vintf.drv_cb.PREADYs);
+   wait(vintf.Pready);
+	  //vintf.drv_cb.PENABLEs <= 0;
+    end
+ 
+          @(`DRV_PATH);
+          gen_drv.get(trans_h);
+          trans_h.print_trans("Driver");
+          if(`DRV_PATH.Psel);
+          @(`DRV_PATH);
+
+          if(trans_h.transfer)
+            `DRV_PATH.Psel <= 1;
+          else
+            `DRV_PATH.Psel <= 0;
+
+          `DRV_PATH.Penable <= 0;
+          `DRV_PATH.Pwdata  <= trans_h.Pwdata;
+          `DRV_PATH.Paddr   <= trans_h.Paddr;
+          `DRV_PATH.Pwrite  <= trans_h.Pwrite;
+
+          @(`DRV_PATH);
+          `DRV_PATH.Penable <= 1;
+            @(posedge `DRV_PATH.Pready);
+          
+        end
+
+        /*if(vintf.Presetn)
+        -> item_done;
+        $info($time, " :first posedge");
+        gen_drv.get(trans_h);
+        if(`DRV_PATH.Psel !== 1) begin
+        trans_h.print_trans("Driver");
+        @(`DRV_PATH);
+        $info($time, " :second posedge");
+        if(trans_h.transfer)
+          `DRV_PATH.Psel <= 1;
+        else
+          `DRV_PATH.Psel <= 0;
+
+        `DRV_PATH.Penable <= 0;
+        `DRV_PATH.Pwdata  <= trans_h.Pwdata;
+        `DRV_PATH.Paddr   <= trans_h.Paddr;
+        `DRV_PATH.Pwrite  <= trans_h.Pwrite;
+
+        @(`DRV_PATH);
+        $info($time, " :third posedge");
+        end
+        if(trans_h.transfer)
+          `DRV_PATH.Penable <= 1;
+
+        wait(`DRV_PATH.Pready==1);
+        trans_h.print_trans("Driver");
+        $info($time, " :Pready asserted");
+        if(trans_h.transfer)
+          `DRV_PATH.Psel <= 1;
+        else
+          `DRV_PATH.Psel <= 0;
+        `DRV_PATH.Pwdata  <= trans_h.Pwdata;
+        `DRV_PATH.Paddr   <= trans_h.Paddr;
+        `DRV_PATH.Pwrite  <= trans_h.Pwrite;
+        `DRV_PATH.Penable <= 0;*/

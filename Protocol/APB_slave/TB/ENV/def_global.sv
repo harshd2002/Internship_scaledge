@@ -6,10 +6,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//APB generator class
+//APB global variables declaration
 
-`define DRV_PATH vintf.apb_mp_drv.apb_cb_drv
-`define MON_PATH vintf.apb_mp_mon.apb_cb_mon
+`ifndef APB_DEFINE
+`define APB_DEFINE
 
-//enum type variable to select operation type
-typedef enum {PWRITE, PREAD} operation;
+`define DRV_PATH  vintf.apb_mp_drv.apb_cb_drv
+`define MON_PATH  vintf.apb_mp_mon.apb_cb_mon
+
+`endif
