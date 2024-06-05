@@ -1,0 +1,1654 @@
+Start time: 11:48:53 on May 30,2024
+qverilog -reportprogress 300 -guimode factory_registration_and_print_method.sv 
+** Note: (qverilog-2286) factory_registration_and_print_method.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package factory_registration_and_print_method_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling module uvm_example_1
+
+Top level modules:
+	uvm_example_1
+actory_registration_and_print_method_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_1
+# 
+# Top level modules:
+# 	uvm_example_1
+# End time: 11:48:54 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -lib work work.factory_registration_and_print_method_sv_unit work.uvm_example_1 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,0,0,0 -usestarttime 53,48,11,30,4,124,4,150,0
+# vsim -lib work work.factory_registration_and_print_method_sv_unit work.uvm_example_1 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 11:48:54 on May 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.factory_registration_and_print_method_sv_unit(fast)
+# Loading work.uvm_example_1(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# ----------------------------------------
+# Name              Type       Size  Value
+# ----------------------------------------
+# obj_sub_class_h1  sub_class  -     @470 
+# ----------------------------------------
+# -------------------------------------------------
+# Name             Type         Size  Value        
+# -------------------------------------------------
+# obj_h1           factory_reg  -     @466         
+#   addr           integral     32    'hff         
+#   data           integral     32    'h9f         
+#   name           string       13    UVM_example_1
+#   obj_sub_class  sub_class    -     @467         
+#   sub_var        integral     32    'hff         
+# -------------------------------------------------
+# -------------------------------------------------
+# Name             Type         Size  Value        
+# -------------------------------------------------
+# obj_copy_h1      factory_reg  -     @468         
+#   addr           integral     32    'h0          
+#   data           integral     32    'h9f         
+#   name           string       13    UVM_example_1
+#   obj_sub_class  sub_class    -     @471         
+#   sub_var        integral     32    'hff         
+# -------------------------------------------------
+# -------------------------------------------------
+# Name             Type         Size  Value        
+# -------------------------------------------------
+# obj_h1           factory_reg  -     @472         
+#   addr           integral     32    'h0          
+#   data           integral     32    'h9f         
+#   name           string       13    UVM_example_1
+#   obj_sub_class  sub_class    -     @474         
+#   sub_var        integral     32    'hff         
+# -------------------------------------------------
+# original object: 65866, subclass object: 65865
+# copied object: 131402, subclass object: 262473
+# clonned object: 196938, subclass object: 393545
+# -------------------------------------------------
+# Name             Type         Size  Value        
+# -------------------------------------------------
+# obj_h1           factory_reg  -     @466         
+#   addr           integral     32    'hff         
+#   data           integral     32    'h9f         
+#   name           string       13    UVM_example_1
+#   obj_sub_class  sub_class    -     @467         
+#   sub_var        integral     32    'hff         
+# -------------------------------------------------
+# ----------------------------------------------------
+# Name             Type         Size  Value           
+# ----------------------------------------------------
+# obj_copy_h1      factory_reg  -     @468            
+#   addr           integral     32    'h0             
+#   data           integral     32    'h2             
+#   name           string       16    UVM_copy_example
+#   obj_sub_class  sub_class    -     @471            
+#   sub_var        integral     32    'h0             
+# ----------------------------------------------------
+# -----------------------------------------------------
+# Name             Type         Size  Value            
+# -----------------------------------------------------
+# obj_h1           factory_reg  -     @472             
+#   addr           integral     32    'h3              
+#   data           integral     32    'h5              
+#   name           string       17    UVM_clone_example
+#   obj_sub_class  sub_class    -     @474             
+#   sub_var        integral     32    'h3              
+# -----------------------------------------------------
+# original object: 65866, subclass object: 65865
+# copied object: 131402, subclass object: 262473
+# clonned object: 196938, subclass object: 393545
+#  quit -sim
+# End time: 11:49:03 on May 30,2024, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+    cd ../pack_unpack
+qverilog pack_unpack.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 11:57:40 on May 30,2024
+# qverilog -reportprogress 300 -guimode pack_unpack.sv 
+# ** Note: (qverilog-2286) pack_unpack.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package pack_unpack_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_3
+# ** Warning: pack_unpack.sv(28): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(32): (qverilog-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(33): (qverilog-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(34): (qverilog-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(43): (qverilog-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(44): (qverilog-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(45): (qverilog-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# 
+# Top level modules:
+# 	uvm_example_3
+# End time: 11:57:41 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 7
+vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,7,0,0 -usestarttime 40,57,11,30,4,124,4,150,0
+# vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 11:57:41 on May 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_deps (0:0 1:1 30 0 3574 1716979768 0x53:0x1)
+# ** Warning: (vopt-56) Problem with optimized design dependency file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_deps" - file open failed.
+# No such file or directory. (errno = ENOENT)
+# ** Fatal: (vopt-8) Problem while reading dependency file "_deps".
+# Result too large. (errno = ERANGE)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib.qdb".
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib1_0.qdb".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib1_0.qpg".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib1_0.qtl".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib2_0.qdb".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib2_0.qpg".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib2_0.qtl".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib3_0.qdb".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib3_0.qpg".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib3_0.qtl".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib4_0.qdb".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib4_0.qpg".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib4_0.qtl".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib6_0.qdb".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib6_0.qpg".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt/_lib6_0.qtl".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-133) Unable to remove directory "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/pack_unpack/work/@_opt".
+# Result too large. (errno = ERANGE)
+# Error loading design
+# End time: 11:57:43 on May 30,2024, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 7
+qverilog pack_unpack.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 11:57:59 on May 30,2024
+# qverilog -reportprogress 300 -guimode pack_unpack.sv 
+# ** Note: (qverilog-2286) pack_unpack.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package pack_unpack_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_3
+# ** Warning: pack_unpack.sv(28): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(32): (qverilog-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(33): (qverilog-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(34): (qverilog-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(43): (qverilog-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(44): (qverilog-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(45): (qverilog-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# 
+# Top level modules:
+# 	uvm_example_3
+# End time: 11:58:00 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 7
+vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,7,0,0 -usestarttime 59,57,11,30,4,124,4,150,0
+# vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 11:58:00 on May 30,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: pack_unpack.sv(28): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(32): (vopt-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(33): (vopt-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(34): (vopt-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(43): (vopt-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(44): (vopt-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(45): (vopt-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.pack_unpack_sv_unit(fast)
+# Loading work.uvm_example_3(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# --------------------------------------
+# Name     Type         Size  Value     
+# --------------------------------------
+# obj_h1   pack_unpack  -     @466      
+#   data1  integral     32    'he39b7f0c
+#   data2  integral     8     'h8b      
+#   data3  integral     8     'hf1      
+# --------------------------------------
+# obj_h2: (pack_unpack@467) { data1: 'h0  data2: 'h0  data3: 'h0  } 
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# byte array: 11100011
+# byte array: 10011011
+# byte array: 01111111
+# byte array: 00001100
+# byte array: 10001011
+# byte array: 11110001
+# int array: 11100011100110110111111100001100
+# int array: 10001011111100010000000000000000
+# obj_h2: (pack_unpack@467) {
+#   data1: 'he39b7f0c 
+#   data2: 'h8b 
+#   data3: 'hf1 
+# }
+#  quit -sim
+# End time: 11:58:16 on May 30,2024, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 7
+qverilog pack_unpack.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 11:59:07 on May 30,2024
+# qverilog -reportprogress 300 -guimode pack_unpack.sv 
+# ** Note: (qverilog-2286) pack_unpack.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package pack_unpack_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_3
+# ** Warning: pack_unpack.sv(28): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(32): (qverilog-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(33): (qverilog-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(34): (qverilog-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(43): (qverilog-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(44): (qverilog-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(45): (qverilog-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# 
+# Top level modules:
+# 	uvm_example_3
+# End time: 11:59:08 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 7
+vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,7,0,0 -usestarttime 7,59,11,30,4,124,4,150,0
+# vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 11:59:08 on May 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: pack_unpack.sv(28): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(32): (vopt-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(33): (vopt-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(34): (vopt-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(43): (vopt-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(44): (vopt-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(45): (vopt-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.pack_unpack_sv_unit(fast)
+# Loading work.uvm_example_3(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# --------------------------------------
+# Name     Type         Size  Value     
+# --------------------------------------
+# obj_h1   pack_unpack  -     @466      
+#   data1  integral     32    'he39b7f0c
+#   data2  integral     8     'h8b      
+#   data3  integral     3     'h2       
+# --------------------------------------
+# obj_h2: (pack_unpack@467) { data1: 'h0  data2: 'h0  data3: 'h0  } 
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 1
+# bit array: 0
+# byte array: 11100011
+# byte array: 10011011
+# byte array: 01111111
+# byte array: 00001100
+# byte array: 10001011
+# byte array: 01000000
+# int array: 11100011100110110111111100001100
+# int array: 10001011010000000000000000000000
+# obj_h2: (pack_unpack@467) {
+#   data1: 'he39b7f0c 
+#   data2: 'h8b 
+#   data3: 'h2 
+# }
+#  quit -sim
+# End time: 11:59:23 on May 30,2024, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 7
+qverilog pack_unpack.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 11:59:43 on May 30,2024
+# qverilog -reportprogress 300 -guimode pack_unpack.sv 
+# ** Note: (qverilog-2286) pack_unpack.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package pack_unpack_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_3
+# ** Warning: pack_unpack.sv(28): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(32): (qverilog-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(33): (qverilog-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(34): (qverilog-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(43): (qverilog-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(44): (qverilog-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(45): (qverilog-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# 
+# Top level modules:
+# 	uvm_example_3
+# End time: 11:59:44 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 7
+vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,7,0,0 -usestarttime 43,59,11,30,4,124,4,150,0
+# vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 11:59:44 on May 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: pack_unpack.sv(28): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(32): (vopt-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(33): (vopt-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(34): (vopt-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(43): (vopt-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(44): (vopt-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(45): (vopt-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.pack_unpack_sv_unit(fast)
+# Loading work.uvm_example_3(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# --------------------------------------
+# Name     Type         Size  Value     
+# --------------------------------------
+# obj_h1   pack_unpack  -     @466      
+#   data3  integral     3     'h2       
+#   data1  integral     32    'he39b7f0c
+#   data2  integral     8     'h8b      
+# --------------------------------------
+# obj_h2: (pack_unpack@467) { data3: 'h0  data1: 'h0  data2: 'h0  } 
+# bit array: 0
+# bit array: 1
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 0
+# bit array: 0
+# bit array: 0
+# bit array: 1
+# bit array: 0
+# bit array: 1
+# bit array: 1
+# byte array: 01011100
+# byte array: 01110011
+# byte array: 01101111
+# byte array: 11100001
+# byte array: 10010001
+# byte array: 01100000
+# int array: 01011100011100110110111111100001
+# int array: 10010001011000000000000000000000
+# obj_h2: (pack_unpack@467) {
+#   data3: 'h2 
+#   data1: 'he39b7f0c 
+#   data2: 'h8b 
+# }
+#  quit -sim
+# End time: 12:00:00 on May 30,2024, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 7
+cd ../compare_method
+qverilog compare_method.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:04:23 on May 30,2024
+# qverilog -reportprogress 300 -guimode compare_method.sv 
+# ** Note: (qverilog-2286) compare_method.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package compare_method_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_2
+# 
+# Top level modules:
+# 	uvm_example_2
+# End time: 12:04:23 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -lib work work.compare_method_sv_unit work.uvm_example_2 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,0,0,0 -usestarttime 23,4,12,30,4,124,4,150,0
+# vsim -lib work work.compare_method_sv_unit work.uvm_example_2 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 12:04:23 on May 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_deps (0:0 1:1 18 0 3631 1716976853 0x53:0x1)
+# ** Warning: (vopt-56) Problem with optimized design dependency file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_deps" - file open failed.
+# No such file or directory. (errno = ENOENT)
+# ** Fatal: (vopt-8) Problem while reading dependency file "_deps".
+# Result too large. (errno = ERANGE)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib.qdb".
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib1_0.qdb".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib1_0.qpg".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib1_0.qtl".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib2_0.qdb".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib2_0.qpg".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib2_0.qtl".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib3_0.qdb".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib3_0.qpg".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib3_0.qtl".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib4_0.qdb".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib4_0.qpg".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib4_0.qtl".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib5_0.qdb".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib5_0.qpg".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-31) Unable to unlink file "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt/_lib5_0.qtl".
+# The process cannot access the file because it is being used by another process. (GetLastError() = 32)
+# ** Warning: (vopt-133) Unable to remove directory "C:/users/Admin/Documents/git_internship/UVM/examples_week_1/compare_method/work/@_opt".
+# Error loading design
+# End time: 12:04:25 on May 30,2024, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+qverilog compare_method.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:05:23 on May 30,2024
+# qverilog -reportprogress 300 -guimode compare_method.sv 
+# ** Warning: (qverilog-6) -- Waiting for lock by "Admin@DESKTOP-92JVQA0, pid = 12208
+# ". Lockfile is "C:/Users/Admin/Documents/git_internship/UVM/Examples_week_1/compare_method/work/_lock".
+# ** Warning: (qverilog-6) -- Waiting for lock by "Admin@DESKTOP-92JVQA0, pid = 12208
+# ". Lockfile is "C:/Users/Admin/Documents/git_internship/UVM/Examples_week_1/compare_method/work/_lock".
+# ** Warning: (qverilog-6) -- Waiting for lock by "Admin@DESKTOP-92JVQA0, pid = 12208
+# ". Lockfile is "C:/Users/Admin/Documents/git_internship/UVM/Examples_week_1/compare_method/work/_lock".
+# ** Warning: (qverilog-6) -- Waiting for lock by "Admin@DESKTOP-92JVQA0, pid = 12208
+# ". Lockfile is "C:/Users/Admin/Documents/git_internship/UVM/Examples_week_1/compare_method/work/_lock".
+# ** Warning: (qverilog-6) -- Waiting for lock by "Admin@DESKTOP-92JVQA0, pid = 12208
+# ". Lockfile is "C:/Users/Admin/Documents/git_internship/UVM/Examples_week_1/compare_method/work/_lock".
+# ** Warning: (qverilog-6) -- Waiting for lock by "Admin@DESKTOP-92JVQA0, pid = 12208
+# ". Lockfile is "C:/Users/Admin/Documents/git_internship/UVM/Examples_week_1/compare_method/work/_lock".
+# ** Warning: (qverilog-6) -- Waiting for lock by "Admin@DESKTOP-92JVQA0, pid = 12208
+# ". Lockfile is "C:/Users/Admin/Documents/git_internship/UVM/Examples_week_1/compare_method/work/_lock".
+# ** Warning: (qverilog-6) -- Waiting for lock by "Admin@DESKTOP-92JVQA0, pid = 12208
+# ". Lockfile is "C:/Users/Admin/Documents/git_internship/UVM/Examples_week_1/compare_method/work/_lock".
+# ** Warning: (qverilog-6) -- Waiting for lock by "Admin@DESKTOP-92JVQA0, pid = 12208
+# ". Lockfile is "C:/Users/Admin/Documents/git_internship/UVM/Examples_week_1/compare_method/work/_lock".
+# Break key hit
+# SIGSEGV: segmentation violation
+# C:/questasim64_10.7c/win64/qverilog failed.
+qverilog compare_method.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:06:18 on May 30,2024
+# qverilog -reportprogress 300 -guimode compare_method.sv 
+# ** Note: (qverilog-2286) compare_method.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package compare_method_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_2
+# 
+# Top level modules:
+# 	uvm_example_2
+# End time: 12:06:19 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -lib work work.compare_method_sv_unit work.uvm_example_2 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,0,0,0 -usestarttime 18,6,12,30,4,124,4,150,0
+# vsim -lib work work.compare_method_sv_unit work.uvm_example_2 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 12:06:19 on May 30,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.compare_method_sv_unit(fast)
+# Loading work.uvm_example_2(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# ** Info: objects are same
+#    Time: 0 ns  Scope: uvm_example_2 File: compare_method.sv Line: 49
+# ----------------------------------------------------
+# Name             Type            Size  Value        
+# ----------------------------------------------------
+# obj_h1           compare_method  -     @466         
+#   addr           integral        32    'hff         
+#   strobe         integral        8     'h7f         
+#   data           integral        32    'h9f         
+#   name           string          13    UVM_example_1
+#   obj_sub_class  sub_class       -     @467         
+#     sub_var      integral        32    'hff         
+# ----------------------------------------------------
+# ----------------------------------------------------
+# Name             Type            Size  Value        
+# ----------------------------------------------------
+# obj_h2           compare_method  -     @468         
+#   addr           integral        32    'hff         
+#   strobe         integral        8     'h7f         
+#   data           integral        32    'h9f         
+#   name           string          13    UVM_example_1
+#   obj_sub_class  sub_class       -     @470         
+#     sub_var      integral        32    'hff         
+# ----------------------------------------------------
+# original object: 65866, subclass object: 65865
+# copied object: 131402, subclass object: 196937
+# UVM_INFO @ 0: reporter [MISCMP] Miscompare for obj_h2.strobe: lhs = 'h1 : rhs = 'h7f
+# UVM_INFO @ 0: reporter [MISCMP] 1 Miscompare(s) for object obj_h1@466 vs. obj_h2@468
+# ** Error: objects are not same
+#    Time: 0 ns  Scope: uvm_example_2 File: compare_method.sv Line: 60
+# ----------------------------------------------------
+# Name             Type            Size  Value        
+# ----------------------------------------------------
+# obj_h1           compare_method  -     @466         
+#   addr           integral        32    'hff         
+#   strobe         integral        8     'h7f         
+#   data           integral        32    'h9f         
+#   name           string          13    UVM_example_1
+#   obj_sub_class  sub_class       -     @467         
+#     sub_var      integral        32    'hff         
+# ----------------------------------------------------
+# -------------------------------------------------------
+# Name             Type            Size  Value           
+# -------------------------------------------------------
+# obj_h2           compare_method  -     @468            
+#   addr           integral        32    'h0             
+#   strobe         integral        8     'h1             
+#   data           integral        32    'h2             
+#   name           string          16    UVM_copy_example
+#   obj_sub_class  sub_class       -     @470            
+#     sub_var      integral        32    'h0             
+# -------------------------------------------------------
+# original object: 65866, subclass object: 65865
+# copied object: 131402, subclass object: 196937
+#  quit -sim
+# End time: 12:06:31 on May 30,2024, Elapsed time: 0:00:12
+# Errors: 1, Warnings: 0
+cd ../pack_unpack
+qverilog pack_unpack.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:16:34 on May 30,2024
+# qverilog -reportprogress 300 -guimode pack_unpack.sv 
+# ** Note: (qverilog-2286) pack_unpack.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# ** Error (suppressible): ** while parsing macro expansion: 'uvm_field_array_int' starting at pack_unpack.sv(25)
+# ** at pack_unpack.sv(25): (qverilog-2720) A generate begin/end pair has been found outside of generate construct.
+# ** Error: ** while parsing macro expansion: 'uvm_field_array_int' starting at pack_unpack.sv(25)
+# ** at pack_unpack.sv(25): (qverilog-2730) Undefined variable: 'what__'.
+# ** Error: (qverilog-13069) ** while parsing macro expansion: 'uvm_field_array_int' starting at pack_unpack.sv(25)
+# ** at pack_unpack.sv(25): near ".": syntax error, unexpected '.', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# ** Error: (qverilog-13069) ** while parsing macro expansion: 'uvm_field_array_int' starting at pack_unpack.sv(25)
+# ** at pack_unpack.sv(25): near "return": syntax error, unexpected "SystemVerilog keyword 'return'".
+# ** Error: (qverilog-13069) ** while parsing macro expansion: 'uvm_field_array_int' starting at pack_unpack.sv(25)
+# ** at pack_unpack.sv(25): near "=": syntax error, unexpected '='.
+# ** Error: ** while parsing macro expansion: 'uvm_field_array_int' starting at pack_unpack.sv(25)
+# ** at pack_unpack.sv(25): (qverilog-13205) Syntax error found in the scope following 'bit_arr'. Is there a missing '::'?
+# End time: 12:16:34 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+# C:/questasim64_10.7c/win64/qverilog failed.
+qverilog pack_unpack.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:17:18 on May 30,2024
+# qverilog -reportprogress 300 -guimode pack_unpack.sv 
+# ** Note: (qverilog-2286) pack_unpack.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# ** Error: ** while parsing macro expansion: 'uvm_field_array_int' starting at pack_unpack.sv(26)
+# ** at pack_unpack.sv(26): (qverilog-2730) Undefined variable: 'what__'.
+# ** Error: (qverilog-13069) ** while parsing macro expansion: 'uvm_field_array_int' starting at pack_unpack.sv(26)
+# ** at pack_unpack.sv(26): near ".": syntax error, unexpected '.', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# ** Error: (qverilog-13069) ** while parsing macro expansion: 'uvm_field_array_int' starting at pack_unpack.sv(26)
+# ** at pack_unpack.sv(26): near "return": syntax error, unexpected "SystemVerilog keyword 'return'".
+# ** Error: (qverilog-13069) ** while parsing macro expansion: 'uvm_field_array_int' starting at pack_unpack.sv(26)
+# ** at pack_unpack.sv(26): near "=": syntax error, unexpected '='.
+# ** Error: ** while parsing macro expansion: 'uvm_field_array_int' starting at pack_unpack.sv(26)
+# ** at pack_unpack.sv(26): (qverilog-13205) Syntax error found in the scope following 'bit_arr'. Is there a missing '::'?
+# End time: 12:17:19 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 5, Warnings: 0
+# C:/questasim64_10.7c/win64/qverilog failed.
+qverilog pack_unpack.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:26:01 on May 30,2024
+# qverilog -reportprogress 300 -guimode pack_unpack.sv 
+# ** Note: (qverilog-2286) pack_unpack.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package pack_unpack_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_3
+# ** Warning: pack_unpack.sv(28): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(32): (qverilog-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(33): (qverilog-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(34): (qverilog-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(43): (qverilog-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(46): (qverilog-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(49): (qverilog-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# 
+# Top level modules:
+# 	uvm_example_3
+# End time: 12:26:01 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 7
+vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,7,0,0 -usestarttime 1,26,12,30,4,124,4,150,0
+# vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 12:26:01 on May 30,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: pack_unpack.sv(28): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(32): (vopt-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(33): (vopt-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(34): (vopt-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(43): (vopt-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(46): (vopt-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(49): (vopt-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.pack_unpack_sv_unit(fast)
+# Loading work.uvm_example_3(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# --------------------------------------
+# Name     Type         Size  Value     
+# --------------------------------------
+# obj_h1   pack_unpack  -     @466      
+#   data3  integral     3     'h2       
+#   data1  integral     32    'he39b7f0c
+#   data2  integral     8     'h8b      
+# --------------------------------------
+# obj_h2: (pack_unpack@467) { data3: 'h0  data1: 'h0  data2: 'h0  } 
+# bit array: '{0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1}
+# byte array: 01011100
+# byte array: 01110011
+# byte array: 01101111
+# byte array: 11100001
+# byte array: 10010001
+# byte array: 01100000
+# int array: 01011100011100110110111111100001
+# int array: 10010001011000000000000000000000
+# obj_h2: (pack_unpack@467) {
+#   data3: 'h2 
+#   data1: 'he39b7f0c 
+#   data2: 'h8b 
+# }
+# obj_h2: (pack_unpack@467) {
+#   data3: 'h2 
+#   data1: 'he39b7f0c 
+#   data2: 'h8b 
+# }
+# obj_h2: (pack_unpack@467) {
+#   data3: 'h2 
+#   data1: 'he39b7f0c 
+#   data2: 'h8b 
+# }
+#  quit -sim
+# End time: 12:26:18 on May 30,2024, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 7
+qverilog pack_unpack.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:30:13 on May 30,2024
+# qverilog -reportprogress 300 -guimode pack_unpack.sv 
+# ** Note: (qverilog-2286) pack_unpack.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package pack_unpack_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_3
+# ** Warning: pack_unpack.sv(30): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(34): (qverilog-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(35): (qverilog-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(36): (qverilog-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(45): (qverilog-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(48): (qverilog-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(51): (qverilog-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# 
+# Top level modules:
+# 	uvm_example_3
+# End time: 12:30:14 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 7
+vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,7,0,0 -usestarttime 13,30,12,30,4,124,4,150,0
+# vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 12:30:14 on May 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Error (suppressible): pack_unpack.sv(32): (vopt-7063) Failed to find 'obj_h2' in hierarchical name 'obj_h2.print'.
+#         Region: uvm_example_3
+# Optimization failed
+# Error loading design
+# End time: 12:30:15 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+qverilog pack_unpack.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:30:35 on May 30,2024
+# qverilog -reportprogress 300 -guimode pack_unpack.sv 
+# ** Note: (qverilog-2286) pack_unpack.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package pack_unpack_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_3
+# ** Warning: pack_unpack.sv(30): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(33): (qverilog-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(34): (qverilog-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(35): (qverilog-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(44): (qverilog-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(47): (qverilog-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(50): (qverilog-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# 
+# Top level modules:
+# 	uvm_example_3
+# End time: 12:30:36 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 7
+vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,7,0,0 -usestarttime 35,30,12,30,4,124,4,150,0
+# vsim -lib work work.pack_unpack_sv_unit work.uvm_example_3 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 12:30:36 on May 30,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: pack_unpack.sv(30): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(33): (vopt-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(34): (vopt-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(35): (vopt-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(44): (vopt-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(47): (vopt-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: pack_unpack.sv(50): (vopt-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.pack_unpack_sv_unit(fast)
+# Loading work.uvm_example_3(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# --------------------------------------
+# Name     Type         Size  Value     
+# --------------------------------------
+# obj_h1   pack_unpack  -     @466      
+#   data3  integral     3     'h2       
+#   data1  integral     32    'he39b7f0c
+#   data2  integral     8     'h8b      
+# --------------------------------------
+# bit array: '{0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1}
+# byte array: 01011100
+# byte array: 01110011
+# byte array: 01101111
+# byte array: 11100001
+# byte array: 10010001
+# byte array: 01100000
+# int array: 01011100011100110110111111100001
+# int array: 10010001011000000000000000000000
+# ---------------------------------------------
+# Name            Type         Size  Value     
+# ---------------------------------------------
+# obj_bit_unpack  pack_unpack  -     @467      
+#   data3         integral     3     'h2       
+#   data1         integral     32    'he39b7f0c
+#   data2         integral     8     'h8b      
+# ---------------------------------------------
+# obj_byte_unpack: (pack_unpack@468) {
+#   data3: 'h2 
+#   data1: 'he39b7f0c 
+#   data2: 'h8b 
+# }
+# obj_int_unpack: (pack_unpack@469) { data3: 'h2  data1: 'he39b7f0c  data2: 'h8b  } 
+#  quit -sim
+# End time: 12:30:53 on May 30,2024, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 7
+cd ../
+pwd
+# C:/Users/Admin/Documents/git_internship/UVM/examples_week_1
+cd ../examples_week_1/user_defined_methods_using_polymorphism
+qverilog virtual_methods.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 13:44:05 on May 30,2024
+# qverilog -reportprogress 300 -guimode virtual_methods.sv 
+# ** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# ** Error: (qverilog-13069) virtual_methods.sv(39): near ";": syntax error, unexpected ';', expecting '('.
+# ** Error: virtual_methods.sv(46): (qverilog-2730) Undefined variable: 'enb'.
+# ** Error: virtual_methods.sv(48): (qverilog-2730) Undefined variable: 'address'.
+# End time: 13:44:06 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+# C:/questasim64_10.7c/win64/qverilog failed.
+qverilog virtual_methods.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 13:47:17 on May 30,2024
+# qverilog -reportprogress 300 -guimode virtual_methods.sv 
+# ** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# ** Error: virtual_methods.sv(46): (qverilog-2730) Undefined variable: 'enb'.
+# ** Error: virtual_methods.sv(48): (qverilog-2730) Undefined variable: 'address'.
+# End time: 13:47:17 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# C:/questasim64_10.7c/win64/qverilog failed.
+qverilog virtual_methods.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 13:48:35 on May 30,2024
+# qverilog -reportprogress 300 -guimode virtual_methods.sv 
+# ** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package virtual_methods_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_1
+# ** Error: virtual_methods.sv(41): 'sub_class' is an unknown type.
+# Or did you omit the '()' for an instantiation?
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(49): Could not find field/method name (name) in 'obj_h1' of 'obj_h1.name'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(61): Could not find field/method name (obj_sub_class) in 'obj_h1' of 'obj_h1.obj_sub_class'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(62): Could not find field/method name (obj_sub_class) in 'obj_copy_h1' of 'obj_copy_h1.obj_sub_class'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(63): Could not find field/method name (obj_sub_class) in 'obj_clone_h1' of 'obj_clone_h1.obj_sub_class'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(65): Could not find field/method name (name) in 'obj_copy_h1' of 'obj_copy_h1.name'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(67): Could not find field/method name (name) in 'obj_clone_h1' of 'obj_clone_h1.name'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(73): Could not find field/method name (obj_sub_class) in 'obj_h1' of 'obj_h1.obj_sub_class'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(74): Could not find field/method name (obj_sub_class) in 'obj_copy_h1' of 'obj_copy_h1.obj_sub_class'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(75): Could not find field/method name (obj_sub_class) in 'obj_clone_h1' of 'obj_clone_h1.obj_sub_class'.
+# End time: 13:48:35 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 10, Warnings: 0
+# C:/questasim64_10.7c/win64/qverilog failed.
+qverilog virtual_methods.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 13:48:57 on May 30,2024
+# qverilog -reportprogress 300 -guimode virtual_methods.sv 
+# ** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package virtual_methods_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_1
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(47): Could not find field/method name (name) in 'obj_h1' of 'obj_h1.name'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(56): Could not find field/method name (obj_sub_class) in 'obj_h1' of 'obj_h1.obj_sub_class'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(57): Could not find field/method name (obj_sub_class) in 'obj_copy_h1' of 'obj_copy_h1.obj_sub_class'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(58): Could not find field/method name (obj_sub_class) in 'obj_clone_h1' of 'obj_clone_h1.obj_sub_class'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(60): Could not find field/method name (name) in 'obj_copy_h1' of 'obj_copy_h1.name'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(62): Could not find field/method name (name) in 'obj_clone_h1' of 'obj_clone_h1.name'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(68): Could not find field/method name (obj_sub_class) in 'obj_h1' of 'obj_h1.obj_sub_class'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(69): Could not find field/method name (obj_sub_class) in 'obj_copy_h1' of 'obj_copy_h1.obj_sub_class'.
+# ** Error (suppressible): (qverilog-13276) virtual_methods.sv(70): Could not find field/method name (obj_sub_class) in 'obj_clone_h1' of 'obj_clone_h1.obj_sub_class'.
+# End time: 13:48:57 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 9, Warnings: 0
+# C:/questasim64_10.7c/win64/qverilog failed.
+qverilog virtual_methods.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 13:50:21 on May 30,2024
+# qverilog -reportprogress 300 -guimode virtual_methods.sv 
+# ** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package virtual_methods_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_1
+# 
+# Top level modules:
+# 	uvm_example_1
+# End time: 13:50:22 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,0,0,0 -usestarttime 21,50,13,30,4,124,4,150,0
+# vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 13:50:22 on May 30,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.virtual_methods_sv_unit(fast)
+# Loading work.uvm_example_1(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# --------------------------------
+# Name    Type         Size  Value
+# --------------------------------
+# obj_h1  factory_reg  -     @466 
+#   addr  integral     32    'hff 
+#   data  integral     32    'h9f 
+# --------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       integral     32    'hff 
+#   data       integral     32    'h9f 
+# -------------------------------------
+# --------------------------------
+# Name    Type         Size  Value
+# --------------------------------
+# obj_h1  factory_reg  -     @468 
+#   addr  integral     32    'hff 
+#   data  integral     32    'h9f 
+# --------------------------------
+# original object: 65864
+# copied object: 131400
+# clonned object: 196936
+# --------------------------------
+# Name    Type         Size  Value
+# --------------------------------
+# obj_h1  factory_reg  -     @466 
+#   addr  integral     32    'hff 
+#   data  integral     32    'h9f 
+# --------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       integral     32    'h0  
+#   data       integral     32    'h2  
+# -------------------------------------
+# --------------------------------
+# Name    Type         Size  Value
+# --------------------------------
+# obj_h1  factory_reg  -     @468 
+#   addr  integral     32    'h3  
+#   data  integral     32    'h5  
+# --------------------------------
+# original object: 65864
+# copied object: 131400
+# clonned object: 196936
+#  quit -sim
+# End time: 13:50:32 on May 30,2024, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 0
+qverilog virtual_methods.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 13:51:11 on May 30,2024
+# qverilog -reportprogress 300 -guimode virtual_methods.sv 
+# ** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package virtual_methods_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_1
+# 
+# Top level modules:
+# 	uvm_example_1
+# End time: 13:51:12 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,0,0,0 -usestarttime 11,51,13,30,4,124,4,150,0
+# vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 13:51:12 on May 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.virtual_methods_sv_unit(fast)
+# Loading work.uvm_example_1(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# ----------------------------------
+# Name      Type         Size  Value
+# ----------------------------------
+# obj_h1    factory_reg  -     @466 
+#   addr    integral     32    'hff 
+#   strobe  integral     8     'h7f 
+#   data    integral     32    'h9f 
+# ----------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       integral     32    'hff 
+#   strobe     integral     8     'h7f 
+#   data       integral     32    'h9f 
+# -------------------------------------
+# ----------------------------------
+# Name      Type         Size  Value
+# ----------------------------------
+# obj_h1    factory_reg  -     @468 
+#   addr    integral     32    'hff 
+#   strobe  integral     8     'h7f 
+#   data    integral     32    'h9f 
+# ----------------------------------
+# original object: 65864
+# copied object: 131400
+# clonned object: 196936
+# ----------------------------------
+# Name      Type         Size  Value
+# ----------------------------------
+# obj_h1    factory_reg  -     @466 
+#   addr    integral     32    'hff 
+#   strobe  integral     8     'h7f 
+#   data    integral     32    'h9f 
+# ----------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       integral     32    'h0  
+#   strobe     integral     8     'h1  
+#   data       integral     32    'h2  
+# -------------------------------------
+# ----------------------------------
+# Name      Type         Size  Value
+# ----------------------------------
+# obj_h1    factory_reg  -     @468 
+#   addr    integral     32    'h3  
+#   strobe  integral     8     'h4  
+#   data    integral     32    'h5  
+# ----------------------------------
+# original object: 65864
+# copied object: 131400
+# clonned object: 196936
+#  quit -sim
+# End time: 13:51:21 on May 30,2024, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+ quit -sim
+qverilog virtual_methods.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 13:52:36 on May 30,2024
+# qverilog -reportprogress 300 -guimode virtual_methods.sv 
+# ** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package virtual_methods_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_1
+# 
+# Top level modules:
+# 	uvm_example_1
+# End time: 13:52:37 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,0,0,0 -usestarttime 36,52,13,30,4,124,4,150,0
+# vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 13:52:37 on May 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.virtual_methods_sv_unit(fast)
+# Loading work.uvm_example_1(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# ----------------------------------
+# Name      Type         Size  Value
+# ----------------------------------
+# obj_h1    factory_reg  -     @466 
+#   addr    integral     32    'hff 
+#   strobe  integral     8     'h7f 
+#   data    integral     32    'h9f 
+# ----------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       integral     32    'hff 
+#   strobe     integral     8     'h7f 
+#   data       integral     32    'h9f 
+# -------------------------------------
+# original object: 65864
+# copied object: 131400
+# ----------------------------------
+# Name      Type         Size  Value
+# ----------------------------------
+# obj_h1    factory_reg  -     @466 
+#   addr    integral     32    'hff 
+#   strobe  integral     8     'h7f 
+#   data    integral     32    'h9f 
+# ----------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       integral     32    'h0  
+#   strobe     integral     8     'h1  
+#   data       integral     32    'h2  
+# -------------------------------------
+# original object: 65864
+# copied object: 131400
+#  quit -sim
+# End time: 13:52:46 on May 30,2024, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+ quit -sim
+qverilog virtual_methods.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 13:53:16 on May 30,2024
+# qverilog -reportprogress 300 -guimode virtual_methods.sv 
+# ** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package virtual_methods_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_1
+# 
+# Top level modules:
+# 	uvm_example_1
+# End time: 13:53:16 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,0,0,0 -usestarttime 16,53,13,30,4,124,4,150,0
+# vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 13:53:16 on May 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.virtual_methods_sv_unit(fast)
+# Loading work.uvm_example_1(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# ----------------------------------
+# Name      Type         Size  Value
+# ----------------------------------
+# obj_h1    factory_reg  -     @466 
+#   addr    integral     32    'hff 
+#   strobe  integral     8     'h7f 
+#   data    integral     32    'h9f 
+# ----------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       integral     32    'hff 
+#   strobe     integral     8     'h7f 
+#   data       integral     32    'h9f 
+# -------------------------------------
+# original object: 65864
+# copied object: 131400
+# ----------------------------------
+# Name      Type         Size  Value
+# ----------------------------------
+# obj_h1    factory_reg  -     @466 
+#   addr    integral     32    'hff 
+#   strobe  integral     8     'h7f 
+#   data    integral     32    'h9f 
+# ----------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       integral     32    'h0  
+#   strobe     integral     8     'h1  
+#   data       integral     32    'h2  
+# -------------------------------------
+# original object: 65864
+# copied object: 131400
+#  quit -sim
+# End time: 13:53:26 on May 30,2024, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 0
+ quit -sim
+qverilog virtual_methods.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 13:53:49 on May 30,2024
+# qverilog -reportprogress 300 -guimode virtual_methods.sv 
+# ** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package virtual_methods_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_1
+# 
+# Top level modules:
+# 	uvm_example_1
+# End time: 13:53:49 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,0,0,0 -usestarttime 49,53,13,30,4,124,4,150,0
+# vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 13:53:50 on May 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.virtual_methods_sv_unit(fast)
+# Loading work.uvm_example_1(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# ----------------------------------
+# Name      Type         Size  Value
+# ----------------------------------
+# obj_h1    factory_reg  -     @466 
+#   addr    integral     32    'hff 
+#   strobe  integral     8     'h7f 
+#   data    integral     32    'h9f 
+# ----------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       integral     32    'hff 
+#   strobe     integral     8     'h0  
+#   data       integral     32    'h9f 
+# -------------------------------------
+# original object: 65864
+# copied object: 131400
+# ----------------------------------
+# Name      Type         Size  Value
+# ----------------------------------
+# obj_h1    factory_reg  -     @466 
+#   addr    integral     32    'hff 
+#   strobe  integral     8     'h7f 
+#   data    integral     32    'h9f 
+# ----------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       integral     32    'h0  
+#   strobe     integral     8     'h1  
+#   data       integral     32    'h2  
+# -------------------------------------
+# original object: 65864
+# copied object: 131400
+#  quit -sim
+# End time: 13:53:59 on May 30,2024, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+qverilog virtual_methods.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 14:01:12 on May 30,2024
+# qverilog -reportprogress 300 -guimode virtual_methods.sv 
+# ** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# ** Error: (qverilog-13069) virtual_methods.sv(22): near "/": syntax error, unexpected '/', expecting ';'.
+# ** Error: virtual_methods.sv(25): Illegal declaration after the statement near line '22'.  Declarations must precede statements.  Look for stray semicolons.
+# End time: 14:01:12 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# C:/questasim64_10.7c/win64/qverilog failed.
+qverilog virtual_methods.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 14:01:23 on May 30,2024
+# qverilog -reportprogress 300 -guimode virtual_methods.sv 
+# ** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# ** Error: virtual_methods.sv(25): Illegal declaration after the statement near line '22'.  Declarations must precede statements.  Look for stray semicolons.
+# End time: 14:01:23 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/questasim64_10.7c/win64/qverilog failed.
+qverilog virtual_methods.sv
+# QuestaSim-64 qverilog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 14:01:40 on May 30,2024
+# qverilog -reportprogress 300 -guimode virtual_methods.sv 
+# ** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package virtual_methods_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_1
+# 
+# Top level modules:
+# 	uvm_example_1
+# End time: 14:01:41 on May 30,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,0,0,0 -usestarttime 40,1,14,30,4,124,4,150,0
+# vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 14:01:41 on May 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.virtual_methods_sv_unit(fast)
+# Loading work.uvm_example_1(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# user defined copy method
+# ----------------------------------
+# Name      Type         Size  Value
+# ----------------------------------
+# obj_h1    factory_reg  -     @466 
+#   addr    integral     32    'hff 
+#   strobe  integral     8     'h7f 
+#   data    integral     32    'h9f 
+# ----------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       integral     32    'hff 
+#   strobe     integral     8     'h0  
+#   data       integral     32    'h9f 
+# -------------------------------------
+# original object: 65864
+# copied object: 131400
+# ----------------------------------
+# Name      Type         Size  Value
+# ----------------------------------
+# obj_h1    factory_reg  -     @466 
+#   addr    integral     32    'hff 
+#   strobe  integral     8     'h7f 
+#   data    integral     32    'h9f 
+# ----------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       integral     32    'h0  
+#   strobe     integral     8     'h1  
+#   data       integral     32    'h2  
+# -------------------------------------
+# original object: 65864
+# copied object: 131400
+#  quit -sim
+# End time: 14:01:50 on May 30,2024, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0

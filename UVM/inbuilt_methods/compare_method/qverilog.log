@@ -1,0 +1,9 @@
+Start time: 12:06:18 on May 30,2024
+qverilog -reportprogress 300 -guimode compare_method.sv 
+** Note: (qverilog-2286) compare_method.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package compare_method_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling module uvm_example_2
+
+Top level modules:
+	uvm_example_2

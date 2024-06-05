@@ -1,0 +1,125 @@
+Start time: 16:14:37 on May 30,2024
+qverilog -reportprogress 300 -guimode virtual_methods.sv 
+** Note: (qverilog-2286) virtual_methods.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package virtual_methods_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling module uvm_example_1
+
+Top level modules:
+	uvm_example_1
+questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package virtual_methods_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module uvm_example_1
+# 
+# Top level modules:
+# 	uvm_example_1
+# End time: 16:14:37 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,0,0,0 -usestarttime 37,14,16,30,4,124,4,150,0
+# vsim -lib work work.virtual_methods_sv_unit work.uvm_example_1 -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 16:14:37 on May 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.virtual_methods_sv_unit(fast)
+# Loading work.uvm_example_1(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# user defined copy method
+# --------------------------------------
+# Name      Type         Size  Value    
+# --------------------------------------
+# obj_h1    factory_reg  -     @466     
+#   addr    int          12    'hff     
+#   strobe  byte         8     'b1111111
+#   data    integer      64    'd159    
+# --------------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       int          12    'hff 
+#   strobe     byte         8     'b0  
+#   data       integer      64    'd159
+# -------------------------------------
+# original object: 65864
+# copied object: 131400
+# --------------------------------------
+# Name      Type         Size  Value    
+# --------------------------------------
+# obj_h1    factory_reg  -     @466     
+#   addr    int          12    'hff     
+#   strobe  byte         8     'b1111111
+#   data    integer      64    'd159    
+# --------------------------------------
+# -------------------------------------
+# Name         Type         Size  Value
+# -------------------------------------
+# obj_copy_h1  factory_reg  -     @467 
+#   addr       int          12    'h0  
+#   strobe     byte         8     'b1  
+#   data       integer      64    'd2  
+# -------------------------------------
+# original object: 65864
+# copied object: 131400
+#  quit -sim
+# End time: 16:14:46 on May 30,2024, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+cd ../
+pwd
+# C:/Users/Admin/Documents/git_internship/UVM/inbuilt_methods
+cd ../LAB2_Phases_and_Reporting
+cd sim
+do run.do
+# Cannot open macro file: run.do
+do do_file.do
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 16:21:13 on May 30,2024
+# vlog -reportprogress 300 ../packages/pkg.sv ../tb/top.sv "+incdir+" ../env "+incdir" "+../test" 
+# -- Compiling package pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) ../packages/pkg.sv(12): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# ** Error: ../packages/pkg.sv(16): Cannot find `include file "trans_with_macros.sv" in directories:
+#     , C:/questasim64_10.7c/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: ../packages/pkg.sv(17): Cannot find `include file "driver.sv" in directories:
+#     , C:/questasim64_10.7c/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: ../packages/pkg.sv(18): Cannot find `include file "agent.sv" in directories:
+#     , C:/questasim64_10.7c/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: ../packages/pkg.sv(19): Cannot find `include file "env.sv" in directories:
+#     , C:/questasim64_10.7c/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: ../packages/pkg.sv(20): Cannot find `include file "test.sv" in directories:
+#     , C:/questasim64_10.7c/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# -- Compiling module top
+# ** Error: ../tb/top.sv(6): (vlog-13006) Could not find the package (pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: (vlog-2054) File "../env" is a directory.
+# End time: 16:21:13 on May 30,2024, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 0
+# ** Error: C:/questasim64_10.7c/win64/vlog failed.
+# Error in macro ./do_file.do line 9
+# C:/questasim64_10.7c/win64/vlog failed.
+#     while executing
+# "vlog ../packages/pkg.sv ../tb/top.sv +incdir+ ../env +incdir +../test"

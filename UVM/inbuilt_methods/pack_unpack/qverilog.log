@@ -1,0 +1,16 @@
+Start time: 12:30:35 on May 30,2024
+qverilog -reportprogress 300 -guimode pack_unpack.sv 
+** Note: (qverilog-2286) pack_unpack.sv(1): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package pack_unpack_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling module uvm_example_3
+** Warning: pack_unpack.sv(30): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+** Warning: pack_unpack.sv(33): (qverilog-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+** Warning: pack_unpack.sv(34): (qverilog-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+** Warning: pack_unpack.sv(35): (qverilog-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+** Warning: pack_unpack.sv(44): (qverilog-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+** Warning: pack_unpack.sv(47): (qverilog-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+** Warning: pack_unpack.sv(50): (qverilog-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+
+Top level modules:
+	uvm_example_3
