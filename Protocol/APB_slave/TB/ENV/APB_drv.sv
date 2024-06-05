@@ -52,10 +52,11 @@ class apb_drv;
             `DRV_PATH.Pwdata  <= trans_h.Pwdata;
 
         @(`DRV_PATH)
+        if(vintf.Psel == 1) begin
           `DRV_PATH.Penable <= 1;
         
         wait(`DRV_PATH.Pready);
-
+        end
         -> item_done;
 
       end: DRIVER_BLOCK

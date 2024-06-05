@@ -44,6 +44,7 @@ class apb_mon;
         trans_h.Pslverr   = `MON_PATH.Pslverr;
         mon_scrbd.put(trans_h);
         mon_pred.put(trans_h);
+        mon_func_cvg.put(trans_h);
         trans_h.print_trans("MONITOR");
         if(!`MON_PATH.Pwrite)
           act_q.push_front(trans_h.Prdata);

@@ -42,8 +42,14 @@ add wave -noupdate -expand -label sim:/apb_top/intf/apb_cb_mon/Group1 -group {Re
 add wave -noupdate -expand -label sim:/apb_top/intf/apb_cb_mon/Group1 -group {Region: sim:/apb_top/intf/apb_cb_mon} /apb_top/intf/apb_cb_mon/Pwdata
 add wave -noupdate -expand -label sim:/apb_top/intf/apb_cb_mon/Group1 -group {Region: sim:/apb_top/intf/apb_cb_mon} /apb_top/intf/apb_cb_mon/Prdata
 add wave -noupdate -expand -label sim:/apb_top/intf/apb_cb_mon/Group1 -group {Region: sim:/apb_top/intf/apb_cb_mon} /apb_top/intf/apb_cb_mon/apb_cb_mon_event
+add wave -noupdate /apb_top/intf/SETUP_STATE
+add wave -noupdate /apb_top/intf/ACCESS_STATE
+add wave -noupdate /apb_top/intf/SIGNAL_STABILITY
+add wave -noupdate /apb_top/intf/WRITE_DATA_STABILITY
+add wave -noupdate /apb_top/intf/NEXT_TRANSFER_CHECK
+add wave -noupdate /apb_top/intf/RESET_CHECK
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {59 ns} 0}
+WaveRestoreCursors {{Cursor 1} {170 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 120
@@ -59,4 +65,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {268 ns}
+WaveRestoreZoom {0 ns} {478 ns}

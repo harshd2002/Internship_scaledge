@@ -17,7 +17,7 @@ class apb_back2back_wr_ws extends apb_gen;
   virtual task run;
     repeat(trans_num) begin
       trans_h = new();
-      trans_h.randomize() with {ops_e == P_WRITE;};
+      trans_h.randomize() with {ops_e == P_WRITE; Pwdata <= 32'hFFFF;};
       trans_h.Pwrite = 1;
       trans_h.transfer = 1;
       gen_drv.put(trans_h);

@@ -30,8 +30,14 @@ class apb_pred;
     forever begin
       mon_pred.get(trans_h);
       exp_trans_h = new trans_h;
+      trans_h.print_trans("predictor");
       if(trans_h.Pwrite)
         exp_q.push_front(trans_h.Pwdata);
+      if(trans_h.Paddr > 20)
+        trans_h.Pslverr = 1;
+      else
+        trans_h.Pslverr = 0;
+
       pred_scrbd.put(exp_trans_h);
     end
   endtask

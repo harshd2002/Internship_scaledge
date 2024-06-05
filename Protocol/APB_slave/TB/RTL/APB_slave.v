@@ -40,9 +40,6 @@ module APB_slave #(parameter DATA_WIDTH = 32,
 	reg timer_o;
 	reg [2:0] t_counter;
 
-	//assign prdata = ((state == access) && pselect && penable) ? mem[paddr] : 'dz;
-
-
 	always @(posedge pclk or negedge presetn) begin
 		if(!presetn) begin
 			pr_state <= IDLE;
@@ -72,9 +69,6 @@ module APB_slave #(parameter DATA_WIDTH = 32,
 					if(pselect && penable) begin
 						nxt_state = ACCESS;
 					end
-					else if(pselect && !penable) begin
-						nxt_state = IDLE;
-					end
 					else begin
 						nxt_state = IDLE;
 					end
@@ -85,7 +79,6 @@ module APB_slave #(parameter DATA_WIDTH = 32,
 						nxt_state = SETUP;
 
 					if(timer_o || !wait_state) begin
-						//pready = 1'b1;
 						if(pselect && penable) begin
 							if(pwrite) begin
 								mem[paddr[4:0]] = pwdata;
@@ -96,7 +89,6 @@ module APB_slave #(parameter DATA_WIDTH = 32,
 						end
 					end
 					else begin
-						//pready = 1'b0;
 						nxt_state = ACCESS;
 					end
 					end

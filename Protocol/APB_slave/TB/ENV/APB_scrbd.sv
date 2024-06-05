@@ -28,8 +28,10 @@ class apb_scrbd;
   //run method
   task run;
     forever begin
-      mon_scrbd.get(act_trans_h);
-      pred_scrbd.get(exp_trans_h);
+      fork
+        mon_scrbd.get(act_trans_h);
+        pred_scrbd.get(exp_trans_h);
+      join
       act_trans_h.print_trans("SCOREBOARD");
       exp_trans_h.print_trans("SCOREBOARD");
       //checking queue for inorder scoreboard
@@ -37,8 +39,12 @@ class apb_scrbd;
         if(exp_q.pop_back() == act_q.pop_back())
           $info($time, " :read operation pass.");
         else
-          $info($time, " :read operation fail.");
+          $error($time, " :read operation fail.");
       end
+      if(exp_trans_h.Pslverr == act_trans_h.Pslverr)
+        $info($time, " :slave error pass.");
+      else
+        $error($time, " :slave error fail.");
     end
   endtask
 

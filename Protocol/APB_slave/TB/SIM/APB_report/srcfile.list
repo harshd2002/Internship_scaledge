@@ -3,7 +3,7 @@
 ../ENV/APB_drv.sv
 ../ENV/APB_env.sv
 ../ENV/APB_func_cvg.sv
-../ENV/APB_gen.sv
+../ENV/APB_gen_base.sv
 ../ENV/APB_intf.sv
 ../ENV/APB_mon.sv
 ../ENV/APB_pred.sv

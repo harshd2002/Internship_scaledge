@@ -47,7 +47,7 @@ class apb_test;
       wait_state_h = new();
       env_h.gen_h = wait_state_h;
       apb_top.dut.wait_state = 1;
-      apb_top.dut.time_out = 5;
+      apb_top.dut.time_out = 15;
     end
     if($test$plusargs("BACK2BACK_WR")) begin
       back2back_wr_h = new();

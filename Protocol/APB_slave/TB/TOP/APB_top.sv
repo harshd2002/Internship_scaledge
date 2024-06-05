@@ -59,6 +59,16 @@ module apb_top();
 		$finish;
 	end
 
+  //final block to check if anything remained inside the checker queue
+  final begin
+    $info("Starting final block");
+    if(exp_q.size() !== 0)
+      $warning("There is an expected data reamined to be checked\n Expected data is: %0p", exp_q.pop_front());
+    if(act_q.size() !== 0)
+      $warning("There is an actual data reamined to be checked\n Actual data is: %0p", act_q.pop_front());
+    $info("Ending final block");
+  end
+
 	//generating clock
 	always #5 Pclk = ~Pclk;
 
