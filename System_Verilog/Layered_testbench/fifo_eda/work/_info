@@ -1,0 +1,162 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Documents/git_internship/System_Verilog/Layered_testbench/fifo_eda
+T_opt
+!s110 1718932066
+V:gDZJK2I@JbKOHmfEE<>h2
+04 8 4 work fifo_top fast 0
+=1-54ee7509668a-6674d262-125-34d0
+o-quiet -auto_acc_if_foreign -work work -suppress 12110
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+R0
+vasync_fifo
+Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z3 !s110 1718932111
+!i10b 1
+!s100 :n56jmVMM9jWIE1C9AQ9X2
+IL0jzdja>>ROA;9=9W=zTM3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 fifo_rtl_sv_unit
+S1
+R0
+w1717697905
+8fifo_rtl.sv
+Ffifo_rtl.sv
+L0 3
+Z5 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z6 !s108 1718932111.000000
+!s107 fifo_test.sv|fifo_env.sv|fifo_scrbd.sv|fifo_pred.sv|fifo_mon.sv|fifo_drv.sv|fifo_gen_almostempty_flag.sv|fifo_gen_almostfull_flag.sv|fifo_gen_empty_flag.sv|fifo_gen_full_flag.sv|fifo_gen_continuous_wr_rd.sv|fifo_gen_sanity.sv|fifo_gen.sv|fifo_trans.sv|fifo_intf.sv|fifo_def.sv|fifo_top.sv|fifo_pack.sv|fifo_rtl.sv|
+Z7 !s90 -reportprogress|300|-coveropt|3|+acc|+cover|fifo_rtl.sv|fifo_pack.sv|fifo_top.sv|
+!i113 0
+Z8 !s102 -coveropt 3 +cover
+Z9 o-coveropt 3 +acc +cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Yfifo_intf
+R2
+R3
+!i10b 1
+!s100 _Vi_AMcgnP0aja_gEA7V^2
+IBIieSm0WH8BTLe_LZ>o[22
+R4
+Z10 !s105 fifo_top_sv_unit
+S1
+R0
+w1718886254
+8fifo_intf.sv
+Z11 Ffifo_intf.sv
+L0 13
+R5
+r1
+!s85 0
+31
+R6
+Z12 !s107 fifo_test.sv|fifo_env.sv|fifo_scrbd.sv|fifo_pred.sv|fifo_mon.sv|fifo_drv.sv|fifo_gen_almostempty_flag.sv|fifo_gen_almostfull_flag.sv|fifo_gen_empty_flag.sv|fifo_gen_full_flag.sv|fifo_gen_continuous_wr_rd.sv|fifo_gen_sanity.sv|fifo_gen.sv|fifo_trans.sv|fifo_intf.sv|fifo_def.sv|fifo_top.sv|fifo_pack.sv|fifo_rtl.sv|
+R7
+!i113 0
+R8
+R9
+R1
+Xfifo_pack
+!s115 fifo_intf
+R2
+R3
+!i10b 1
+!s100 BafC4Nhh88ci22Aka[0Bj1
+I[7D_BaIBG=]jH[DfezPgf3
+V[7D_BaIBG=]jH[DfezPgf3
+S1
+R0
+w1718930930
+Z13 Ffifo_pack.sv
+Ffifo_trans.sv
+Ffifo_gen.sv
+Ffifo_gen_sanity.sv
+Ffifo_gen_continuous_wr_rd.sv
+Ffifo_gen_full_flag.sv
+Ffifo_gen_empty_flag.sv
+Ffifo_gen_almostfull_flag.sv
+Ffifo_gen_almostempty_flag.sv
+Ffifo_drv.sv
+Ffifo_mon.sv
+Ffifo_pred.sv
+Ffifo_scrbd.sv
+Ffifo_env.sv
+Ffifo_test.sv
+L0 17
+R5
+r1
+!s85 0
+31
+R6
+R12
+R7
+!i113 0
+R8
+R9
+R1
+vfifo_top
+R2
+Z14 DXx4 work 9 fifo_pack 0 22 [7D_BaIBG=]jH[DfezPgf3
+DXx4 work 16 fifo_top_sv_unit 0 22 54BoI<l;a[K2gZEojgMdP3
+R4
+r1
+!s85 0
+!i10b 1
+!s100 UlO>1[g0d7?=;<FMiZRVC2
+I@QbEBBPk@j`L1<JB0l8Z01
+R10
+S1
+R0
+w1718885710
+Z15 8fifo_top.sv
+Z16 Ffifo_top.sv
+L0 16
+R5
+31
+R6
+R12
+R7
+!i113 0
+R8
+R9
+R1
+Xfifo_top_sv_unit
+R2
+R14
+V54BoI<l;a[K2gZEojgMdP3
+r1
+!s85 0
+!i10b 1
+!s100 hSEiTkN6TJc[N]de^h^C<1
+I54BoI<l;a[K2gZEojgMdP3
+!i103 1
+S1
+R0
+w1718930632
+R15
+R16
+R13
+Ffifo_def.sv
+R11
+L0 14
+R5
+31
+R6
+R12
+R7
+!i113 0
+R8
+R9
+R1

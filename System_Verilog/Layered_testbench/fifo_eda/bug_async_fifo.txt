@@ -1,0 +1,6 @@
+bugs in asynchronous fifo design
+
+underflow and overflow flag :
+  -> they should get high when write or read occur when fifo is full or empty respectively but they were not getting high.
+  -> they should be de-asserted on the same clock as that of full or empty flags getting de-asserted.
+
