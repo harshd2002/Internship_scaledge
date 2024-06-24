@@ -24,7 +24,10 @@ package fifo_pack;
   //variable for storing number of transactions
   byte unsigned NUM_TRANS = 10;
   byte unsigned TRANS_LIM = 4;
+  static byte unsigned WR_COUNT = 0, RD_COUNT = 0;
 
+  //flag to override driver
+  bit override_flag;
 
   //event to trigger reset
   event rst_evt;
@@ -44,6 +47,7 @@ package fifo_pack;
   endfunction
 
   `include "fifo_trans.sv"
+  `include "fifo_functional_cvg.sv"
   `include "fifo_gen.sv"
   `include "fifo_gen_sanity.sv"
   `include "fifo_gen_continuous_wr_rd.sv"
@@ -51,6 +55,8 @@ package fifo_pack;
   `include "fifo_gen_empty_flag.sv"
   `include "fifo_gen_almostfull_flag.sv"
   `include "fifo_gen_almostempty_flag.sv"
+  `include "fifo_gen_inbet_rst.sv"
+  `include "fifo_gen_read_empty.sv"
   `include "fifo_drv.sv"
   `include "fifo_mon.sv"
   `include "fifo_pred.sv"

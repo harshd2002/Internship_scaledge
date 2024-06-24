@@ -13,6 +13,7 @@ add wave -noupdate -expand -label sim:/fifo_top/dut/Group1 -group {Region: sim:/
 add wave -noupdate -expand -label sim:/fifo_top/dut/Group1 -group {Region: sim:/fifo_top/dut} /fifo_top/dut/almost_empty
 add wave -noupdate -expand -label sim:/fifo_top/dut/Group1 -group {Region: sim:/fifo_top/dut} /fifo_top/dut/overflow
 add wave -noupdate -expand -label sim:/fifo_top/dut/Group1 -group {Region: sim:/fifo_top/dut} /fifo_top/dut/underflow
+add wave -noupdate -expand -label sim:/fifo_top/dut/Group1 -group {Region: sim:/fifo_top/dut} /fifo_pack::override_flag
 add wave -noupdate -expand -label sim:/fifo_top/dut/Group1 -group {Region: sim:/fifo_top/dut} /fifo_top/dut/wr_ptr
 add wave -noupdate -expand -label sim:/fifo_top/dut/Group1 -group {Region: sim:/fifo_top/dut} /fifo_top/dut/rd_ptr
 add wave -noupdate -expand -label sim:/fifo_top/dut/Group1 -group {Region: sim:/fifo_top/dut} /fifo_top/dut/g_wr_ptr
@@ -39,28 +40,28 @@ add wave -noupdate -expand -label sim:/fifo_top/intf/Group1 -group {Region: sim:
 add wave -noupdate -expand -label sim:/fifo_top/intf/wr_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/wr_drv_cb} /fifo_top/intf/wr_drv_cb/full
 add wave -noupdate -expand -label sim:/fifo_top/intf/wr_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/wr_drv_cb} /fifo_top/intf/wr_drv_cb/overflow
 add wave -noupdate -expand -label sim:/fifo_top/intf/wr_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/wr_drv_cb} /fifo_top/intf/wr_drv_cb/wr_enbl
+add wave -noupdate -expand -label sim:/fifo_top/intf/wr_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/wr_drv_cb} /fifo_top/intf/rd_drv_cb/rd_enbl
 add wave -noupdate -expand -label sim:/fifo_top/intf/wr_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/wr_drv_cb} /fifo_top/intf/wr_drv_cb/wr_data
 add wave -noupdate -expand -label sim:/fifo_top/intf/wr_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/wr_drv_cb} /fifo_top/intf/wr_drv_cb/wr_drv_cb_event
 add wave -noupdate -expand -label sim:/fifo_top/intf/rd_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_drv_cb} /fifo_top/intf/rd_drv_cb/empty
 add wave -noupdate -expand -label sim:/fifo_top/intf/rd_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_drv_cb} /fifo_top/intf/rd_drv_cb/underflow
-add wave -noupdate -expand -label sim:/fifo_top/intf/rd_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_drv_cb} /fifo_top/intf/rd_drv_cb/rd_enbl
-add wave -noupdate -expand -label sim:/fifo_top/intf/rd_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_drv_cb} /fifo_top/intf/rd_drv_cb/rd_drv_cb_event
+add wave -noupdate -expand -label sim:/fifo_top/intf/rd_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_drv_cb} -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_mon_cb/empty
+add wave -noupdate -expand -label sim:/fifo_top/intf/rd_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_drv_cb} -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_mon_cb/almost_empty
+add wave -noupdate -expand -label sim:/fifo_top/intf/rd_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_drv_cb} -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_drv_cb/rd_drv_cb_event
+add wave -noupdate -expand -label sim:/fifo_top/intf/rd_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_drv_cb} -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_mon_cb/underflow
+add wave -noupdate -expand -label sim:/fifo_top/intf/rd_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_drv_cb} -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_mon_cb/rd_enbl
+add wave -noupdate -expand -label sim:/fifo_top/intf/rd_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_drv_cb} -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_mon_cb/rd_data
+add wave -noupdate -expand -label sim:/fifo_top/intf/rd_drv_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_drv_cb} -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_mon_cb/rd_mon_cb_event
 add wave -noupdate -expand -label sim:/fifo_top/intf/wr_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/wr_mon_cb} /fifo_top/intf/wr_mon_cb/full
 add wave -noupdate -expand -label sim:/fifo_top/intf/wr_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/wr_mon_cb} /fifo_top/intf/wr_mon_cb/almost_full
 add wave -noupdate -expand -label sim:/fifo_top/intf/wr_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/wr_mon_cb} /fifo_top/intf/wr_mon_cb/overflow
 add wave -noupdate -expand -label sim:/fifo_top/intf/wr_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/wr_mon_cb} /fifo_top/intf/wr_mon_cb/wr_enbl
 add wave -noupdate -expand -label sim:/fifo_top/intf/wr_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/wr_mon_cb} /fifo_top/intf/wr_mon_cb/wr_data
 add wave -noupdate -expand -label sim:/fifo_top/intf/wr_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/wr_mon_cb} /fifo_top/intf/wr_mon_cb/wr_mon_cb_event
-add wave -noupdate -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_mon_cb/empty
-add wave -noupdate -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_mon_cb/almost_empty
-add wave -noupdate -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_mon_cb/underflow
-add wave -noupdate -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_mon_cb/rd_enbl
-add wave -noupdate -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_mon_cb/rd_data
-add wave -noupdate -expand -label sim:/fifo_top/intf/rd_mon_cb/Group1 -group {Region: sim:/fifo_top/intf/rd_mon_cb} /fifo_top/intf/rd_mon_cb/rd_mon_cb_event
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {37 ns} 0}
+WaveRestoreCursors {{Cursor 1} {65 ns} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 150
+configure wave -namecolwidth 203
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 1
@@ -74,4 +75,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {210 ns}
+WaveRestoreZoom {0 ns} {399 ns}

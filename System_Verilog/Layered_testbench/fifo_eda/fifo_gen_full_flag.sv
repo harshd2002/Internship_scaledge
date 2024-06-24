@@ -16,7 +16,8 @@ class fifo_gen_full_flag extends fifo_gen;
 	task run();
     object_raise();
     $display($time, " :generator_full_flag");
-    TRANS_LIM = 2;
+    WR_COUNT = 16;
+    RD_COUNT = 5;
 
     NUM_TRANS = 16;
     //writing inside fifo

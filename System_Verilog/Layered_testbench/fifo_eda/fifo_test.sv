@@ -25,6 +25,10 @@ class fifo_test;
   fifo_gen_almostfull_flag almostfull_flag_h;
   //almostempty flag testcase handle
   fifo_gen_almostempty_flag almostempty_flag_h;
+  //inbetween reset testcase handle
+  fifo_gen_inbet_rst inbet_rst_h;
+  //reading when empty testcase handle
+  fifo_gen_read_empty read_empty_h;
 
 	//virtual interface to pass interface
 	virtual fifo_intf vintf;
@@ -61,6 +65,14 @@ class fifo_test;
     if($test$plusargs("ALMOSTEMPTY_FLAG")) begin
       almostempty_flag_h = new();
       env_h.gen_h = almostempty_flag_h;
+    end
+    if($test$plusargs("INBETWEEN_RESET")) begin
+      inbet_rst_h = new();
+      env_h.gen_h = inbet_rst_h;
+    end
+    if($test$plusargs("READ_EMPTY")) begin
+      read_empty_h = new();
+      env_h.gen_h = read_empty_h;
     end
 		env_h.connect(vintf);
 	endfunction

@@ -15,6 +15,8 @@ class fifo_gen_sanity extends fifo_gen;
 	//task to generate and store data
 	task run();
     object_raise();
+    WR_COUNT = 1;
+    RD_COUNT = 1;
     $display($time, " :generator_sanity");
     //writing inside fifo
     super.write_op();

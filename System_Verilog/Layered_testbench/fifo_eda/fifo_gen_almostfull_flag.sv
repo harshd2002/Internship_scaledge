@@ -16,7 +16,8 @@ class fifo_gen_almostfull_flag extends fifo_gen;
 	task run();
     object_raise();
     $display($time, " :generator_full_flag");
-    TRANS_LIM = 4;
+    WR_COUNT = 16;
+    RD_COUNT = 5;
 
     NUM_TRANS = 16;
     //writing inside fifo
@@ -24,14 +25,12 @@ class fifo_gen_almostfull_flag extends fifo_gen;
       super.write_op();
       gen_drv.put(trans_h);
     end
-    //#100;
     NUM_TRANS = 5;
     //reading form fifo
 		repeat(NUM_TRANS) begin
       super.read_op();
       gen_drv.put(trans_h);
     end
-    //#50;
     NUM_TRANS = 5;
     //writing inside fifo
 		repeat(NUM_TRANS) begin

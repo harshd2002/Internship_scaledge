@@ -15,6 +15,7 @@ class fifo_env;
 	mailbox #(fifo_trans) gen_drv = new(1);
 	mailbox #(fifo_trans) mon_pred_scrbd = new();
 	mailbox #(fifo_trans) pred_scrbd = new();
+  mailbox #(fifo_trans) mon_func_cvg = new(1);
 
 	//handles of blocks inside environment
 	fifo_gen gen_h;
@@ -22,6 +23,7 @@ class fifo_env;
 	fifo_mon mon_h;
 	fifo_pred pred_h;
 	fifo_scrbd scrbd_h;
+  fifo_functional_cvg func_cvg_h;
 
 	//passing virtual function
 	task build();
@@ -29,15 +31,17 @@ class fifo_env;
 		mon_h = new();
 		pred_h = new();
 		scrbd_h = new();
+    func_cvg_h = new();
 	endtask
 
 	//connecting interface and mailbox
 	task connect(virtual fifo_intf vintf);
 		gen_h.connect(gen_drv);
 		drv_h.connect(gen_drv, vintf);
-		mon_h.connect(mon_pred_scrbd, vintf);
+		mon_h.connect(mon_pred_scrbd, mon_func_cvg, func_cvg_h, vintf);
 		pred_h.connect(mon_pred_scrbd, pred_scrbd);
 		scrbd_h.connect(mon_pred_scrbd, pred_scrbd);
+    func_cvg_h.connect(vintf, mon_func_cvg);
 	endtask
 
 	//generating and passing values
@@ -47,8 +51,8 @@ class fifo_env;
 			gen_h.run();
   		drv_h.run();
   		mon_h.run();
-			//pred_h.run();
 			scrbd_h.run();
+      func_cvg_h.run();
     join_any
 	endtask
 endclass

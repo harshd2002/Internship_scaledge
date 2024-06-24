@@ -28,13 +28,13 @@ interface fifo_intf (input bit wr_clk, input bit rd_clk, input bit rstn);
 	endclocking
 
 	clocking wr_mon_cb @(posedge wr_clk);
-		default input #1 output #1;
+		default input #0 output #1;
 		input wr_enbl, wr_data;
 		input empty, almost_empty, underflow, full, almost_full, overflow;
 	endclocking
 
 	clocking rd_mon_cb @(posedge rd_clk);
-		default input #1 output #1;
+		default input #0 output #1;
 		input rd_enbl, rd_data;
 		input empty, almost_empty, underflow, full, almost_full, overflow;
 	endclocking

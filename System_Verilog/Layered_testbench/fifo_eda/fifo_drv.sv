@@ -17,7 +17,6 @@ class fifo_drv;
 	
   //mailbox to get data from generator
 	mailbox #(fifo_trans) gen_drv;
-	//mailbox #(fifo_trans) rd_gen_drv;
 	
   //virtual interface to connect with original interface (fifo_intf)
 	virtual fifo_intf vintf;
@@ -48,11 +47,16 @@ class fifo_drv;
   task wr_driver();
     forever @(posedge `WR_DRV) begin
       $display($time, " :write driver started");
-        `WR_DRV.wr_enbl <= 0;
-        wait((wr_que.size()!=0) && (vintf.rstn) && (!`WR_DRV.full));
+      if((wr_que.size()!=0) && (vintf.rstn) && ((!`WR_DRV.full) | (override_flag))) begin
+      $display($time, " :write driver driving %0h ", wr_que[0].wr_data);
         `WR_DRV.wr_data <= wr_que[0].wr_data;
         `WR_DRV.wr_enbl <= 1;
         wr_que.pop_front();
+      end
+      else begin
+        `WR_DRV.wr_enbl <= 0;
+      end
+      $display($time, " :write driver ended");
     end
   endtask
 
@@ -60,10 +64,14 @@ class fifo_drv;
   task rd_driver();
     forever @(posedge `RD_DRV) begin
       $display($time, " :read driver started");
-      `RD_DRV.rd_enbl <= 0;
-      wait((rd_que.size()!=0) && (vintf.rstn) && (!`RD_DRV.empty));
-      `RD_DRV.rd_enbl <= 1; 
-      rd_que.delete(0); 
+      if((rd_que.size()!=0) && (vintf.rstn) && ((!`RD_DRV.empty) | (override_flag))) begin
+      $display($time, " :read driver driving");
+        `RD_DRV.rd_enbl <= 1; 
+        rd_que.delete(0); 
+      end
+      else
+        `RD_DRV.rd_enbl <= 0;
+      $display($time, " :read driver ended");
     end 
   endtask 
 
@@ -82,7 +90,6 @@ class fifo_drv;
            @(negedge vintf.rstn); 
           end 
           begin 
-            wait((wr_que.size() + rd_que.size()) < TRANS_LIM);
             gen_drv.get(trans_h); 
             object_raise();
             trans_h.print_trans("driver"); 
@@ -90,6 +97,15 @@ class fifo_drv;
               wr_que.push_back(trans_h); 
             if(trans_h.ops_e == READ) 
               rd_que.push_back(trans_h);
+
+            if(wr_que.size() == WR_COUNT) begin
+              wait(!wr_que.size());
+              @(`WR_DRV);
+            end
+            if(rd_que.size() == RD_COUNT) begin
+              wait(!rd_que.size());
+              @(`RD_DRV);
+            end
           end
         join_any
         disable driver_fork_join;

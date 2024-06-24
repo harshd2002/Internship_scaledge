@@ -38,15 +38,17 @@ class fifo_scrbd;
     trans_h.print_trans("scoreboard");
     if(trans_h.ops_e == WRITE)
       rf_mem_q.push_back(trans_h.wr_data);
+//      rf_mem_q = {rf_mem_q, trans_h.wr_data};
+      $info($time, "[SCOREBOARD] %h, %h", trans_h.wr_data, rf_mem_q[$]);
 
-		//scoreboard logic 
+/*		//scoreboard logic 
     fifo_input_cvg.sample();
     fifo_output_cvg.sample(trans_h.rd_data, trans_h.full, trans_h.empty, trans_h.almost_full, trans_h.almost_empty, trans_h.overflow, trans_h.underflow);
     foreach(trans_h.wr_data[i]) begin
       bits_toggle_check.sample(trans_h.wr_data[i]);
       bits_toggle_check.sample(trans_h.rd_data[i]);
     end
-
+*/
     checker_run();
     object_drop();
     end
@@ -56,9 +58,9 @@ class fifo_scrbd;
   task checker_run();
     if(trans_h.ops_e == READ) begin
 		  if(trans_h.rd_data == rf_mem_q[0])
-		    $info("%0t: [SCOREBOARD] read pass", $time);
+		    $info("%0t: [SCOREBOARD] read pass: %0h, %0h", $time, trans_h.rd_data, rf_mem_q);
       else
-        $error("%0t: [SCOREBOARD] read fail", $time);
+        $error("%0t: [SCOREBOARD] read fail: %0h, %0h", $time, trans_h.rd_data, rf_mem_q);
       void'(rf_mem_q.pop_front());
     end
     if(((trans_h.full) && (rf_mem_q.size()==16)) || ((!trans_h.full) && (rf_mem_q.size()!=16)))
@@ -88,10 +90,11 @@ class fifo_scrbd;
   endtask
 
 
-  //------------------------------functonal coverage---------------------------------------------------
+/*  //------------------------------functonal coverage---------------------------------------------------
 
   //functional coverage for inputs
   covergroup fifo_input_cvg;
+    option.per_instance = 1;
     option.comment      = "cover_group for input signals of Async FIFO";
     
     OPERATION: coverpoint trans_h.ops_e {
@@ -101,7 +104,8 @@ class fifo_scrbd;
     }
     OPE_TRANSITION: coverpoint trans_h.ops_e {
       option.comment = "operation transition check";
-      bins back_to_back = (WRITE=>READ);
+      bins back_to_back_wr_rd = (WRITE=>READ);
+      bins back_to_back_rd_wr = (READ=>WRITE);
     }
 
     WRITE_DATA: coverpoint trans_h.wr_data {
@@ -112,6 +116,7 @@ class fifo_scrbd;
 
   //coverage for toggle check
   covergroup bits_toggle_check with function sample (bit toggle_bit);
+    option.per_instance = 1;
     option.comment = "covergroup to check toggle of bits";
     TOGGLE: coverpoint toggle_bit {
       bins bit_transition_0_1 = (0=>1);
@@ -121,6 +126,7 @@ class fifo_scrbd;
 
   //coverage for output signals
   covergroup fifo_output_cvg with function sample(bit [7:0] read_data, bit full, empty, almostfull, almostempty, overflow,underflow);
+    option.per_instance = 1;
     option.comment = "cover_group for output signals of Async FIFO";
 
     READ_DATA: coverpoint read_data {
@@ -165,6 +171,7 @@ class fifo_scrbd;
     fifo_output_cvg   = new();
     bits_toggle_check = new();
   endfunction
+*/
 
 endclass
 `endif
