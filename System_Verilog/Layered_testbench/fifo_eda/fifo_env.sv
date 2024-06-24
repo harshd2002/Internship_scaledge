@@ -26,23 +26,23 @@ class fifo_env;
   fifo_functional_cvg func_cvg_h;
 
 	//passing virtual function
-	task build();
+	function void build();
 		drv_h = new();
 		mon_h = new();
 		pred_h = new();
 		scrbd_h = new();
     func_cvg_h = new();
-	endtask
+  endfunction
 
 	//connecting interface and mailbox
-	task connect(virtual fifo_intf vintf);
+	function void connect(virtual fifo_intf vintf);
 		gen_h.connect(gen_drv);
 		drv_h.connect(gen_drv, vintf);
 		mon_h.connect(mon_pred_scrbd, mon_func_cvg, func_cvg_h, vintf);
 		pred_h.connect(mon_pred_scrbd, pred_scrbd);
 		scrbd_h.connect(mon_pred_scrbd, pred_scrbd);
     func_cvg_h.connect(vintf, mon_func_cvg);
-	endtask
+  endfunction
 
 	//generating and passing values
 	task run();

@@ -37,6 +37,27 @@ class fifo_mon;
       fork
         wr_mon();
         rd_mon();
+        forever @(negedge vintf.rstn) begin
+	      trans_h.wr_data      = 0;
+        trans_h.rd_data      = vintf.rd_data;
+        trans_h.full         = vintf.full;
+        trans_h.almost_full  = vintf.almost_full;
+        trans_h.overflow     = vintf.overflow;
+        trans_h.empty        = vintf.empty;
+        trans_h.almost_empty = vintf.almost_empty;
+        trans_h.underflow    = vintf.underflow;
+
+        trans_h.print_trans("monitor");
+		    //storing data for scoreboard and predictor
+		    mon_pred_scrbd.put(trans_h);
+        mon_func_cvg.put(trans_h);
+        func_cvg_h.fifo_input_cvg.sample(trans_h);
+        func_cvg_h.fifo_output_cvg.sample(trans_h.rd_data, trans_h.full, trans_h.empty, trans_h.almost_full, trans_h.almost_empty, trans_h.overflow, trans_h.underflow);
+        foreach(trans_h.wr_data[i]) begin
+          func_cvg_h.bits_toggle_check.sample(trans_h.wr_data[i]);
+          func_cvg_h.bits_toggle_check.sample(trans_h.rd_data[i]);
+        end
+        end
       join
     end
 	endtask

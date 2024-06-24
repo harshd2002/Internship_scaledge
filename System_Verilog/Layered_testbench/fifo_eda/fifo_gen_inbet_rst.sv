@@ -18,9 +18,11 @@ class fifo_gen_inbet_rst extends fifo_gen;
     begin
       object_raise();
       $display($time, " :generator_full_flag");
-      TRANS_LIM = 2;
+      WR_COUNT = 3;
+      RD_COUNT = 5;
+      INBET_RST_TIME = 65;
   
-      NUM_TRANS = 16;
+      NUM_TRANS = 5;
       //writing inside fifo
   		repeat(NUM_TRANS) begin
         super.write_op();

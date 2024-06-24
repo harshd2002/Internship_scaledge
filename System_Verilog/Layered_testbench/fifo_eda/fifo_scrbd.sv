@@ -30,6 +30,10 @@ class fifo_scrbd;
 
 	//comparing outputs
 	task run();
+    fork
+    begin
+      reset_checker();
+    end
     forever begin
 		mon_pred_scrbd.get(trans_h);
     $info("scoreboard started");
@@ -52,7 +56,16 @@ class fifo_scrbd;
     checker_run();
     object_drop();
     end
+    join
 	endtask
+
+  task reset_checker();
+    forever @(rst_evt) begin
+      rf_mem_q.delete();
+		  mon_pred_scrbd.get(trans_h);
+      checker_run();
+    end
+  endtask
 
   //checker to compare output
   task checker_run();

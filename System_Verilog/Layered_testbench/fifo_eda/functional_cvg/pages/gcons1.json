@@ -1,0 +1,6 @@
+var g_db_data = [
+{dummy:0},
+{name:'fifo_input_cvg',f:1,type:6,id:21,tb:'12',h:'9',m:'3',hp:'75.00%',cov:['81.25%','Y'],g:'100.00%',gp:['81.25%','Y'],hdlPath:'/fifo_pack/fifo_functional_cvg',parent:'20'},
+{name:'bits_toggle_check',f:1,type:6,id:31,tb:'2',h:'2',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hdlPath:'/fifo_pack/fifo_functional_cvg',parent:'20'},
+{name:'fifo_output_cvg',f:1,type:6,id:35,tb:'16',h:'13',m:'3',hp:'81.25%',cov:['78.57%','Y'],g:'100.00%',gp:['78.57%','Y'],hdlPath:'/fifo_pack/fifo_functional_cvg',parent:'20'}];
+processConsCovergroupsData(g_db_data);

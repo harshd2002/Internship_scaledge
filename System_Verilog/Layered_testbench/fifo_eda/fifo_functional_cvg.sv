@@ -48,7 +48,11 @@ class fifo_functional_cvg;
       option.comment = "write data range check";
       bins write_data_range[4] = {[0:$]};
     }
-    RESET_CHECK: coverpoint vintf.rstn {
+//  endgroup
+/*
+  covergroup reset_cvg @(vintf.rstn); 
+    option.per_instance = 1;
+*/    RESET_CHECK: coverpoint vintf.rstn {
       option.comment = " reset check ";
       bins reset_0 = {0};
       bins reset_1 = {1};
@@ -113,6 +117,7 @@ class fifo_functional_cvg;
     fifo_input_cvg    = new();
     fifo_output_cvg   = new();
     bits_toggle_check = new();
+//    reset_cvg         = new();
   endfunction
 
 endclass

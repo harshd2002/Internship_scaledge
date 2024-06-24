@@ -18,12 +18,15 @@ class fifo_gen_sanity extends fifo_gen;
     WR_COUNT = 1;
     RD_COUNT = 1;
     $display($time, " :generator_sanity");
+    NUM_TRANS = 5;
+		repeat(NUM_TRANS) begin
     //writing inside fifo
     super.write_op();
     gen_drv.put(trans_h);
     //reading form fifo
     super.read_op();
     gen_drv.put(trans_h);
+    end
     object_drop();
 	endtask
 

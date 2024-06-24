@@ -14,7 +14,7 @@ sim:
 	vsim -vopt fifo_top -suppress 12110 +ALMOSTFULL_FLAG -c -do "coverage save -onexit -directive -cvg -codeall almostfull_flag.ucdb; run -all; -l transcript.log; exit"
 	vsim -vopt fifo_top -suppress 12110 +ALMOSTEMPTY_FLAG -c -do "coverage save -onexit -directive -cvg -codeall almostempty_flag.ucdb; run -all; -l transcript.log; exit"
 	vsim -vopt fifo_top -suppress 12110 +READ_EMPTY -c -do "coverage save -onexit -directive -cvg -codeall read_empty.ucdb; run -all; -l transcript.log; exit"
-	vsim -vopt fifo_top -suppress 12110 +INBETWEEN_RESET -c -do "coverage save -onexit -directive -cvg -codeall inbet_rst.ucdb; run -all; -l transcript.log; exit"
+	vsim -vopt fifo_top -suppress 12110 +INBETWEEN_RESET -c -do "coverage save -onexit -directive -cvg -codeall inbet_rst.ucdb; run -all; -l  transcript.log; exit"
 
 cover:
 	vcover merge async_fifo.ucdb sanity.ucdb continuous_wr_rd.ucdb full_flag.ucdb empty_flag.ucdb almostfull_flag.ucdb almostempty_flag.ucdb inbet_rst.ucdb read_empty.ucdb
