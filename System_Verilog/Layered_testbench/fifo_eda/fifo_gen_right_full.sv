@@ -1,40 +1,41 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //Project: Asynchronous FIFO verification
-//File name: fifo_gen_almostfull_flag.sv
-//description: extended generator class
+//File name: fifo_gen_.sv
+//description: generator class
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //Async FIFO extended generator class
 
-`ifndef FIFO_GENERATOR_ALMOSTFULL_FLAG
-`define FIFO_GENERATOR_ALMOSTFULL_FLAG
+`ifndef FIFO_GENERATOR_READ_EMPTY
+`define FIFO_GENERATOR_READ_EMPTY
 
-class fifo_gen_almostfull_flag extends fifo_gen;
+class fifo_gen_read_empty extends fifo_gen;
 
 	//task to generate and store data
 	task run();
     object_raise();
-    $display($time, " :generator_almostfull_flag");
-    WR_COUNT = 16;
-    RD_COUNT = 5;
-
-    NUM_TRANS = 16;
-    //writing inside fifo
-		repeat(NUM_TRANS) begin
+    RD_COUNT = 6;
+    WR_COUNT = 2;
+    override_flag = 1;
       super.write_op();
       gen_drv.put(trans_h);
-    end
-    NUM_TRANS = 5;
-    //reading form fifo
-		repeat(NUM_TRANS) begin
+    $display($time, " :generator_sanity");
+    NUM_TRANS = 4;
+    //reading from fifo
+  	repeat(NUM_TRANS) begin
       super.read_op();
       gen_drv.put(trans_h);
     end
     NUM_TRANS = 5;
     //writing inside fifo
-		repeat(NUM_TRANS) begin
+  	repeat(NUM_TRANS) begin
       super.write_op();
+      gen_drv.put(trans_h);
+    end
+    //reading form fifo
+  	repeat(NUM_TRANS) begin
+      super.read_op();
       gen_drv.put(trans_h);
     end
     object_drop();
@@ -42,6 +43,5 @@ class fifo_gen_almostfull_flag extends fifo_gen;
 
 endclass
 `endif
-
 
 

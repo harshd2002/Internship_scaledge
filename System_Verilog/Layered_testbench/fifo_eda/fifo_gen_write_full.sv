@@ -1,39 +1,31 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //Project: Asynchronous FIFO verification
-//File name: fifo_gen_read_empty.sv
+//File name: fifo_gen_write_full.sv
 //description: generator class
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //Async FIFO extended generator class
 
-`ifndef FIFO_GENERATOR_READ_EMPTY
-`define FIFO_GENERATOR_READ_EMPTY
+`ifndef FIFO_GENERATOR_WRITE_FULL
+`define FIFO_GENERATOR_WRITE_FULL
 
-class fifo_gen_read_empty extends fifo_gen;
+class fifo_gen_write_full extends fifo_gen;
 
 	//task to generate and store data
 	task run();
     object_raise();
-    RD_COUNT = 6;
-    WR_COUNT = 2;
+    $display($time, " :generator_write_full");
+    RD_COUNT = 1;
+    WR_COUNT = 5;
     override_flag = 1;
+    NUM_TRANS = 20;
+    /writing inside fifo
+  	repeat(NUM_TRANS) begin
       super.write_op();
       gen_drv.put(trans_h);
-    $display($time, " :generator_read_empty");
-    NUM_TRANS = 4;
+    end
     //reading from fifo
-  	repeat(NUM_TRANS) begin
-      super.read_op();
-      gen_drv.put(trans_h);
-    end
-    NUM_TRANS = 5;
-    //writing inside fifo
-  	repeat(NUM_TRANS) begin
-      super.write_op();
-      gen_drv.put(trans_h);
-    end
-    //reading form fifo
   	repeat(NUM_TRANS) begin
       super.read_op();
       gen_drv.put(trans_h);
@@ -43,4 +35,5 @@ class fifo_gen_read_empty extends fifo_gen;
 
 endclass
 `endif
+
 

@@ -29,6 +29,8 @@ class fifo_test;
   fifo_gen_inbet_rst inbet_rst_h;
   //reading when empty testcase handle
   fifo_gen_read_empty read_empty_h;
+  //writing when full testcase handle
+  fifo_gen_write_full write_full_h;
 
 	//virtual interface to pass interface
 	virtual fifo_intf vintf;
@@ -73,6 +75,10 @@ class fifo_test;
     if($test$plusargs("READ_EMPTY")) begin
       read_empty_h = new();
       env_h.gen_h = read_empty_h;
+    end
+    if($test$plusargs("WRITE_FULL")) begin
+      write_full_h = new();
+      env_h.gen_h = write_full_h;
     end
 		env_h.connect(vintf);
 	endfunction

@@ -65,7 +65,7 @@ module fifo_top();
       test_h.run();
     join_any
     //wait(!object_count);
-    #250;
+    #400;
 		$finish;
 	end
 

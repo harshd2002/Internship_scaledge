@@ -98,11 +98,11 @@ class fifo_drv;
             if(trans_h.ops_e == READ) 
               rd_que.push_back(trans_h);
 
-            if((wr_que.size() == WR_COUNT) && (!WR_COUNT)) begin 
+            if((wr_que.size() == WR_COUNT) || (!WR_COUNT)) begin 
               wait(!wr_que.size());
               @(`WR_DRV);
             end
-            if((rd_que.size() == RD_COUNT) && (!RD_COUNT)) begin
+            if((rd_que.size() == RD_COUNT) || (!RD_COUNT)) begin
               wait(!rd_que.size());
               @(`RD_DRV);
             end

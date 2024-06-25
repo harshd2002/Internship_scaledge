@@ -15,12 +15,10 @@ vlog -coveropt 3 +acc +cover fifo_rtl.sv fifo_pack.sv fifo_top.sv
 #vsim -vopt fifo_top -suppress 12110 +EMPTY_FLAG -c -do "coverage save -onexit -directive -cvg -codeall empty_flag.ucdb; do wave.do; run -all; exit" -l transcript.log
 #vsim -vopt fifo_top -suppress 12110 +ALMOSTFULL_FLAG -c -do "coverage save -onexit -directive -cvg -codeall almostfull_flag.ucdb; do wave.do; run -all; exit" -l transcript.log
 #vsim -vopt fifo_top -suppress 12110 +ALMOSTEMPTY_FLAG -c -do "coverage save -onexit -directive -cvg -codeall almostempty_flag.ucdb; do wave.do; run -all; exit" -l transcript.log
-vsim -vopt fifo_top -suppress 12110 +INBETWEEN_RESET -c -do "coverage save -onexit -directive -cvg -codeall inbet_rst.ucdb; do wave.do; run -all; exit" -l transcript.log
+#vsim -vopt fifo_top -suppress 12110 +INBETWEEN_RESET -c -do "coverage save -onexit -directive -cvg -codeall inbet_rst.ucdb; do wave.do; run -all; exit" -l transcript.log
 #vsim -vopt fifo_top -suppress 12110 +READ_EMPTY -c -do "coverage save -onexit -directive -cvg -codeall read_empty.ucdb; do wave.do; run -all; exit" -l transcript.log
+vsim -vopt fifo_top -suppress 12110 +WRITE_FULL -c -do "coverage save -onexit -directive -cvg -codeall write_full.ucdb; do wave.do; run -all; exit" -l transcript.log
 
-#vcover merge async_fifo.ucdb sanity.ucdb continuous_wr_rd.ucdb full_flag.ucdb empty_flag.ucdb almostfull_flag.ucdb almostempty_flag.ucdb
-#del sanity.ucdb continuous_wr_rd.ucdb full_flag.ucdb empty_flag.ucdb almostfull_flag.ucdb almostempty_flag.ucdb
-#vcover report -html async_fifo.ucdb 
 
 #add wave sim:fifo_top/dut/*
 #add wave sim:fifo_top/intf/*

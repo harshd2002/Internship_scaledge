@@ -15,7 +15,7 @@ class fifo_gen_empty_flag extends fifo_gen;
 	//task to generate and store data
 	task run();
     object_raise();
-    $display($time, " :generator_full_flag");
+    $display($time, " :generator_empty_flag");
     WR_COUNT = 6;
     RD_COUNT = 8;
 

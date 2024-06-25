@@ -17,7 +17,7 @@ class fifo_gen_inbet_rst extends fifo_gen;
     fork
     begin
       object_raise();
-      $display($time, " :generator_full_flag");
+      $display($time, " :generator_inbetween_reset");
       WR_COUNT = 3;
       RD_COUNT = 5;
       INBET_RST_TIME = 65;

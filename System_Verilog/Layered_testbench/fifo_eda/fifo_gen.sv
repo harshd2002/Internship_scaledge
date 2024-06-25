@@ -43,13 +43,6 @@ virtual class fifo_gen;
 		trans_h.randomize() with {ops_e == READ;};
 		$display($time," : generated values: %0p", trans_h);
   endtask
-/*
-  virtual task simultaneous_wr_rd_op();
-    $display($time," : simultaneous read-write operation generator");
-		trans_h = new();
-		trans_h.randomize() with {ops_e == WRITE_READ;};
-		$display($time," : generated values: %0p", trans_h);
- endtask
-*/
+
 endclass
 `endif

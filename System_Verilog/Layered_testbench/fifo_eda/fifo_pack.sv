@@ -23,8 +23,7 @@ package fifo_pack;
   byte unsigned RST_TIME = 17;
   //variable for storing number of transactions
   byte unsigned NUM_TRANS = 10;
-  byte unsigned TRANS_LIM = 4;
-  static byte unsigned WR_COUNT = 0, RD_COUNT = 0;
+  byte unsigned WR_COUNT = 0, RD_COUNT = 0;
 
   //flag to override driver
   bit override_flag;
@@ -57,6 +56,7 @@ package fifo_pack;
   `include "fifo_gen_almostempty_flag.sv"
   `include "fifo_gen_inbet_rst.sv"
   `include "fifo_gen_read_empty.sv"
+  `include "fifo_gen_write_full.sv"
   `include "fifo_drv.sv"
   `include "fifo_mon.sv"
   `include "fifo_pred.sv"
