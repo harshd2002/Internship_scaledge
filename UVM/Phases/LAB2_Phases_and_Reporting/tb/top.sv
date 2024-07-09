@@ -1,0 +1,28 @@
+
+
+module top; ///// 
+  
+     //import pkg.sv
+        import pkg::*;
+
+     // import the UVM package
+   	import uvm_pkg::*;
+	//`include "my_report_server.sv"
+
+     // include the uvm_macros.svh
+	`include "uvm_macros.svh"
+	
+    //my_error_catcher err_catch=new();
+
+	initial begin
+	  //suvm_top.set_report_verbosity_level(UVM_MEDIUM);
+	  //err_catch.summarize_report_catcher();
+	  //uvm_report_cb::add(null, err_catch);
+	 //creating environment root component
+	  run_test("test");
+	end
+
+
+  
+endmodule : top
+

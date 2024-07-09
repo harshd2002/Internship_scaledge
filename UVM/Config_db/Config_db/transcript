@@ -1,0 +1,157 @@
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+do run.do fifo_overflow_flag_test
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 00:28:04 on Jul 05,2024
+# vlog -reportprogress 300 top.sv 
+# ** Note: (vlog-2286) top.sv(3): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package top_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 00:28:04 on Jul 05,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt work.top -suppress 12110 
+# Start time: 00:28:04 on Jul 05,2024
+# ** Warning: (vsim-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Refreshing C:/Users/Admin/Documents/git_internship/UVM/Config_db/Config_db/work.top
+# ** Warning: (vlog-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Refreshing C:/Users/Admin/Documents/git_internship/UVM/Config_db/Config_db/work.top_sv_unit
+# ** Warning: (vlog-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.top_sv_unit
+# Loading work.top
+# Loading mtiUvm.questa_uvm_pkg
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Instance: /top File: agent.sv Line: 39
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Instance: /top File: agent.sv Line: 57
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /top/driver File: driver.sv Line: 14
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /top/driver File: driver.sv Line: 26
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /top/driver File: driver.sv Line: 44
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /top/driver File: driver.sv Line: 57
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /top/driver File: driver.sv Line: 69
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /top/driver File: driver.sv Line: 102
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /top/driver File: driver.sv Line: 115
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /top/driver File: driver.sv Line: 128
+# Loading C:/questasim64_10.7c/uvm-1.1d\win64\uvm_dpi.dll
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# UVM_INFO driver.sv(20) @ 0: uvm_test_top.obj_env.obj_agent.obj_driver [BUILD_PHASE --> DRIVER]  10 
+# UVM_INFO driver.sv(37) @ 0: uvm_test_top.obj_env.obj_agent.obj_driver [CONNECT_PHASE --> DRIVER]  getting in driver : 10 
+# UVM_INFO agent.sv(45) @ 0: uvm_test_top.obj_env.obj_agent [END_OF_ELABORATION_PHASE --> AGENT]  25 
+# UVM_INFO driver.sv(50) @ 0: uvm_test_top.obj_env.obj_agent.obj_driver [END_OF_ELABORATION_PHASE --> DRIVER]  22 
+# UVM_INFO agent.sv(63) @ 0: uvm_test_top.obj_env.obj_agent [END_OF_ELABORATION_PHASE --> AGENT]  25 
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------
+# Name                       Type                    Size  Value
+# --------------------------------------------------------------
+# uvm_test_top               test                    -     @466 
+#   obj_env                  enviroment              -     @473 
+#     obj_agent              agent                   -     @483 
+#       obj_driver           driver                  -     @491 
+#         rsp_port           uvm_analysis_port       -     @506 
+#         seq_item_port      uvm_seq_item_pull_port  -     @498 
+#       obj_monitor          monitor                 -     @514 
+#       obj_seqr             sequencer               -     @521 
+#         rsp_export         uvm_analysis_export     -     @528 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @622 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+# --------------------------------------------------------------
+# 
+# UVM_INFO driver.sv(63) @ 0: uvm_test_top.obj_env.obj_agent.obj_driver [START_OF_SIMULATION_PHASE --> DRIVER]  10 
+# UVM_INFO test.sv(65) @ 0: uvm_test_top [RUN_PHASE --> TEST]  SET in TEST: 10 
+# UVM_INFO enviroment.sv(65) @ 0: uvm_test_top.obj_env [RUN_PHASE --> ENVIROMENT]  FROM ENVIROMENT 
+# UVM_INFO agent.sv(84) @ 0: uvm_test_top.obj_env.obj_agent [RUN_PHASE --> AGENT]  FROM AGENT 
+# UVM_INFO driver.sv(75) @ 0: uvm_test_top.obj_env.obj_agent.obj_driver [RUN_PHASE --> DRIVER]  20 
+# UVM_INFO driver.sv(83) @ 0: uvm_test_top.obj_env.obj_agent.obj_driver [reset sub_phase] reset phase started
+# UVM_INFO driver.sv(87) @ 0: uvm_test_top.obj_env.obj_agent.obj_driver [configure sub_phase] Configure phase started
+# UVM_INFO driver.sv(96) @ 0: uvm_test_top.obj_env.obj_agent.obj_driver [shutdown sub_phase] shutdown phase started
+# UVM_INFO driver.sv(78) @ 5: uvm_test_top.obj_env.obj_agent.obj_driver [RUN_PHASE --> DRIVER]  FROM DRIVER 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 10: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO driver.sv(108) @ 10: uvm_test_top.obj_env.obj_agent.obj_driver [EXTRACT_PHASE --> DRIVER]  20 
+# UVM_INFO driver.sv(121) @ 10: uvm_test_top.obj_env.obj_agent.obj_driver [CHECK_PHASE --> DRIVER]  15 
+# UVM_INFO driver.sv(134) @ 10: uvm_test_top.obj_env.obj_agent.obj_driver [REPORT_PHASE --> DRIVER]  15 
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   22
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [BUILD_PHASE --> DRIVER]     1
+# [CHECK_PHASE --> DRIVER]     1
+# [CONNECT_PHASE --> DRIVER]     1
+# [END_OF_ELABORATION_PHASE --> AGENT]     2
+# [END_OF_ELABORATION_PHASE --> DRIVER]     1
+# [EXTRACT_PHASE --> DRIVER]     1
+# [Questa UVM]     2
+# [REPORT_PHASE --> DRIVER]     1
+# [RNTST]     1
+# [RUN_PHASE --> AGENT]     1
+# [RUN_PHASE --> DRIVER]     2
+# [RUN_PHASE --> ENVIROMENT]     1
+# [RUN_PHASE --> TEST]     1
+# [START_OF_SIMULATION_PHASE --> DRIVER]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [configure sub_phase]     1
+# [reset sub_phase]     1
+# [shutdown sub_phase]     1
+# ** Note: $finish    : C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 10 ns  Iteration: 54  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_10.7c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+pwd
+# C:/Users/Admin/Documents/git_internship/UVM/Config_db/Config_db
+# End time: 00:32:47 on Jul 05,2024, Elapsed time: 0:04:43
+# Errors: 0, Warnings: 11

@@ -1,0 +1,14 @@
+Start time: 11:19:09 on May 30,2024
+qverilog -reportprogress 300 -guimode Tb/top.sv 
+-- Compiling module top
+** Note: (qverilog-2286) Tb/top.sv(4): Using implicit +incdir+C:/questasim64_10.7c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Error: Tb/top.sv(8): (qverilog-13006) Could not find the package (pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Error: Tb/top.sv(13): (qverilog-2164) Class or package 'trans' not found.
+** Error: (qverilog-13069) Tb/top.sv(13): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: Tb/top.sv(13): (qverilog-2164) Class or package 'type_id' not found.
+** Error: Tb/top.sv(17): (qverilog-2164) Class or package 'trans' not found.
+** Error: (qverilog-13069) Tb/top.sv(17): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: Tb/top.sv(17): (qverilog-2164) Class or package 'type_id' not found.
+End time: 11:19:09 on May 30,2024, Elapsed time: 0:00:00
+Errors: 7, Warnings: 0

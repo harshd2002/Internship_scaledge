@@ -1,0 +1,3 @@
+event triggers in which region of sv.
+object utils and component utils
+object can be derived from which classes
